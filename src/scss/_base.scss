@@ -1,0 +1,23 @@
+@import "params";
+@import "compass/css3";
+
+* {
+  // http://caniuse.com/#search=box-sizing
+  @include box-sizing(border-box);
+}
+
+a:focus,
+a:active {
+  // Remove focus borders and outlines
+  outlne: 0;
+  border: 0;
+}
+
+html {
+  font-family: $o-base-font;
+  font-size: $o-base-text-size;
+  line-height: $o-base-line-height;
+  background: $o-material;
+  color: $o-base-text-color;
+}
+

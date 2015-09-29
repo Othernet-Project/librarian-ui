@@ -1,0 +1,78 @@
+@import "params";
+@import "icons/icons";
+@import "compass/css3";
+
+.o-statusbar {
+  // Basic geometry
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // No height given here, because we don't want the sidebar to be restricted
+  // to a fixed height.
+
+  // FX
+  &.open {
+    .o-statusbar-status {
+      max-height: $o-statusbar-status-height;
+    }
+
+    .o-statusbar-hbar-activator-icon {
+      @include mdi-icon($o-statusbar-hbar-activator-open-icon);
+    }
+  }
+
+  // Child elements
+
+  .o-statusbar-hbar {
+    // Basic geometry
+    position: relative;
+    height: $o-statusbar-hbar-height;
+    width: 100%;
+
+    // Styling
+    background: $o-clickable-item-background;
+    @include background-image(linear-gradient($o-clickable-item-shading));
+    border-top: $o-widget-border;
+    border-bottom: $o-separator-border;
+    cursor: pointer;
+  }
+
+  .o-statusbar-status {
+    // Basic geometry
+    max-height: 0;  // Completely collapsed initially
+    overflow: hidden;
+
+    // FX
+    @include transition(max-height $o-animation-speed);
+  }
+
+  .o-statusbar-hbar-activator {
+    // Basic geometry
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $o-statusbar-hbar-activator-width;
+
+    @if $o-statusbar-hbar-show-label == no {
+      .o-statusbar-hbar-activator-label {
+        display: none;
+      }
+    }
+  }
+
+  .o-statusbar-hbar-activator-icon {
+    // Basic geometry
+    width: 100%;
+    height: 100%;
+    padding-top: $o-statusbar-hbar-activator-icon-top-offset;
+
+    // Styling
+    font-size: $o-statusbar-hbar-activator-icon-size;
+    text-align: center;
+    color: $o-statusbar-hbar-activator-icon-color;
+
+    // Icon
+    @include mdi-icon($o-statusbar-hbar-activator-closed-icon);
+  }
+}

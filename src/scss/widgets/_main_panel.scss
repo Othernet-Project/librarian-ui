@@ -1,0 +1,9 @@
+@import "params";
+
+.o-main-panel {
+  // Basic geometry
+  padding-top: $o-main-panel-top-offset;
+  padding-bottom: $o-main-panel-bottom-offset;
+  padding-left: $o-main-panel-padding;
+  padding-right: $o-main-panel-padding;
+}

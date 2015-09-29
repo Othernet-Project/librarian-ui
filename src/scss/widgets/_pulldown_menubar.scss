@@ -1,0 +1,109 @@
+@import "params";
+@import "compass/css3";
+
+$o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menubar-menu-height;
+
+.o-pulldown-menubar {
+  // Element characteristics
+  display: block;
+
+  // Styling
+  background: $o-pulldown-menubar-background;
+  color: $o-pulldown-menubar-text-color;
+
+  // Basic geometry
+  position: fixed;
+  top: -$o-pulldown-menubar-menu-height; // hides menu from view
+  left: $o-pulldown-menubar-default-pos-left;
+  right: $o-pulldown-menubar-default-pos-right;
+  height: $o-pulldown-menubar-height;
+
+  // FX
+  @include transition(top $o-animation-speed);
+
+  // Alternative states
+
+  &.open {
+    top: 0; 
+
+    .o-pulldown-menubar-menu {
+      background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
+    }
+
+    .o-pulldown-menubar-hbar-activator {
+      background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
+    }
+  }
+
+  // Child containers
+
+  .o-pulldown-menubar-menu {
+    // Basic geometry
+    position: relative;
+    width: 100%;
+    height: $o-pulldown-menubar-menu-height;
+
+    // Styling
+    background-color: $o-pulldown-menubar-background;
+
+    // FX
+    @include transition(background-color $o-animation-speed);
+  }
+
+  .o-pulldown-menubar-hbar {
+    // Basic geometry
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $o-pulldown-menubar-hbar-height;
+  }
+    
+  .o-pulldown-menubar-hbar-activator {
+    // Basic geometry
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $o-pulldown-menubar-hbar-activator-width;
+    height: 100%;
+
+    // Styling
+    text-align: center;
+    text-decoration: none;
+    line-height: $o-pulldown-menubar-hbar-height;
+    background-color: $o-pulldown-menubar-background;
+    color: $o-pulldown-menubar-text-color;
+
+    // FX
+    
+    @include transition(background-color $o-animation-speed);
+
+    &:hover, &:focus {
+      background: $o-pulldown-menubar-hbar-activator-highlight-color;
+    }
+  }
+
+  .o-pulldown-menubar-hbar-bar {
+    // Basic geometry
+    position: absolute;
+    left: $o-pulldown-menubar-hbar-activator-width;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  .o-pulldown-menubar-hbar-activator-icon {
+    // Basic geometry
+    vertical-align: middle;
+    position: relative;
+    top: $o-pulldown-menubar-hbar-activator-icon-top-offset;
+
+    // Styling
+    font-size: $o-pulldown-menubar-hbar-activator-icon-size;
+    color: $o-pulldown-menubar-hbar-activator-icon-color;
+
+    // Icon
+    @include mdi-icon($o-pulldown-menubar-hbar-activator-closed-icon);
+  }
+}
