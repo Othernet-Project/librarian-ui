@@ -6,13 +6,6 @@
   @include box-sizing(border-box);
 }
 
-a:focus,
-a:active {
-  // Remove focus borders and outlines
-  outlne: 0;
-  border: 0;
-}
-
 html {
   font-family: $o-base-font;
   font-size: $o-base-text-size;
