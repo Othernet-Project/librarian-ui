@@ -9,27 +9,29 @@
         <link rel="stylesheet" href="/static/css/ui.css">
     </head>
     <body>
-        <%ui:pulldown_menubar id="menubar-top">
-            <%ui:pulldown_menubar_menu id="menubar-top">
+        <%ui:pulldown_menubar id="menubar-top" label="Main menu">
+            <%def name="menu()">
                 Hello menu
-            </%ui:pulldown_menubar_menu>
-            <%ui:pulldown_menubar_hbar id="menubar-top" label="Click here">
-                Hello menubar
-            </%ui:pulldown_menubar_hbar>
+            </%def>
+            <%def name="hbar()">
+                <%ui:split_container id="search-menubar">
+                    <%def name="front()">Front</%def>
+                    <%def name="back()">Back</%def>
+                </%ui:split_container>
+            </%def>
         </%ui:pulldown_menubar>
 
         <%ui:main_panel id="main-panel">
         Hello panel!
         </%ui:main_panel>
 
-        <%ui:statusbar id="main-status">
-            <%ui:statusbar_hbar id="main-status" label="Click here">
+        <%ui:statusbar id="main-status" label="Statusbar">
+            <%def name="hbar()">
             Hello statusbar!
-            </%ui:statusbar_hbar>
-
-            <%ui:statusbar_status id="main-status">
+            </%def>
+            <%def name="status()">
             Librarian UI 0.1
-            </%ui:statusbar_status>
+            </%def>
         </%ui:statusbar>
 
         <!-- third-party libraries -->
