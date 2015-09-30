@@ -1,6 +1,5 @@
 *.py[co]
 *.sw[op]
 /.ropeproject
-/.coffee_pid
-/.compass_pid
+/.*_pid
 /.sass-cache
