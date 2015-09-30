@@ -1,12 +1,19 @@
 ((window, $) ->
-  statusbar = $ '.o-statusbar'
-  statusbarHbar = statusbar.find '.o-statusbar-hbar'
-  activator = statusbar.find '.o-statusbar-hbar-activator'
 
-  activator.on "click", (e) ->
-    e.preventDefault()
+  ExpandableBox = window.o.elements.ExpandableBox
 
-  statusbarHbar.on "click", (e) ->
-    statusbar.toggleClass "open"
+  class Statusbar extends ExpandableBox
+    constructor: (@id) ->
+      super(@id)
+
+      # Stash references to inner
+      @activatorButton = @findChild 'hbar-activator'
+
+      # Suppress normal behavior of the activator because the entire hbar is
+      # the activator
+      @activatorButton.on 'click', (e) ->
+        e.preventDefault()
+
+  window.export 'Statusbar', 'widgets', Statusbar
 
 ) this, this.jQuery

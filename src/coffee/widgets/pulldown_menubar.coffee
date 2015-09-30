@@ -1,11 +1,20 @@
 ((window, $) ->
-  pulldownMenu = $ ".o-pulldown-menubar"
-  activator = pulldownMenu.find ".o-pulldown-menubar-hbar-activator"
-  pulldownMenuLinks = $ ".o-pulldown-menubar-menu [role=\"menuitem\"]"
-  firstNavMenu = pulldownMenuLinks.first()
-  activator.on "click", (e) ->
-    e.preventDefault()
-    pulldownMenu.toggleClass "open"
-    if pulldownMenu.hasClass "open"
-      firstNavMenu.focus()
+
+  ExpandableBox = window.o.elements.ExpandableBox
+
+  class PulldownMenubar extends ExpandableBox
+    constructor: (@id) ->
+      super(@id)
+
+      # Stash references to relevant children
+      @menu = @findChild 'menu'
+      @firstNav = @menu.find("[role=\"menuitem\"]").first()
+
+    elementClass: 'pulldown-menubar'
+
+    onOpen: () ->
+      @firstNav.focus()
+
+  window.export 'PulldownMenubar', 'widgets', PulldownMenubar
+
 ) this, this.jQuery
