@@ -11,7 +11,7 @@ case "$ACTION" in
         then
             exit 1
         else
-            coffee --watch --output "$COFFEE_OUT" "$COFFEE_SRC" &
+            coffee --bare --watch --output "$COFFEE_OUT" "$COFFEE_SRC" &
             echo -n "$!" > $COFFEE_PID
         fi
         ;;

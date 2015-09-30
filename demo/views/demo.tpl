@@ -32,8 +32,18 @@
             </%ui:statusbar_status>
         </%ui:statusbar>
 
+        <!-- third-party libraries -->
         <script src="/static/js/jquery.js"></script>
+
+        <!-- Librarian UI modules -->
+        <script src="/static/js/utils/dahelpers.js"></script>
+        <script src="/static/js/utils/export.js"></script>
+        <script src="/static/js/elements/element.js"></script>
+        <script src="/static/js/elements/expandable_box.js"></script>
         <script src="/static/js/widgets/pulldown_menubar.js"></script>
         <script src="/static/js/widgets/statusbar.js"></script>
+
+        <!-- demo-specific modules -->
+        <script src="/static/js/main.js"></script>
     </body>
 </html>
