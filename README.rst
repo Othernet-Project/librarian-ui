@@ -22,3 +22,17 @@ To stop watchers::
 Demo (also used for development) can be started by running::
 
     python demo/demo.py
+
+
+Browser targeting
+=================
+
+Librarian UI will focus on following targets:
+
+- Microsoft Internet Explorer 9 and newer
+- Firefox latest
+- Google Chrome latest
+- Safari latest
+- Mobile Chrome latest
+- Mobile Safari latest
+- Opera Mini latest
