@@ -1,5 +1,8 @@
-@import "params";
 @import "compass/css3";
+@import "compass/typography/text/replacement";
+
+@import "params";
+@import "elements/images";
 
 $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menubar-menu-height;
 
@@ -27,11 +30,18 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     top: 0; 
 
     .o-pulldown-menubar-menu {
+      // Styling
       background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
     }
 
     .o-pulldown-menubar-hbar-activator {
+      // Styling
       background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
+    }
+
+    .o-pulldown-menubar-hbar-activator-icon {
+      // Icon
+      @include mdi-icon($o-pulldown-menubar-hbar-activator-open-icon);
     }
   }
 
@@ -91,6 +101,15 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     right: 0;
     top: 0;
     height: 100%;
+  }
+
+  // FIXME: The logo is not centered within the h-bar.
+  .o-pulldown-menubar-hbar-activator-label {
+    @if $o-pulldown-menubar-hbar-use-logo == yes {
+      @include image-sprite($o-pulldown-menubar-hbar-logo);
+      vertical-align: middle;
+      @include hide-text;
+    }
   }
 
   .o-pulldown-menubar-hbar-activator-icon {
