@@ -316,3 +316,86 @@ html {
 .o-statusbar .o-statusbar-hbar-activator-icon:before {
   content: "\f214";
 }
+
+/**
+ * PANELS
+ *
+ * Panels are generic containers. They can be nested within each other, and 
+ * they don't have any inherent styling. Styling for panel groups is applied
+ * using the mixins in this module. Each mixin defines the layout of a fixed
+ * set of panels (e.g., split-panel deals with a single parent, and two 
+ * children).
+ *
+ * All panels should have a class specified by global $o-container-class 
+ * variable in the params module.
+ */
+/**
+ * split-panel($split)
+ *
+ * Panel that has two child containers that split the width at certain 
+ * coordinate given by $split argument.
+ *
+ * Children span the entire height of the parent container, and parent has a 
+ * specific height given by the $height argument.
+ *
+ * The $split-from-right argument can either be yes or no. If splitting is done
+ * from right, then the right side panel would be that wide, otherwise the 
+ * $split width is given to the left panel.
+ *
+ */
+/* line 8, ../../../src/scss/widgets/_contextbar.scss */
+.o-contextbar {
+  position: relative;
+  height: 100%;
+}
+/* line 34, ../../../src/scss/elements/_panels.scss */
+.o-contextbar .o-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+/* line 41, ../../../src/scss/elements/_panels.scss */
+.o-contextbar .o-panel:first-child {
+  left: 0;
+  right: 3rem;
+}
+/* line 46, ../../../src/scss/elements/_panels.scss */
+.o-contextbar .o-panel:last-child {
+  width: 3rem;
+  right: 0;
+}
+/* line 12, ../../../src/scss/widgets/_contextbar.scss */
+.o-contextbar .o-contextbar-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 25, ../../../src/scss/widgets/_contextbar.scss */
+.o-contextbar .o-contextbar-menu:hover, .o-contextbar .o-contextbar-menu:focus {
+  background: #089bd2;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+/* line 35, ../../../src/scss/widgets/_contextbar.scss */
+.o-contextbar .o-contextbar-menu-label {
+  display: none;
+}
+/* line 42, ../../../src/scss/widgets/_contextbar.scss */
+.o-contextbar .o-contextbar-menu-icon {
+  position: relative;
+  top: 0.4rem;
+  width: 100%;
+  text-align: center;
+  text-align: center;
+  font-size: 200%;
+}
+/* line 24, ../../../src/scss/icons/_icons.scss */
+.o-contextbar .o-contextbar-menu-icon:before {
+  content: "\f3f1";
+}

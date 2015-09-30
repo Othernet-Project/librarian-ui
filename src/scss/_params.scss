@@ -47,6 +47,13 @@ $o-clickable-target-size: 3rem !default;
 // FX
 $o-animation-speed: 0.3s !default;
 
+
+// ELEMENTS
+
+$o-container-class: panel;
+
+// WIDGETS
+
 // Pulldown menubar
 $o-pulldown-menubar-hbar-height: $o-clickable-target-size !default;
 $o-pulldown-menubar-menu-height: $o-clickable-target-size * 3 !default;
@@ -79,3 +86,10 @@ $o-statusbar-hbar-activator-open-icon: "chevron-down" !default;
 $o-statusbar-hbar-activator-icon-size: 180% !default;
 $o-statusbar-hbar-activator-icon-color: $o-base-text-color !default;
 $o-statusbar-hbar-activator-icon-top-offset: 0.2rem !default;
+
+// Contextbar
+$o-contextbar-text-color: $o-negative-base !default;
+$o-contextbar-height: 100% !default;
+$o-contextbar-menu-icon-width: $o-clickable-target-size !default;
+$o-contextbar-menu-icon-top-offset: 0.4rem !default;
+$o-contextbar-menu-highlight-color: $o-accent !default;

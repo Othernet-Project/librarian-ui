@@ -1,0 +1,56 @@
+@import "compass/css3";
+@import "compass/typography/text/replacement";
+
+@import "params";
+@import "icons/materialdesignicons";
+@import "elements/panels";
+
+.o-contextbar {
+  // Basic geometry
+  @include split-panel($o-contextbar-menu-icon-width, $o-contextbar-height);
+
+  .o-contextbar-menu {
+    // Basic geometry
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Styling
+    text-decoration: none;
+    color: $o-contextbar-text-color;
+
+    // Alternative state
+    &:hover,
+    &:focus {
+      // Styling
+      background: $o-contextbar-menu-highlight-color;
+
+      // FX
+      @include transition(background-color $o-animation-speed);
+    }
+  }
+
+  .o-contextbar-menu-label {
+    // FIXME: Conditionally hide the label
+
+    // Remove
+    display: none;
+  }
+
+  .o-contextbar-menu-icon {
+    // Basic geometry
+    position: relative;
+    top: $o-contextbar-menu-icon-top-offset;
+    width: 100%;
+    text-align: center;
+
+    // Styling
+    text-align: center;
+    font-size: 200%;
+
+    // Icon
+    @include mdi-icon(menu);
+  }
+}

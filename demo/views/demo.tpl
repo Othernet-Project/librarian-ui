@@ -14,10 +14,9 @@
                 Hello menu
             </%def>
             <%def name="hbar()">
-                <%ui:split_container id="search-menubar">
-                    <%def name="front()">Front</%def>
-                    <%def name="back()">Back</%def>
-                </%ui:split_container>
+                <%ui:contextbar id="search-menubar">
+                    <%def name="panel()">Front</%def>
+                </%ui:contextbar>
             </%def>
         </%ui:pulldown_menubar>
 

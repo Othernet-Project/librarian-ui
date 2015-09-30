@@ -1,15 +1,18 @@
-## Split container
+## Contextbar
 ##
-## Container that has two sections horizontally, of which one is fixed width,
-## and other extends to fill the remaining space.
+## Split panel with menu icon to the right and empty panel to the left.
+##
 
-<%def name="split_container(id, fixed='back')">
-    <div class="o-split-container o-split-container-fixed-#{fixed}">
-        <div class="o-split-container-front">
-            ${caller.front()}
+<%def name="contextbar(id, label='open')">
+    <div class="o-contextbar o-panel" id="${id}">
+        <div class="o-panel">
+            ${caller.panel()}
         </div>
-        <div class="o-split-container-back">
-            ${caller.back()}
+        <div class="o-panel">
+            <a href="#menu" class="o-contextbar-menu">
+                <span class="o-contextbar-menu-label">${label}</span>
+                <span class="o-contextbar-menu-icon icon"></span>
+            </a>
         </div>
     </div>
 </%def>
