@@ -6,6 +6,16 @@
   @include box-sizing(border-box);
 }
 
+// Remove dotted focus ring from most elements in Firefox
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+// Remove dotted focus ring from select box in Firefox
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 $o-input-text-color;
+}
+
 html {
   font-family: $o-base-font;
   font-size: $o-base-text-size;

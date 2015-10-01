@@ -1,0 +1,44 @@
+@import "compass/css3";
+@import "params";
+
+button,
+.button {
+  // Basic geometry
+  margin: 0 $o-button-horizontal-spacing;
+  padding: $o-button-padding;
+  height: $o-input-height;
+
+  // Typography
+  font-size: $o-input-text-size;
+  font-family: $o-input-font;
+  line-height: $o-button-line-height;
+  text-decoration: none;
+
+  // Styling
+  background: $o-button-face-color;
+  color: $o-button-text-color;
+  @if $o-button-face-shading {
+    @include background-image(linear-gradient($o-button-face-shading));
+  }
+
+  // Border
+  border: $o-input-outline;
+  border-top-color: $o-input-outline-highlight-color;
+  border-radius: $o-input-corner-radius;
+
+  // Interaction
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+
+  // Alternative 
+  &:hover,
+  &:focus {
+    border-color: $o-input-focus-outline;
+    background: $o-button-hover-face-color;
+    color: $o-button-hover-text-color;
+    @if $o-button-hover-face-shading {
+      @include background-image(linear-gradient($o-button-hover-face-shading));
+    }
+  }
+}

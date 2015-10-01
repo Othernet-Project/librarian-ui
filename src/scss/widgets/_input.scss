@@ -1,0 +1,36 @@
+@import "compass/css3";
+@import "params";
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=search],
+input[type=url],
+input[type=tel],
+input[type=number],
+select {
+  // Basic geometry
+  margin: 0 $o-input-horizontal-spacing;
+  padding: $o-input-padding;
+  height: $o-input-height;
+
+  // Typography
+  font-size: $o-input-text-size;
+  font-family: $o-input-font;
+
+  // Styling
+  background: $o-input-background;
+  color: $o-input-text-color;
+
+  // Border
+  border: $o-input-outline;
+  border-top-color: $o-input-outline-highlight-color;
+  border-radius: $o-input-corner-radius;
+
+  // Alternative state
+  &:hover,
+  &:focus {
+    border-color: $o-input-focus-outline;
+  }
+}

@@ -24,8 +24,8 @@ $o-shadow: $o-material !default;
 $o-outline: #aaa !default;                          // dark grey
 $o-outline-highlight: #ccc !default;                // medium grey
 $o-base-text-color: $o-base !default;
-$o-clickable-item-background: #fafafa !default;
-$o-clickable-item-shading: #fafafa #eee !default;
+$o-clickable-target-color: #fafafa !default;
+$o-clickable-target-shading: $o-clickable-target-color darken($o-clickable-target-color, 10) !default;
 
 // Styling
 $o-widget-border: 1px solid $o-outline !default;
@@ -43,6 +43,8 @@ $mdi-version:          "1.2.64" !default;
 
 // Geometry
 $o-clickable-target-size: 3rem !default;
+$o-clickable-target-corner-radius: 0.3rem;
+$o-input-width: 14rem;
 
 // FX
 $o-animation-speed: 0.3s !default;
@@ -54,8 +56,31 @@ $o-container-class: panel;
 
 // WIDGETS
 
-// Forms
-$o-input-width: 14rem;
+// General
+$o-input-text-color: $o-base !default;
+$o-input-height: 2.1rem !default;
+$o-input-text-size: 1rem !default;
+$o-input-font: $o-base-font !default;
+$o-input-background: $o-negative-base !default;
+$o-input-outline-color: $o-outline !default;
+$o-input-outline-highlight-color: $o-outline-highlight !default;
+$o-input-outline: 1px solid $o-input-outline-color !default;
+$o-input-corner-radius: $o-clickable-target-corner-radius !default;
+$o-input-padding: 0.4rem 1rem !default;
+$o-input-horizontal-spacing: 0.4rem !default;
+$o-input-focus-outline: $o-accent !default;
+
+// Button
+$o-button-line-height: 120% !default;
+$o-button-font-size: 1rem !default;
+$o-button-face-color: $o-clickable-target-color !default;
+$o-button-text-color: $o-base-text-color !default;
+$o-button-face-shading: $o-clickable-target-shading !default;
+$o-button-horizontal-spacing: 0.4rem !default;
+$o-button-padding: 0.3rem 1rem !default;
+$o-button-hover-text-color: $o-negative-base !default;
+$o-button-hover-face-color: $o-accent !default;
+$o-button-hover-face-shading: $o-button-hover-face-color darken($o-button-hover-face-color, 10);
 
 // Pulldown menubar
 $o-pulldown-menubar-hbar-height: $o-clickable-target-size !default;
