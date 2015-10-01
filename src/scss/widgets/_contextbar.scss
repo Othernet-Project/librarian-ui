@@ -53,5 +53,8 @@
 
     // Icon
     @include mdi-icon(menu);
+
+    // FX
+    @include transition(color $o-animation-speed);
   }
 }
