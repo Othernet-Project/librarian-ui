@@ -31,8 +31,8 @@
     width: 100%;
 
     // Styling
-    background: $o-clickable-item-background;
-    @include background-image(linear-gradient($o-clickable-item-shading));
+    background: $o-clickable-target-color;
+    @include background-image(linear-gradient($o-clickable-target-shading));
     border-top: $o-widget-border;
     border-bottom: $o-separator-border;
     cursor: pointer;

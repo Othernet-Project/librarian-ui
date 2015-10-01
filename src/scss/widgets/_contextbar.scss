@@ -26,6 +26,7 @@
     &:focus {
       // Styling
       background: $o-contextbar-menu-highlight-color;
+      color: $o-contextbar-menu-highlight-text-color;
 
       // FX
       @include transition(background-color $o-animation-speed);
@@ -48,7 +49,7 @@
 
     // Styling
     text-align: center;
-    font-size: 200%;
+    font-size: $o-contextbar-menu-icon-size;
 
     // Icon
     @include mdi-icon(menu);

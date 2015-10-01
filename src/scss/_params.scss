@@ -71,36 +71,37 @@ $o-input-horizontal-spacing: 0.4rem !default;
 $o-input-focus-outline: $o-accent !default;
 
 // Button
+$o-button-padding: 0 1rem !default;
 $o-button-line-height: 120% !default;
 $o-button-font-size: 1rem !default;
 $o-button-face-color: $o-clickable-target-color !default;
 $o-button-text-color: $o-base-text-color !default;
 $o-button-face-shading: $o-clickable-target-shading !default;
 $o-button-horizontal-spacing: 0.4rem !default;
-$o-button-padding: 0.3rem 1rem !default;
 $o-button-hover-text-color: $o-negative-base !default;
 $o-button-hover-face-color: $o-accent !default;
 $o-button-hover-face-shading: $o-button-hover-face-color darken($o-button-hover-face-color, 10);
 
 // Pulldown menubar
-$o-pulldown-menubar-hbar-height: $o-clickable-target-size !default;
+$o-pulldown-menubar-hbar-height: $o-clickable-target-size * 2 !default;
 $o-pulldown-menubar-menu-height: $o-clickable-target-size * 3 !default;
 $o-pulldown-menubar-default-pos-left: 0 !default;
 $o-pulldown-menubar-default-pos-right: 0 !default;
-$o-pulldown-menubar-background: darken($o-background, 15) !default;
+$o-pulldown-menubar-background: $o-material !default;
 $o-pulldown-menubar-text-color: $o-base-text-color !default;
-$o-pulldown-menubar-hbar-activator-width: 5.4rem !default;
+$o-pulldown-menubar-hbar-activator-width: 8rem !default;
 $o-pulldown-menubar-hbar-activator-highlight-color: $o-accent !default;
 $o-pulldown-menubar-hbar-activator-highlight-text-color: $o-negative-base !default;
 $o-pulldown-menubar-hbar-activator-icon-color: $o-pulldown-menubar-text-color !default;
 $o-pulldown-menubar-hbar-activator-icon-size: 180% !default;
 $o-pulldown-menubar-hbar-activator-closed-icon: "chevron-down" !default;
 $o-pulldown-menubar-hbar-activator-open-icon: "chevron-up" !default;
-$o-pulldown-menubar-hbar-activator-icon-top-offset: 0 !default;
+$o-pulldown-menubar-hbar-activator-icon-top-offset: -3px !default;
 $o-pulldown-menubar-hbar-use-logo: yes !default;
 $o-pulldown-menubar-hbar-logo: logo !default;
 $o-pulldown-menubar-menu-background: $o-accent !default;
 $o-pulldown-menubar-menu-text-color: $o-negative-base !default;
+$o-pulldown-menubar-activator-corner-radius: 0.4rem !default;
 
 // Main panel
 $o-main-panel-top-offset: $o-pulldown-menubar-hbar-height !default;
@@ -119,17 +120,23 @@ $o-statusbar-hbar-activator-icon-color: $o-base-text-color !default;
 $o-statusbar-hbar-activator-icon-top-offset: 0.2rem !default;
 
 // Contextbar
-$o-contextbar-text-color: $o-negative-base !default;
+$o-contextbar-text-color: $o-base-text-color !default;
 $o-contextbar-height: 100% !default;
-$o-contextbar-menu-icon-width: $o-clickable-target-size !default;
-$o-contextbar-menu-icon-top-offset: 0.4rem !default;
-$o-contextbar-menu-highlight-color: $o-accent !default;
+$o-contextbar-menu-icon-width: $o-clickable-target-size * 1.5 !default;
+$o-contextbar-menu-icon-top-offset: 1.6rem !default;
+$o-contextbar-menu-icon-size: 220%;
+$o-contextbar-menu-highlight-color: transparent !default;
+$o-contextbar-menu-highlight-text-color: $o-accent !default;
 
 // Multisearch
 $o-multisearch-width: 100% !default;
 $o-multisearch-height: 100% !default;
 $o-multisearch-select-width: $o-input-width !default;;
-$o-multisearch-button-width: $o-clickable-target-size !default;
+$o-multisearch-button-width: $o-clickable-target-size * 2 !default;
 $o-multisearch-input-width: 100% !default;
 $o-multisearch-show-label: no !default;
+$o-multisearch-vertical-padding: 1.6rem !default;
+$o-multisearch-horizontal-padding: 2rem !default;
+$o-multisearch-icon: magnify !default;
+$o-multisearch-icon-size: 180% !default;
 

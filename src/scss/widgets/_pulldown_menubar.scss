@@ -78,6 +78,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     line-height: $o-pulldown-menubar-hbar-height;
     background-color: $o-pulldown-menubar-background;
     color: $o-pulldown-menubar-text-color;
+    @include border-bottom-right-radius($o-pulldown-menubar-activator-corner-radius);
 
     // FX
     
@@ -100,10 +101,15 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
 
   // FIXME: The logo is not centered within the h-bar.
   .o-pulldown-menubar-hbar-activator-label {
+    // Basic geometry
+    position: relative;
+    top: $o-pulldown-menubar-hbar-activator-icon-top-offset;
+
     @if $o-pulldown-menubar-hbar-use-logo == yes {
       @include image-sprite($o-pulldown-menubar-hbar-logo);
       vertical-align: middle;
       @include hide-text;
+      margin-right: -0.2rem;
     }
   }
 

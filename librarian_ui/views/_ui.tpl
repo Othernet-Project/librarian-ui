@@ -92,7 +92,7 @@
         <div class="o-panel">
             <button id="${name}-button" type="submit" class="o-multisearch-button">
                 <span class="o-multisearch-button-label">${label}</span>
-                <span class="o-multisearch-button-icon"></span>
+                <span class="o-multisearch-button-icon icon"></span>
             </button>
         </div>
     </form>
