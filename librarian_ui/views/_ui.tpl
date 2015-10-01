@@ -40,17 +40,6 @@
     </header>
 </%def>
 
-## Main panel
-##
-## Simple container that leaves space for pulldown menubar and status bar
-##
-
-<%def name="main_panel(id)">
-    <div class="o-main-panel" id="${id}">
-    ${caller.body()}
-    </div>
-</%def>
-
 
 ## Status bar (bottom bar)
 ##
