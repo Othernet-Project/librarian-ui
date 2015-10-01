@@ -6,7 +6,7 @@
 <%def name="contextbar(id, label='open')">
     <div class="o-contextbar o-panel" id="${id}">
         <div class="o-panel">
-            ${caller.panel()}
+        ${caller.panel()}
         </div>
         <div class="o-panel">
             <a href="#menu" class="o-contextbar-menu">
@@ -46,7 +46,7 @@
 
 <%def name="main_panel(id)">
     <div class="o-main-panel" id="${id}">
-        ${caller.body()}
+    ${caller.body()}
     </div>
 </%def>
 
@@ -60,7 +60,7 @@
     <footer class="o-statusbar" id="${id}">
         <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
             <div class="o-statusbar-hbar-quick-status">
-                ${caller.hbar()}
+            ${caller.hbar()}
             </div>
             <a href="#${id}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${id}-status">
                 <span class="o-statusbar-hbar-activator-label">${label}</span>
@@ -68,7 +68,7 @@
             </a>
         </div>
         <div class="o-statusbar-status o-collapsible" id="${id}-status" role="status" aria-expanded="false">
-            ${caller.status()}
+        ${caller.status()}
         </div>
     </footer>
 </%def>
