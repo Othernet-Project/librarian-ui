@@ -1,0 +1,15 @@
+@import "params";
+@import "elements/panels";
+
+.o-multisearch {
+  // Basic geometry
+  width: $o-multisearch-width;
+  @include double-split-panel($o-multisearch-select-width, $o-multisearch-button-width, $o-multisearch-height);
+
+  // Child elements
+  select, input[type=text], button {
+    display: inline-block;
+    width: $o-multisearch-input-width;
+    vertical-align: middle;
+  }
+}

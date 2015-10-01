@@ -54,6 +54,9 @@ $o-container-class: panel;
 
 // WIDGETS
 
+// Forms
+$o-input-width: 14rem;
+
 // Pulldown menubar
 $o-pulldown-menubar-hbar-height: $o-clickable-target-size !default;
 $o-pulldown-menubar-menu-height: $o-clickable-target-size * 3 !default;
@@ -93,3 +96,12 @@ $o-contextbar-height: 100% !default;
 $o-contextbar-menu-icon-width: $o-clickable-target-size !default;
 $o-contextbar-menu-icon-top-offset: 0.4rem !default;
 $o-contextbar-menu-highlight-color: $o-accent !default;
+
+// Multisearch
+$o-multisearch-width: 100% !default;
+$o-multisearch-height: 100% !default;
+$o-multisearch-select-width: $o-input-width !default;;
+$o-multisearch-button-width: $o-clickable-target-size !default;
+$o-multisearch-input-width: 100% !default;
+$o-multisearch-show-label: no !default;
+

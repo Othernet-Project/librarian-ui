@@ -1,3 +1,4 @@
+<%namespace name="forms" file="_forms.tpl"/>
 ## Contextbar
 ##
 ## Split panel with menu icon to the right and empty panel to the left.
@@ -71,4 +72,28 @@
         ${caller.status()}
         </div>
     </footer>
+</%def>
+
+
+## Multisearch
+##
+## Double-split panel with select list in the first panel, input box in second,
+## and submit button in the last panel.
+##
+
+<%def name="multisearch(name, route_name=None, method='get', placeholder=None, label='go')">
+    <form id="${name}" class="o-multisearch o-panel"${ 'action="{}"'.format(route(route_name)) if route_name else ''} method="${method}">
+        <div class="o-panel">
+            ${forms.select(name + '_mode')}
+        </div>
+        <div class="o-panel">
+            ${forms.text(name + '_keywords', placeholder=placeholder)}
+        </div>
+        <div class="o-panel">
+            <button id="${name}-button" type="submit" class="o-multisearch-button">
+                <span class="o-multisearch-button-label">${label}</span>
+                <span class="o-multisearch-button-icon"></span>
+            </button>
+        </div>
+    </form>
 </%def>

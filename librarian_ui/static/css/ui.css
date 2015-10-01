@@ -343,24 +343,37 @@ html {
  * $split width is given to the left panel.
  *
  */
+/**
+ * double-split-panel($split-left, $split-right, $height)
+ *
+ * Panel that contains three children, of which the first is left-aligned, with
+ * fixed width specified by $split-left argument, last is right-aligned with
+ * a width given by $split-right argument, and second child takes up the 
+ * remaining space between them. Note that $split-right argument is counted 
+ * from the right edge, not from left.
+ *
+ * The containing panel height is given by the $height argument, and the child 
+ * panels span the full height.
+ */
 /* line 8, ../../../src/scss/widgets/_contextbar.scss */
 .o-contextbar {
+  display: block;
   position: relative;
   height: 100%;
 }
-/* line 34, ../../../src/scss/elements/_panels.scss */
-.o-contextbar .o-panel {
+/* line 35, ../../../src/scss/elements/_panels.scss */
+.o-contextbar > .o-panel {
   position: absolute;
   top: 0;
   bottom: 0;
 }
-/* line 41, ../../../src/scss/elements/_panels.scss */
-.o-contextbar .o-panel:first-child {
+/* line 42, ../../../src/scss/elements/_panels.scss */
+.o-contextbar > .o-panel:first-child {
   left: 0;
   right: 3rem;
 }
-/* line 46, ../../../src/scss/elements/_panels.scss */
-.o-contextbar .o-panel:last-child {
+/* line 47, ../../../src/scss/elements/_panels.scss */
+.o-contextbar > .o-panel:last-child {
   width: 3rem;
   right: 0;
 }
@@ -398,4 +411,38 @@ html {
 /* line 24, ../../../src/scss/icons/_icons.scss */
 .o-contextbar .o-contextbar-menu-icon:before {
   content: "\f3f1";
+}
+
+/* line 4, ../../../src/scss/widgets/_multisearch.scss */
+.o-multisearch {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+/* line 85, ../../../src/scss/elements/_panels.scss */
+.o-multisearch > .o-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+/* line 91, ../../../src/scss/elements/_panels.scss */
+.o-multisearch > .o-panel:first-child {
+  left: 0;
+  width: 14rem;
+}
+/* line 96, ../../../src/scss/elements/_panels.scss */
+.o-multisearch > .o-panel:last-child {
+  right: 0;
+  width: 3rem;
+}
+/* line 101, ../../../src/scss/elements/_panels.scss */
+.o-multisearch > .o-panel:nth-child(2) {
+  left: 14rem;
+  right: 3rem;
+}
+/* line 10, ../../../src/scss/widgets/_multisearch.scss */
+.o-multisearch select, .o-multisearch input[type=text], .o-multisearch button {
+  width: 100%;
+  vertical-align: middle;
 }
