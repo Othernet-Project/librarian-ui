@@ -13,9 +13,10 @@ bottle.TEMPLATE_PATH.append(
 bottle.TEMPLATE_PATH.append(
     os.path.normpath(os.path.join(SCRIPT_PATH, '../librarian_ui/views')))
 
+_ = lambda x: x
 
 bottle.BaseTemplate.defaults.update({
-    '_': lambda x: x,  # Dummy i18n fn
+    '_': _,  # Dummy i18n fn
     'route': lambda x: '/' + x + '/',  # Dummy route fn
     'request': request,
 })
@@ -25,9 +26,18 @@ SEARCH_CHOICES = [
     ('ci', 'Search content'),
 ]
 
+CONTEXT_MENU_ITEMS = [
+    # id, label, path, icon class, enabled
+    ('upload', _('Upload new content'), '/upload', 'upload', True),
+    ('download', _('Download'), '/download', 'folder-download', True),
+    ('separator',),
+    ('settings', _('Settings'), '/settings', 'settings', False),
+    ('login', _('Log in'), '/login', 'login', True),
+]
 
 @get('/')
-@view('demo', search_mode_choices=SEARCH_CHOICES)
+@view('demo', search_mode_choices=SEARCH_CHOICES,
+      context_menu=CONTEXT_MENU_ITEMS)
 def demo():
     return {}
 
