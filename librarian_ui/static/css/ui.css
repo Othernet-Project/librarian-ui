@@ -652,20 +652,20 @@ select:focus {
   border-bottom: 0;
 }
 /* line 50, ../../../src/scss/widgets/_context_menu.scss */
-.o-context-menu .o-context-menu-menuitem:hover {
+.o-context-menu .o-context-menu-menuitem:hover, .o-context-menu .o-context-menu-menuitem:focus {
   color: #089bd2;
 }
-/* line 54, ../../../src/scss/widgets/_context_menu.scss */
-.o-context-menu .o-context-menu-menuitem.disabled, .o-context-menu .o-context-menu-menuitem:hover.disabled {
+/* line 55, ../../../src/scss/widgets/_context_menu.scss */
+.o-context-menu .o-context-menu-menuitem.disabled, .o-context-menu .o-context-menu-menuitem:hover.disabled, .o-context-menu .o-context-menu-menuitem:focus.disabled {
   color: #aaa;
   cursor: default;
 }
-/* line 61, ../../../src/scss/widgets/_context_menu.scss */
+/* line 63, ../../../src/scss/widgets/_context_menu.scss */
 .o-context-menu .o-context-menu-menuitem-icon {
   font-size: 144%;
   vertical-align: middle;
 }
-/* line 66, ../../../src/scss/widgets/_context_menu.scss */
+/* line 68, ../../../src/scss/widgets/_context_menu.scss */
 .o-context-menu .o-context-menu-separator {
   display: block;
   height: 4px;
