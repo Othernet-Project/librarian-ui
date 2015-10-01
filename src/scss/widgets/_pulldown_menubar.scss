@@ -29,14 +29,10 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
   &.open {
     top: 0; 
 
-    .o-pulldown-menubar-menu {
-      // Styling
-      background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
-    }
-
     .o-pulldown-menubar-hbar-activator {
       // Styling
       background-color: $o-pulldown-menubar-hbar-activator-highlight-color;
+      color: $o-pulldown-menubar-hbar-activator-highlight-text-color;
     }
 
     .o-pulldown-menubar-hbar-activator-icon {
@@ -54,10 +50,8 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     height: $o-pulldown-menubar-menu-height;
 
     // Styling
-    background-color: $o-pulldown-menubar-background;
-
-    // FX
-    @include transition(background-color $o-animation-speed);
+    background-color: $o-pulldown-menubar-menu-background;
+    color: $o-pulldown-menubar-menu-text-color;
   }
 
   .o-pulldown-menubar-hbar {
@@ -91,6 +85,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
 
     &:hover, &:focus {
       background: $o-pulldown-menubar-hbar-activator-highlight-color;
+      color: $o-pulldown-menubar-hbar-activator-highlight-text-color;
     }
   }
 
@@ -120,9 +115,11 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
 
     // Styling
     font-size: $o-pulldown-menubar-hbar-activator-icon-size;
-    color: $o-pulldown-menubar-hbar-activator-icon-color;
 
     // Icon
     @include mdi-icon($o-pulldown-menubar-hbar-activator-closed-icon);
+
+    // Fx
+    @include transition(color $o-animation-speed);
   }
 }

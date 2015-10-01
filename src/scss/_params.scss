@@ -62,10 +62,11 @@ $o-pulldown-menubar-hbar-height: $o-clickable-target-size !default;
 $o-pulldown-menubar-menu-height: $o-clickable-target-size * 3 !default;
 $o-pulldown-menubar-default-pos-left: 0 !default;
 $o-pulldown-menubar-default-pos-right: 0 !default;
-$o-pulldown-menubar-background: $o-base !default;
-$o-pulldown-menubar-text-color: $o-negative-base !default;
+$o-pulldown-menubar-background: darken($o-background, 15) !default;
+$o-pulldown-menubar-text-color: $o-base-text-color !default;
 $o-pulldown-menubar-hbar-activator-width: 5.4rem !default;
 $o-pulldown-menubar-hbar-activator-highlight-color: $o-accent !default;
+$o-pulldown-menubar-hbar-activator-highlight-text-color: $o-negative-base !default;
 $o-pulldown-menubar-hbar-activator-icon-color: $o-pulldown-menubar-text-color !default;
 $o-pulldown-menubar-hbar-activator-icon-size: 180% !default;
 $o-pulldown-menubar-hbar-activator-closed-icon: "chevron-down" !default;
@@ -73,6 +74,8 @@ $o-pulldown-menubar-hbar-activator-open-icon: "chevron-up" !default;
 $o-pulldown-menubar-hbar-activator-icon-top-offset: 0 !default;
 $o-pulldown-menubar-hbar-use-logo: yes !default;
 $o-pulldown-menubar-hbar-logo: logo !default;
+$o-pulldown-menubar-menu-background: $o-accent !default;
+$o-pulldown-menubar-menu-text-color: $o-negative-base !default;
 
 // Main panel
 $o-main-panel-top-offset: $o-pulldown-menubar-hbar-height !default;
