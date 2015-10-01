@@ -22,9 +22,12 @@
             </%def>
         </%ui:pulldown_menubar>
 
-        <%ui:main_panel id="main-panel">
-        Hello panel!
-        </%ui:main_panel>
+        ${ui.context_menu('context-menu')}
+
+        <div class="o-main-panel" id="${id}">
+            <%block name="main">
+            </%block>
+        </div>
 
         <%ui:statusbar id="main-status" label="Statusbar">
             <%def name="hbar()">
@@ -41,10 +44,12 @@
         <!-- Librarian UI modules -->
         <script src="/static/js/utils/dahelpers.js"></script>
         <script src="/static/js/utils/export.js"></script>
+        <script src="/static/js/utils/templates.js"></script>
         <script src="/static/js/elements/element.js"></script>
         <script src="/static/js/elements/expandable_box.js"></script>
         <script src="/static/js/widgets/pulldown_menubar.js"></script>
         <script src="/static/js/widgets/statusbar.js"></script>
+        <script src="/static/js/widgets/context_menu.js"></script>
 
         <!-- demo-specific modules -->
         <script src="/static/js/main.js"></script>

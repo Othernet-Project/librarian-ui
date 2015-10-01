@@ -24,3 +24,8 @@ html {
   color: $o-base-text-color;
 }
 
+body {
+  // Allow elements to go off the left and right edge without scrollbars 
+  // appearing at the bottom or page scrolling sideways.
+  overflow-x: hidden;
+}

@@ -9,3 +9,6 @@
 @import "widgets/statusbar";
 @import "widgets/contextbar";
 @import "widgets/multisearch";
+@import "widgets/context_menu";
+
+@include icon-classes;
