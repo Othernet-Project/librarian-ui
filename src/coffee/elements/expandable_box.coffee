@@ -24,13 +24,22 @@
     constructor: (@id) ->
       super(@id)
       @collapsed = true
-      @collapsibleElement = @element.find @collapsibleSection
-      @activatorElement = @element.find @activator
+      @collapsibleElement = @getCollapsible
+      @activatorElement = @getActivator()
       @activatorElement.on 'click', () =>
         @toggle()
 
     collapsibleSection: '.o-collapsible'
     activator: '.o-activator'
+
+    getCollapsible: () ->
+      if @collapsibleSection == 'self'
+        @element
+      else
+        @element.find @collapsibleSection
+
+    getActivator: () ->
+      @element.find @activator
 
     toggle: (cond) ->
       cond = if cond? then cond else @collapsed
