@@ -18,14 +18,6 @@
     updateAria: ()->
       false
 
-    ariaProperty: (name, value, element) ->
-      element ?= @element
-      if value?
-        value = value.toString()
-        element.attr("aria-#{name}", value)
-      else
-        element.attr("aria-#{name}")
-
   window.export 'Element', 'elements', Element
 
 ) this, this.jQuery
