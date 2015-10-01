@@ -28,10 +28,11 @@
  */
 @mixin split-panel($split, $height, $split-from-right: yes)  {
   // Basic geometry
+  display: block;
   position: relative;
   height: $height;
 
-  .o-#{$o-container-class} {
+  & > .o-#{$o-container-class} {
     // Basic geometry
     position: absolute;
     top: 0;
@@ -58,6 +59,48 @@
         left: $split;
         right: 0;
       }
+    }
+  }
+}
+
+
+/**
+ * double-split-panel($split-left, $split-right, $height)
+ *
+ * Panel that contains three children, of which the first is left-aligned, with
+ * fixed width specified by $split-left argument, last is right-aligned with
+ * a width given by $split-right argument, and second child takes up the 
+ * remaining space between them. Note that $split-right argument is counted 
+ * from the right edge, not from left.
+ *
+ * The containing panel height is given by the $height argument, and the child 
+ * panels span the full height.
+ */
+@mixin double-split-panel($split-left, $split-right, $height) {
+  // Basic geometry
+  display: block;
+  position: relative;
+  height: $height;
+
+  & > .o-#{$o-container-class} {
+    // Basic geometry
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    &:first-child {
+      left: 0;
+      width: $split-left;
+    }
+
+    &:last-child {
+      right: 0;
+      width: $split-right;
+    }
+
+    &:nth-child(2) {
+      left: $split-left;
+      right: $split-right;
     }
   }
 }
