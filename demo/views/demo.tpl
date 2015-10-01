@@ -15,7 +15,9 @@
             </%def>
             <%def name="hbar()">
                 <%ui:contextbar id="search-menubar">
-                    <%def name="panel()">Front</%def>
+                    <%def name="panel()">
+                    ${ui.multisearch('search', placeholder=_('Search'))}
+                    </%def>
                 </%ui:contextbar>
             </%def>
         </%ui:pulldown_menubar>

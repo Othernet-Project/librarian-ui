@@ -1,7 +1,7 @@
 import os
 
 import bottle
-from bottle import mako_view as view, get, static_file
+from bottle import mako_view as view, get, static_file, request
 
 SCRIPT_PATH = os.path.dirname(__file__)
 STATIC_DIR = os.path.normpath(
@@ -15,11 +15,19 @@ bottle.TEMPLATE_PATH.append(
 
 
 bottle.BaseTemplate.defaults.update({
-    '_': lambda x: x
+    '_': lambda x: x,  # Dummy i18n fn
+    'route': lambda x: '/' + x + '/',  # Dummy route fn
+    'request': request,
 })
 
+SEARCH_CHOICES = [
+    ('fs', 'Search files'),
+    ('ci', 'Search content'),
+]
+
+
 @get('/')
-@view('demo')
+@view('demo', search_mode_choices=SEARCH_CHOICES)
 def demo():
     return {}
 
