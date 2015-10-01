@@ -66,7 +66,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
     };
 
     ExpandableBox.prototype.updateAria = function() {
-      return this.ariaProperty('expanded', !this.collapsed, this.collapsibleElement);
+      return this.collapsibleElement.ariaProperty('expanded', !this.collapsed);
     };
 
     return ExpandableBox;

@@ -64,7 +64,7 @@
       true
 
     updateAria: () ->
-      @ariaProperty 'expanded', not @collapsed, @collapsibleElement
+      @collapsibleElement.ariaProperty 'expanded', not @collapsed
 
 
   window.export 'ExpandableBox', 'elements', ExpandableBox

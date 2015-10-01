@@ -20,6 +20,10 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
       return $(this.activator);
     };
 
+    ContextMenu.prototype.updateAria = function() {
+      return this.element.ariaProperty('hidden', this.collapsed);
+    };
+
     return ContextMenu;
 
   })(ExpandableBox);

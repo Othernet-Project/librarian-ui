@@ -9,6 +9,9 @@
     getActivator: () ->
       $ @activator
 
+    updateAria: () ->
+      @element.ariaProperty 'hidden', @collapsed
+
 
   window.export 'ContextMenu', 'widgets', ContextMenu
 

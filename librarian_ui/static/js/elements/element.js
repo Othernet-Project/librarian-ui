@@ -17,18 +17,6 @@
       return false;
     };
 
-    Element.prototype.ariaProperty = function(name, value, element) {
-      if (element == null) {
-        element = this.element;
-      }
-      if (value != null) {
-        value = value.toString();
-        return element.attr("aria-" + name, value);
-      } else {
-        return element.attr("aria-" + name);
-      }
-    };
-
     return Element;
 
   })();
