@@ -86,3 +86,19 @@
         </div>
     </form>
 </%def>
+
+<%def name="context_menu(id)">
+    <nav id="${id}" class="o-context-menu" role="menu" aria-hidden="true">
+        % for item in context['context_menu']:
+            % if item[0] == 'separator':
+            <span class="o-context-menu-separator"></span>
+            % else:
+            <% item_id, label, route_name, icon, enabled = item %>
+            <a href="${route(route_name) if enabled else 'javascript:void(0);'}" id="${item_id}" class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}" role="menuitem" arial-disabled="${'false' if enabled else 'true'}">
+                <span class="${'icon icon-{} '.format(icon) if icon else ''}o-context-menu-menuitem-icon"></span>
+                <span class="o-context-menu-menuitem-label">${label}</span>
+            </a>
+            % endif
+        % endfor
+    </nav>
+</%def>

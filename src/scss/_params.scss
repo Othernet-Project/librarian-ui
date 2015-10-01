@@ -19,6 +19,7 @@ $o-critical: #cc3737 !default;                      // red
 $o-warning: #efa417 !default;                       // orange
 $o-material: #eee !default;                         // light grey
 $o-dark-material: #ddd !default;                    // light grey
+$o-foreground-material: white !default;             // white (d'oh!)
 $o-background: #f8f8f8 !default;                    // very light grey
 $o-shadow: $o-material !default;
 $o-outline: #aaa !default;                          // dark grey
@@ -26,6 +27,7 @@ $o-outline-highlight: #ccc !default;                // medium grey
 $o-base-text-color: $o-base !default;
 $o-clickable-target-color: #fafafa !default;
 $o-clickable-target-shading: $o-clickable-target-color darken($o-clickable-target-color, 10) !default;
+$o-disabled: $o-outline !default;
 
 // Styling
 $o-widget-border: 1px solid $o-outline !default;
@@ -48,7 +50,8 @@ $o-input-width: 14rem;
 
 // FX
 $o-animation-speed: 0.3s !default;
-
+$o-long-animation-speed: $o-animation-speed * 2 !default;
+$o-front-shadow: 0 0 10px transparentize($o-base, 0.6);
 
 // ELEMENTS
 
@@ -127,6 +130,19 @@ $o-contextbar-menu-icon-top-offset: 1.6rem !default;
 $o-contextbar-menu-icon-size: 220%;
 $o-contextbar-menu-highlight-color: transparent !default;
 $o-contextbar-menu-highlight-text-color: $o-accent !default;
+
+// Context menu
+$o-context-menu-top-offset: $o-pulldown-menubar-hbar-height !default;
+$o-context-menu-width: 18rem !default;
+$o-context-menu-padding: 1rem !default;
+$o-context-menu-background: $o-foreground-material !default;
+$o-context-menu-text-color: $o-base-text-color !default;
+$o-context-menu-text-size: 120% !default;
+$o-context-menu-menuitem-spacing: 1rem !default;
+$o-context-menu-highlight-color: $o-accent !default;
+$o-context-menu-separator-size: 4px !default;
+$o-context-menu-separator-color: $o-dark-material;
+$o-context-menu-disabled-color: $o-disabled;
 
 // Multisearch
 $o-multisearch-width: 100% !default;
