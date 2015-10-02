@@ -46,6 +46,7 @@
         <script src="/static/js/utils/export.js"></script>
         <script src="/static/js/utils/templates.js"></script>
         <script src="/static/js/utils/aria.js"></script>
+        <script src="/static/js/utils/kbdnav.js"></script>
         <script src="/static/js/elements/element.js"></script>
         <script src="/static/js/elements/expandable_box.js"></script>
         <script src="/static/js/widgets/pulldown_menubar.js"></script>

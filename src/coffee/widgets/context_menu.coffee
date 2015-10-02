@@ -27,15 +27,7 @@
           return
         , 100
 
-      # Allow menu to be traversed with up and down arrow keys
-      @children.on 'keyup', (e) ->
-        # FIXME: This should be factored out into generic mixin/class
-        elem = $ @
-        switch e.which
-          when 38
-            elem.prevAll('a:not(.disabled)').first().focus()
-          when 40
-            elem.nextAll('a:not(.disabled)').first().focus()
+      @children.updownNav()
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'

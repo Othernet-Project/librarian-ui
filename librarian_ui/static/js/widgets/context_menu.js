@@ -30,16 +30,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
           }, 100);
         };
       })(this));
-      this.children.on('keyup', function(e) {
-        var elem;
-        elem = $(this);
-        switch (e.which) {
-          case 38:
-            return elem.prevAll('a:not(.disabled)').first().focus();
-          case 40:
-            return elem.nextAll('a:not(.disabled)').first().focus();
-        }
-      });
+      this.children.updownNav();
     }
 
     ContextMenu.prototype.collapsible = 'self';
