@@ -28,17 +28,25 @@ SEARCH_CHOICES = [
 
 CONTEXT_MENU_ITEMS = [
     # id, label, path, icon class, enabled
-    ('upload', _('Upload new content'), '/upload', 'upload', True),
-    ('download', _('Download'), '/download', 'folder-download', True),
+    ('upload', _('Upload new content'), 'upload', 'upload', True),
+    ('download', _('Download'), 'download', 'folder-download', True),
     ('separator',),
-    ('settings', _('Settings'), '/settings', 'settings', False),
-    ('login', _('Log in'), '/login', 'login', True),
+    ('settings', _('Settings'), 'settings', 'settings', False),
+    ('login', _('Log in'), 'login', 'login', True),
+    ('separator',),
+    ('help', _('Help'), 'help', 'help-circle', True),
 ]
 
 @get('/')
 @view('demo', search_mode_choices=SEARCH_CHOICES,
       context_menu=CONTEXT_MENU_ITEMS)
 def demo():
+    return {}
+
+
+@get('/help/')
+@view('help')
+def help():
     return {}
 
 
