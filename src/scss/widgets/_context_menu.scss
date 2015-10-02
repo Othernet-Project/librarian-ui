@@ -47,12 +47,14 @@
       border-bottom: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $o-context-menu-highlight-color;
     }
 
     &.disabled,
-    &:hover.disabled {
+    &:hover.disabled,
+    &:focus.disabled {
       color: $o-context-menu-disabled-color;
       cursor: default;
     }

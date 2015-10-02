@@ -8,13 +8,45 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
   ContextMenu = (function(superClass) {
     extend(ContextMenu, superClass);
 
-    function ContextMenu() {
-      return ContextMenu.__super__.constructor.apply(this, arguments);
+    function ContextMenu(id) {
+      this.id = id;
+      ContextMenu.__super__.constructor.call(this, this.id);
+      this.children = $('.o-context-menu-menuitem');
+      this.refocusTimeout = null;
+      this.children.on('focus', (function(_this) {
+        return function() {
+          if (_this.refocusTimeout != null) {
+            clearTimeout(_this.refocusTimeout);
+          }
+          if (_this.collapsed) {
+            _this.open();
+          }
+        };
+      })(this));
+      this.children.on('blur', (function(_this) {
+        return function() {
+          return _this.refocusTimeout = setTimeout(function() {
+            _this.close();
+          }, 100);
+        };
+      })(this));
+      this.children.on('keyup', function(e) {
+        var elem;
+        elem = $(this);
+        switch (e.which) {
+          case 38:
+            return elem.prevAll('a:not(.disabled)').first().focus();
+          case 40:
+            return elem.nextAll('a:not(.disabled)').first().focus();
+        }
+      });
     }
 
     ContextMenu.prototype.collapsible = 'self';
 
     ContextMenu.prototype.activator = '.o-contextbar-menu';
+
+    ContextMenu.prototype.onOpen = function() {};
 
     ContextMenu.prototype.getActivator = function() {
       return $(this.activator);
