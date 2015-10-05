@@ -5,7 +5,7 @@ DEMO_JSDIR = demo/static/js
 SCSS_SRC = src/scss
 DEMO_SCSS_SRC = demo/src/scss
 COMPASS_CONF = conf/config.rb
-DEMO_COMPASS_CONF = demo/conf/config.rb
+DEMO_COMPASS_CONF = conf/demo_config.rb
 SCRIPTS = scripts
 EXCLUDE = vendor
 
@@ -28,8 +28,10 @@ restart: stop watch
 
 recompile: 
 	compass compile --force -c $(COMPASS_CONF)
+	# NOT USED: compass compile --force -c $(DEMO_COMPASS_CONF)
 	find $(JSDIR) -path $(JSDIR)/$(EXCLUDE) -prune -o -name "*.js" -exec rm {} +
 	coffee --bare -c --output $(JSDIR) $(COFFEE_SRC)
+	coffee --bare -c --output $(JSDIR) $(DEMO_COFFEE_SRC)
 
 $(COMPASS_PID): $(SCRIPTS)/compass.sh
 	$< start $@ $(COMPASS_CONF)
