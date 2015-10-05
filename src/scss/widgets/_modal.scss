@@ -1,0 +1,35 @@
+@import "params";
+
+.o-modal-overlay {
+  // Basic geometry
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  // Stylng
+  background: $o-modal-overlay-color;
+  cursor: pointer;
+
+  // Panel
+
+  .o-modal-panel {
+    // Basic geometry
+    margin: 0 auto;
+    max-width: $o-modal-panel-max-width;
+    width: 90%;
+    max-height: $o-modal-panel-max-height;
+    min-height: $o-modal-panel-min-height;
+    overflow-y: auto;
+  }
+
+  .o-modal-spinner {
+    // Basic geometry
+    display: inline-block;
+    margin: 4rem auto;
+  }
+}
