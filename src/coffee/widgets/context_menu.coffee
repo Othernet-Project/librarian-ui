@@ -28,11 +28,12 @@
         , 100
 
       @children.updownNav()
+
       @children.on 'click', (e) ->
         e.preventDefault()
         elem = $ this
         url = elem.attr 'href'
-        $.openModal url
+        $.modalContent url
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'

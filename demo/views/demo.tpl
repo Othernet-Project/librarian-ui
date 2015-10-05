@@ -23,7 +23,7 @@
         </%ui:pulldown_menubar>
 
         <%ui:context_menu id="context-menu">
-            ## menu items
+            ${ui.context_menu_item(id="help", label=_('Help'), route_name="help", icon="help", enabled=True)}
         </%ui:context_menu>
 
         <div class="o-main-panel" id="${id}">
@@ -41,11 +41,15 @@
         </%ui:statusbar>
 
         <!-- inline JS templates -->
-        <script="text/tempate" id="modalContent">
+        <script type="text/template" id="modalContent">
             <div class="o-modal-overlay" id="modal-content">
-                <div class="o-modal-window" role="window" id="modal-window">
+                <div class="o-modal-window" role="window" id="modal-content-window" tabindex>
+                    <button id="modal-content-close" class="o-modal-close" role="button" aria-controls="modal-content-window">
+                        <span class="o-modal-close-label">${_('Close')}</span>
+                        <span class="o-modal-close-icon icon"></span>
+                    </button>
                     <div class="o-modal-content o-modal-panel" role="document" id="modal-panel">
-                        <span class="o-modal-spinner">${_('Loading...')}</span>
+                        <span class="o-modal-spinner">${_('Loading')}<span class="o-modal-spinner-loading-indicator">...</span></span>
                     </div>
                 </div>
             </div>

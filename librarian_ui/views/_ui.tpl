@@ -93,7 +93,7 @@
     </nav>
 </%def>
 
-<%def name="context_menu_item(id, label, rute_name, icon, enabled)">
+<%def name="context_menu_item(id, label, route_name, icon, enabled)">
     <a href="${route(route_name) if enabled else 'javascript:void(0);'}" id="${id}" class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}" role="menuitem" arial-disabled="${'false' if enabled else 'true'}">
         <span class="${'icon icon-{} '.format(icon) if icon else ''}o-context-menu-menuitem-icon"></span>
         <span class="o-context-menu-menuitem-label">${label}</span>

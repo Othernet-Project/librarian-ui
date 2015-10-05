@@ -36,7 +36,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         e.preventDefault();
         elem = $(this);
         url = elem.attr('href');
-        return $.openModal(url);
+        return $.modalContent(url);
       });
     }
 

@@ -87,9 +87,17 @@ $o-button-hover-face-shading: $o-button-hover-face-color darken($o-button-hover-
 
 // Modal window
 $o-modal-overlay-color: transparentize($o-base, 0.2) !default;
-$o-modal-panel-max-width: 35rem !default;
-$o-modal-panel-max-height: 90% !default;
-$o-modal-panel-min-height: 20% !default;
+$o-modal-window-max-width: 35rem !default;
+$o-modal-window-max-height: 90% !default;
+$o-modal-window-min-height: 20% !default;
+$o-modal-window-shadow: 0 0 10px transparentize($o-base, 0.2) !default;
+$o-modal-window-padding: 1rem !default;
+$o-modal-window-background: $o-foreground-material !default;
+$o-modal-close-show-label: no !default;
+$o-modal-close-icon: close !default;
+$o-modal-close-icon-size: 180% !default;
+$o-modal-close-top-offset: 0 !default;
+$o-modal-close-right-offset: 0.5rem !default;
 
 // Pulldown menubar
 $o-pulldown-menubar-hbar-height: $o-clickable-target-size * 2 !default;
