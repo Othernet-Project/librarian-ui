@@ -31,7 +31,8 @@
       @children.on 'click', (e) ->
         e.preventDefault()
         elem = $ this
-        url = elem.data 'url'
+        url = elem.attr 'href'
+        $.openModal url
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'
