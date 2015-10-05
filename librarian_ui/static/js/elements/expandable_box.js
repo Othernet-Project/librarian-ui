@@ -12,7 +12,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
       this.id = id;
       ExpandableBox.__super__.constructor.call(this, this.id);
       this.collapsed = true;
-      this.collapsibleElement = this.getCollapsible;
+      this.collapsibleElement = this.getCollapsible();
       this.activatorElement = this.getActivator();
       this.activatorElement.on('click', (function(_this) {
         return function() {

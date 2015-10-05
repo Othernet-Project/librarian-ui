@@ -24,7 +24,7 @@
     constructor: (@id) ->
       super(@id)
       @collapsed = true
-      @collapsibleElement = @getCollapsible
+      @collapsibleElement = @getCollapsible()
       @activatorElement = @getActivator()
       @activatorElement.on 'click', () =>
         @toggle()
