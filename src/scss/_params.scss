@@ -85,6 +85,12 @@ $o-button-hover-text-color: $o-negative-base !default;
 $o-button-hover-face-color: $o-accent !default;
 $o-button-hover-face-shading: $o-button-hover-face-color darken($o-button-hover-face-color, 10);
 
+// Modal window
+$o-modal-overlay-color: transparentize($o-base, 0.2) !default;
+$o-modal-panel-max-width: 35rem !default;
+$o-modal-panel-max-height: 90% !default;
+$o-modal-panel-min-height: 20% !default;
+
 // Pulldown menubar
 $o-pulldown-menubar-hbar-height: $o-clickable-target-size * 2 !default;
 $o-pulldown-menubar-menu-height: $o-clickable-target-size * 3 !default;

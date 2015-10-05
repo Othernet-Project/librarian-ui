@@ -28,6 +28,10 @@
         , 100
 
       @children.updownNav()
+      @children.on 'click', (e) ->
+        e.preventDefault()
+        elem = $ this
+        url = elem.data 'url'
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'

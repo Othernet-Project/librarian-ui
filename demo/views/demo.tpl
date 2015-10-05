@@ -22,7 +22,9 @@
             </%def>
         </%ui:pulldown_menubar>
 
-        ${ui.context_menu('context-menu')}
+        <%ui:context_menu id="context-menu">
+            ## menu items
+        </%ui:context_menu>
 
         <div class="o-main-panel" id="${id}">
             <%block name="main">
@@ -38,6 +40,17 @@
             </%def>
         </%ui:statusbar>
 
+        <!-- inline JS templates -->
+        <script="text/tempate" id="modalContent">
+            <div class="o-modal-overlay" id="modal-content">
+                <div class="o-modal-window" role="window" id="modal-window">
+                    <div class="o-modal-content o-modal-panel" role="document" id="modal-panel">
+                        <span class="o-modal-spinner">${_('Loading...')}</span>
+                    </div>
+                </div>
+            </div>
+        </script>
+
         <!-- third-party libraries -->
         <script src="/static/js/jquery.js"></script>
 
@@ -47,6 +60,7 @@
         <script src="/static/js/utils/templates.js"></script>
         <script src="/static/js/utils/aria.js"></script>
         <script src="/static/js/utils/kbdnav.js"></script>
+        <script src="/static/js/utils/modal.js"></script>
         <script src="/static/js/elements/element.js"></script>
         <script src="/static/js/elements/expandable_box.js"></script>
         <script src="/static/js/widgets/pulldown_menubar.js"></script>

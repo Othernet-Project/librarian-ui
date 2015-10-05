@@ -31,6 +31,12 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         };
       })(this));
       this.children.updownNav();
+      this.children.on('click', function(e) {
+        var elem, url;
+        e.preventDefault();
+        elem = $(this);
+        return url = elem.data('url');
+      });
     }
 
     ContextMenu.prototype.collapsible = 'self';
