@@ -27,11 +27,9 @@ stop:
 restart: stop watch
 
 recompile: 
-	compass compile --force $(COMPASS_CONF)
-	compass compile --force $(DEMO_COMPASS_CONF)
+	compass compile --force -c $(COMPASS_CONF)
 	find $(JSDIR) -path $(JSDIR)/$(EXCLUDE) -prune -o -name "*.js" -exec rm {} +
 	coffee --bare -c --output $(JSDIR) $(COFFEE_SRC)
-	coffee --bare -c --output $(JSDIR) $(DEMO_COFFEE_SRC)
 
 $(COMPASS_PID): $(SCRIPTS)/compass.sh
 	$< start $@ $(COMPASS_CONF)
