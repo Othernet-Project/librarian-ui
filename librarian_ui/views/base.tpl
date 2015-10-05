@@ -44,7 +44,7 @@
         </%ui:statusbar>
 
         <!-- third-party libraries -->
-        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/vendors/jquery.js"></script>
 
         <!-- Librarian UI modules -->
         <script src="/static/js/utils/dahelpers.js"></script>

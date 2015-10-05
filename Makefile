@@ -7,7 +7,7 @@ DEMO_SCSS_SRC = demo/src/scss
 COMPASS_CONF = conf/config.rb
 DEMO_COMPASS_CONF = conf/demo_config.rb
 SCRIPTS = scripts
-EXCLUDE = vendor
+EXCLUDE = vendors
 
 COMPASS_PID = .compass_pid
 DEMO_COMPASS_PID = .compass_demo_pid
