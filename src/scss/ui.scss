@@ -1,5 +1,6 @@
 @import "compass/reset";
 @import "base";
+@import "typography";
 @import "icons/materialdesignicons";
 @import "elements/images";
 @import "widgets/button";
@@ -10,5 +11,6 @@
 @import "widgets/contextbar";
 @import "widgets/multisearch";
 @import "widgets/context_menu";
+@import "widgets/modal";
 
 @include icon-classes;
