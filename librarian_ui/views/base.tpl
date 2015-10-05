@@ -6,7 +6,7 @@
     <head>
         <title>Librarian UI demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="${assets['css/ui']}">
+        <link rel="stylesheet" href="${assets['css/lui']}">
     </head>
     <body>
         <%ui:pulldown_menubar id="menubar-top" label="Main menu">
@@ -44,17 +44,8 @@
         </%ui:statusbar>
 
         <!-- third-party libraries -->
-        <script src="/static/js/vendors/jquery.js"></script>
+        <script src="${assets['js/lui']}"></script>
 
-        <!-- Librarian UI modules -->
-        <script src="/static/js/utils/dahelpers.js"></script>
-        <script src="/static/js/utils/export.js"></script>
-        <script src="/static/js/elements/element.js"></script>
-        <script src="/static/js/elements/expandable_box.js"></script>
-        <script src="/static/js/widgets/pulldown_menubar.js"></script>
-        <script src="/static/js/widgets/statusbar.js"></script>
-
-        <!-- demo-specific modules -->
         <script src="/static/js/main.js"></script>
     </body>
 </html>
