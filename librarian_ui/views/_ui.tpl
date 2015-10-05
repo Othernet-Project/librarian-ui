@@ -99,3 +99,7 @@
         <span class="o-context-menu-menuitem-label">${label}</span>
     </a>
 </%def>
+
+<%def name="context_menu_separator()">
+    <span class="o-context-menu-separator"></span>
+</%def>
