@@ -26,7 +26,7 @@ various parts of the interface. This includes:
   _below_ the default scripts
 </%doc>
 
-<%namespace name="ui" file="_ui.tpl"/>
+<%namespace name="ui" file="ui/widgets.tpl"/>
 
 <% 
 # Global constants
