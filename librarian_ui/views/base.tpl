@@ -40,7 +40,7 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
 
 <html lang="en" xml:lang="en">
     <head>
-        <title><%block name="title"></%block> Librarian v${th.app_version()}</title>
+        <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="${assets['css/lui']}">
         % if redirect_url is not UNDEFINED:
