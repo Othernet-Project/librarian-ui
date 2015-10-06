@@ -1,11 +1,7 @@
 ((window) ->
 
-  # Saves the original reference to any `o` object that may exist
-  if window.o?
-    window.oOrig = window.o
-
   # Defines a global `o` object to serve as namespace
-  window.o = {}
+  window.o ?= {}
 
   # Releases the original `o` object and returns the current value of `o`
   window.releaseO = () ->
