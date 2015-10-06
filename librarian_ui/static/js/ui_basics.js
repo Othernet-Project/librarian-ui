@@ -4,7 +4,7 @@
   PulldownMenubar = window.o.widgets.PulldownMenubar;
   Statusbar = window.o.widgets.Statusbar;
   ContextMenu = window.o.widgets.ContextMenu;
-  pdmb = new PulldownMenubar('menubar-top');
-  scrl = new Statusbar('main-status');
-  return ctxm = new ContextMenu('context-menu');
+  pdmb = new PulldownMenubar(window.o.pageVars.menubarId);
+  scrl = new Statusbar(window.o.pageVars.statusbarId);
+  return ctxm = new ContextMenu(window.o.pageVars.contextmenuId);
 })(this, this.jQuery);

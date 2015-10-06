@@ -107,6 +107,19 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
 
         <%block name="extra_body"/>
 
+        <script type="text/javascript">
+        // Global variables
+        (function (window) {
+            window.o = window.o == null ? {} : window.o;
+            window.o.pageVars = {
+                menubarId: "${MENUBAR_ID}",
+                statusbarId: "${STATUSBAR_ID}",
+                contextbarId: "${CONTEXT_BAR_ID}",
+                contextmenuId: "${CONTEXT_MENU_ID}"
+            };
+        }(this));
+        </script>
+
         <script src="${assets['js/lui']}"></script>
 
         <%block name="extra_scripts"/>

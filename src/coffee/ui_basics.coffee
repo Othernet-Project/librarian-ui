@@ -4,8 +4,8 @@
   Statusbar = window.o.widgets.Statusbar
   ContextMenu = window.o.widgets.ContextMenu
 
-  pdmb = new PulldownMenubar('menubar-top')
-  scrl = new Statusbar('main-status')
-  ctxm = new ContextMenu('context-menu')
+  pdmb = new PulldownMenubar window.o.pageVars.menubarId
+  scrl = new Statusbar window.o.pageVars.statusbarId
+  ctxm = new ContextMenu window.o.pageVars.contextmenuId
 
 ) this, this.jQuery
