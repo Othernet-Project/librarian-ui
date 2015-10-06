@@ -1,45 +1,15 @@
 <%namespace name="forms" file="_forms.tpl"/>
-## Contextbar
-##
-## Split panel with menu icon to the right and empty panel to the left.
-##
-
-<%def name="contextbar(id, label='open')">
-    <div class="o-contextbar o-panel" id="${id}">
-        <div class="o-panel">
-        ${caller.panel()}
-        </div>
-        <div class="o-panel">
-            <a href="#menu" class="o-contextbar-menu">
-                <span class="o-contextbar-menu-label">${label}</span>
-                <span class="o-contextbar-menu-icon icon"></span>
-            </a>
-        </div>
-    </div>
-</%def>
 
 ## Pulldown menubar
 ##
 ## Renders several containers representing pulldown menubars.
 ## 
 
-<%def name="pulldown_menubar(id, label='open/close')">
-    <header class="o-pulldown-menubar" id="${id}" role="section">
-        <nav class="o-pulldown-menubar-menu o-collapsible" id="${id}-menu" role="menubar" aria-expanded="false">
-        ${caller.menu()}
-        </nav>
-        <div class="o-pulldown-menubar-hbar" id="${id}-hbar" role="menubar">
-            <a href="#${id}-menu" role="button" aria-controls="${id}" class="o-pulldown-menubar-hbar-activator o-activator">
-                <span class="o-pulldown-menubar-hbar-activator-label">${label}</span>
-                <span class="o-pulldown-menubar-hbar-activator-icon icon"></span>
-            </a>
-            <div class="o-pulldown-menubar-hbar-bar">
-                ${caller.hbar()}
-            </div>
-        </div>
-    </header>
+<%def name="apps_menu(id)">
+    <nav class="o-pulldown-menubar-menu o-collapsible" id="${id}-menu" role="menubar" aria-expanded="false">
+    ${caller.body()}
+    </nav>
 </%def>
-
 
 ## Status bar (bottom bar)
 ##
@@ -87,14 +57,8 @@
     </form>
 </%def>
 
-<%def name="context_menu(id)">
-    <nav id="${id}" class="o-context-menu" role="menu" aria-hidden="true">
-    ${caller.body()}
-    </nav>
-</%def>
-
-<%def name="context_menu_item(id, label, route_name, icon, enabled)">
-    <a href="${route(route_name) if enabled else 'javascript:void(0);'}" id="${id}" class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}" role="menuitem" arial-disabled="${'false' if enabled else 'true'}">
+<%def name="context_menu_item(id, label, url, icon, enabled)">
+    <a href="${url if enabled else 'javascript:void(0);'}" id="${id}" class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}" role="menuitem" arial-disabled="${'false' if enabled else 'true'}">
         <span class="${'icon icon-{} '.format(icon) if icon else ''}o-context-menu-menuitem-icon"></span>
         <span class="o-context-menu-menuitem-label">${label}</span>
     </a>

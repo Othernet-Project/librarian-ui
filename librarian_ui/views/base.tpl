@@ -1,51 +1,114 @@
+<%doc>
+The base template
+=================
+
+Base template sets the basic UI elements for all 'full' pages. A 'full' page is
+a page that provides the complete set of auxiliarry interface elements such as 
+navigation, sidebars, status bars, and menus.
+
+The base template provides several Mako blocks that can be used to overload 
+various parts of the interface. This includes:
+
+- ``title``: Sets the page title
+- ``menubar_panel``: Sets the contents of the panel inside the pull-down
+  menubar's hbar section (between the logo and context menu)
+- ``context_menu``: Sets the contents of the context menu
+- ``main``: Sets the content of the main panel (this is where most of the 
+  page-specific UI elements go)
+- ``statusbar_quick``: Sets the contents of the quick status area (left of the 
+  statusbar toggle activator
+- ``statusbar_panel``: Sets the contetns of the statusbar panel (expandable
+  portion)
+- ``extra_head``: Can be used to add arbitrary markup to the <head> section
+- ``extra_body``: Can be used to add arbitrary markup to the <body> but 
+  _above_ the scripts
+- ``extra_scripts``: Can be used to add arbitrary markup to the <body> but
+  _below_ the default scripts
+</%doc>
+
 <%namespace name="ui" file="_ui.tpl"/>
+
+<% 
+# Global constants
+MENUBAR_ID = context.get('MENUBAR_ID', 'menubar-top')
+STATUSBAR_ID = context.get('STATUSBAR_ID', 'status') 
+CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
+CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
+%>
 
 <!doctype html>
 
 <html lang="en" xml:lang="en">
     <head>
-        <title>Librarian UI demo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><%block name="title"></%block> Librarian v${th.app_version()}</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="${assets['css/lui']}">
+        % if redirect_url is not UNDEFINED:
+        <meta http-equiv="refresh" content="${REDIRECT_DELAY}; url=${redirect_url}">
+        % endif
+        <%block name="extra_head"/>
     </head>
     <body>
-        <%ui:pulldown_menubar id="menubar-top" label="Main menu">
-            <%def name="menu()">
+        <header class="o-pulldown-menubar" id="${MENUBAR_ID}" role="section">
+            <%ui:apps_menu id="${MENUBAR_ID}">
                 Hello menu
-            </%def>
-            <%def name="hbar()">
-                <%ui:contextbar id="search-menubar">
-                    <%def name="panel()">
-                    ${ui.multisearch('search', placeholder=_('Search'))}
-                    </%def>
-                </%ui:contextbar>
-            </%def>
-        </%ui:pulldown_menubar>
+            </%ui:apps_menu>
+            <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
+                <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
+                    <span class="o-pulldown-menubar-hbar-activator-label">${_('Toggle apps menu')}</span>
+                    <span class="o-pulldown-menubar-hbar-activator-icon icon"></span>
+                </a>
+                <div class="o-pulldown-menubar-hbar-bar">
+                    <div class="o-contextbar o-panel" id="${CONTEXT_BAR_ID}">
+                        <div class="o-panel">
+                        <%block name="menubar_panel"/>
+                        </div>
+                        <div class="o-panel">
+                            <a href="#${CONTEXT_MENU_ID}" class="o-contextbar-menu" role="button" arial-controls="${CONTEXT_MENU_ID}">
+                                <span class="o-contextbar-menu-label">${_('Toggle context menu')}</span>
+                                <span class="o-contextbar-menu-icon icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
+        <%block name="context_menu">
+            ## Use ``ui.context_menu_item()`` def to build your context menu
+            ${ui.context_menu_item('about', _('About'), '/about/', 'information-outline', True)}
+        </%block>
+        </nav>
 
         <div class="o-main-panel" id="main-panel">
         <%block name="main">
-            <%block name="content">
-                <div class="inner">
-                    <%block name="inner">
-                    ${self.body(**context.kwargs)}
-                    </%block>
-                </div>
-            </%block>
+            ${self.body(**context.kwargs)}
         </%block>
         </div>
 
-        <%ui:statusbar id="main-status" label="Statusbar">
-            <%def name="hbar()">
-            Hello statusbar!
-            </%def>
-            <%def name="status()">
-            Librarian UI 0.1
-            </%def>
-        </%ui:statusbar>
+        <footer class="o-statusbar" id="${STATUSBAR_ID}">
+            <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
+                <div class="o-statusbar-hbar-quick-status">
+                <%block name="statusbar_quick"/>
+                </div>
+                <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
+                    <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
+                    <span class="o-statusbar-hbar-activator-icon icon"></span>
+                </a>
+            </div>
+            <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
+            <%block name="statusbar_panel">
+                <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
+                <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
+            </%block>
+            </div>
+        </footer>
 
-        <!-- third-party libraries -->
+        <%block name="extra_body"/>
+
         <script src="${assets['js/lui']}"></script>
 
-        <script src="/static/js/main.js"></script>
+        <%block name="extra_scripts"/>
     </body>
 </html>
