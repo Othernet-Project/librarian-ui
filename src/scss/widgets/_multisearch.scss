@@ -20,10 +20,11 @@
   }
 
   // Child elements
-  select, input[type=text], button {
+  select, input[type=text], button, label {
     display: inline-block;
     width: $o-multisearch-input-width;
     vertical-align: middle;
+    margin: 0;
   }
 
   input[type=text] {
@@ -41,6 +42,27 @@
   button {
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(0);
+  }
+
+  label {
+    // Typography
+    font-family: $o-base-font;
+    font-size: $o-base-text-size;
+    text-align: center;
+
+    // Base geometry
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.3rem 0.2rem;
+
+    // Styling
+    border: $o-widget-border;
+    border-top-color: $o-outline-highlight;
+    @include border-top-left-radius($o-clickable-target-corner-radius);
+    @include border-bottom-left-radius($o-clickable-target-corner-radius);
+
+
   }
 
   .o-multisearch-button-icon {
