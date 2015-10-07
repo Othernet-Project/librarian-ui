@@ -1,6 +1,7 @@
 ((window, $) ->
 
   ExpandableBox = window.o.elements.ExpandableBox
+  loadFailure = window.templates.modalLoadFailure
 
   class ContextMenu extends ExpandableBox
     constructor: (@id) ->
@@ -33,7 +34,7 @@
         e.preventDefault()
         elem = $ this
         url = elem.attr 'href'
-        $.modalContent url
+        $.modalContent url, loadFailure
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'

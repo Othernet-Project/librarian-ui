@@ -3,8 +3,9 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
   hasProp = {}.hasOwnProperty;
 
 (function(window, $) {
-  var ContextMenu, ExpandableBox;
+  var ContextMenu, ExpandableBox, loadFailure;
   ExpandableBox = window.o.elements.ExpandableBox;
+  loadFailure = window.templates.modalLoadFailure;
   ContextMenu = (function(superClass) {
     extend(ContextMenu, superClass);
 
@@ -36,7 +37,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         e.preventDefault();
         elem = $(this);
         url = elem.attr('href');
-        return $.modalContent(url);
+        return $.modalContent(url, loadFailure);
       });
     }
 
