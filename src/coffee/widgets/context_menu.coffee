@@ -34,7 +34,8 @@
         e.preventDefault()
         elem = $ this
         url = elem.attr 'href'
-        $.modalContent url, loadFailure
+        $.modalContent url
+        return
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'
@@ -47,6 +48,7 @@
 
     updateAria: () ->
       @element.ariaProperty 'hidden', @collapsed
+      return
 
 
   window.export 'ContextMenu', 'widgets', ContextMenu

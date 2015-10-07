@@ -37,7 +37,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         e.preventDefault();
         elem = $(this);
         url = elem.attr('href');
-        return $.modalContent(url, loadFailure);
+        $.modalContent(url);
       });
     }
 
@@ -52,7 +52,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
     };
 
     ContextMenu.prototype.updateAria = function() {
-      return this.element.ariaProperty('hidden', this.collapsed);
+      this.element.ariaProperty('hidden', this.collapsed);
     };
 
     return ContextMenu;
