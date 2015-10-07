@@ -82,9 +82,9 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
         </nav>
 
         <div class="o-main-panel" id="main-panel">
-        <%block name="main">
-            ${self.body(**context.kwargs)}
-        </%block>
+            <%block name="main">
+                ${self.body(**context.kwargs)}
+            </%block>
         </div>
 
         <footer class="o-statusbar" id="${STATUSBAR_ID}">
