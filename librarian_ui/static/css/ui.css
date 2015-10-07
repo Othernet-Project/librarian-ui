@@ -94,6 +94,11 @@ select:-moz-focusring {
 }
 
 /* line 19, ../../../src/scss/_base.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 23, ../../../src/scss/_base.scss */
 html {
   font-family: Arial, Helvetica, "Liberation Sans", "Open Sans", sans-serif;
   font-size: 14px;
@@ -102,7 +107,7 @@ html {
   color: #333;
 }
 
-/* line 27, ../../../src/scss/_base.scss */
+/* line 31, ../../../src/scss/_base.scss */
 body {
   overflow-x: hidden;
 }
@@ -591,12 +596,13 @@ select:focus {
   padding-right: 2rem;
 }
 /* line 23, ../../../src/scss/widgets/_multisearch.scss */
-.o-multisearch select, .o-multisearch input[type=text], .o-multisearch button {
+.o-multisearch select, .o-multisearch input[type=text], .o-multisearch button, .o-multisearch label {
   display: inline-block;
   width: 100%;
   vertical-align: middle;
+  margin: 0;
 }
-/* line 29, ../../../src/scss/widgets/_multisearch.scss */
+/* line 30, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch input[type=text] {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -604,7 +610,7 @@ select:focus {
   border-left: 0;
   border-right: 0;
 }
-/* line 36, ../../../src/scss/widgets/_multisearch.scss */
+/* line 37, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch select {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
@@ -613,7 +619,7 @@ select:focus {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 41, ../../../src/scss/widgets/_multisearch.scss */
+/* line 42, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch button {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -622,7 +628,25 @@ select:focus {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 46, ../../../src/scss/widgets/_multisearch.scss */
+/* line 47, ../../../src/scss/widgets/_multisearch.scss */
+.o-multisearch label {
+  font-family: Arial, Helvetica, "Liberation Sans", "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.3rem 0.2rem;
+  border: 1px solid #aaa;
+  border-top-color: #ccc;
+  -moz-border-radius-topleft: 0.3rem;
+  -webkit-border-top-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  -moz-border-radius-bottomleft: 0.3rem;
+  -webkit-border-bottom-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+/* line 68, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch .o-multisearch-button-icon {
   font-size: 180%;
 }
@@ -630,7 +654,7 @@ select:focus {
 .o-multisearch .o-multisearch-button-icon:before {
   content: "\f3de";
 }
-/* line 53, ../../../src/scss/widgets/_multisearch.scss */
+/* line 75, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch .o-multisearch-button-label {
   display: none;
 }
@@ -640,7 +664,7 @@ select:focus {
   position: absolute;
   right: -19rem;
   z-index: 2;
-  top: 6rem;
+  top: 7rem;
   width: 18rem;
   padding: 1rem;
   padding-right: 2rem;
