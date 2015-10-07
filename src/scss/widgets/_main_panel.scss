@@ -1,9 +1,14 @@
-@import "params";
+@import "base/params";
 
 .o-main-panel {
-  // Basic geometry
-  padding-top: $o-main-panel-top-offset;
-  padding-bottom: $o-main-panel-bottom-offset;
-  padding-left: $o-main-panel-padding;
-  padding-right: $o-main-panel-padding;
+  position: fixed;
+  top: $o-main-panel-top-offset;
+  bottom: $o-main-panel-bottom-offset;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+
+  .o-main-inner {
+    padding: $o-main-panel-inner-padding;
+  }
 }
