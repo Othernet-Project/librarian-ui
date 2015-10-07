@@ -1,7 +1,7 @@
 @import "compass/css3";
 @import "compass/typography/text/replacement";
 
-@import "params";
+@import "base/params";
 @import "elements/images";
 
 $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menubar-menu-height;

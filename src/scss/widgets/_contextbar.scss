@@ -1,9 +1,9 @@
 @import "compass/css3";
 @import "compass/typography/text/replacement";
 
-@import "params";
-@import "icons/icons";
+@import "base/params";
 @import "base/panels";
+@import "icons/icons";
 
 .o-contextbar {
   // Basic geometry
