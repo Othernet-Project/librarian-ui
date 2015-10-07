@@ -24,14 +24,20 @@
       return elem.parents('.o-modal-overlay').remove();
     }
   });
-  return $.modalContent = function(contentUrl) {
-    var modal, panel;
+  return $.modalContent = function(contentUrl, failureTemplate) {
+    var modal, panel, res;
     $('#modal-content').remove();
     modal = $(templates.modalContent);
     modal.appendTo(body);
     window = modal.find('.o-modal-window');
     window.focus();
     panel = modal.find('.o-modal-panel');
-    return panel.load(contentUrl);
+    res = $.get(contentUrl);
+    res.done(function(data) {
+      return panel.html(data);
+    });
+    return res.fail(function() {
+      return panel.html(failureTemplate);
+    });
   };
 })(this, this.jQuery, this.templates);

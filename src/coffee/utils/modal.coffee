@@ -20,7 +20,7 @@
     if e.which == ESCAPE
       elem.parents('.o-modal-overlay').remove()
 
-  $.modalContent = (contentUrl) ->
+  $.modalContent = (contentUrl, failureTemplate) ->
     # Kill old modal
     $('#modal-content').remove()
 
@@ -33,6 +33,10 @@
 
     # Load the contents
     panel = modal.find '.o-modal-panel'
-    panel.load contentUrl
+    res = $.get contentUrl
+    res.done (data) ->
+      panel.html data
+    res.fail () ->
+      panel.html failureTemplate
 
 ) this, this.jQuery, this.templates
