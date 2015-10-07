@@ -146,7 +146,7 @@ $o-contextbar-menu-highlight-color: transparent !default;
 $o-contextbar-menu-highlight-text-color: $o-accent !default;
 
 // Context menu
-$o-context-menu-top-offset: $o-pulldown-menubar-hbar-height !default;
+$o-context-menu-top-offset: $o-pulldown-menubar-hbar-height + 1rem !default;
 $o-context-menu-width: 18rem !default;
 $o-context-menu-padding: 1rem !default;
 $o-context-menu-background: $o-foreground-material !default;
