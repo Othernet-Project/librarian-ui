@@ -26,7 +26,8 @@
       @collapsed = true
       @collapsibleElement = @getCollapsible()
       @activatorElement = @getActivator()
-      @activatorElement.on 'click', () =>
+      @activatorElement.on 'click', (e) =>
+        e.preventDefault()
         @toggle()
 
     collapsibleSection: '.o-collapsible'

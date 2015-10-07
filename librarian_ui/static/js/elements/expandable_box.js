@@ -15,7 +15,8 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
       this.collapsibleElement = this.getCollapsible();
       this.activatorElement = this.getActivator();
       this.activatorElement.on('click', (function(_this) {
-        return function() {
+        return function(e) {
+          e.preventDefault();
           return _this.toggle();
         };
       })(this));
