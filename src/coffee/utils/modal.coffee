@@ -1,6 +1,7 @@
 ((window, $, templates) ->
 
-  modalContent = templates.modalContent
+  defaultSuccess = templates.modalContent
+  defaultFailure = templates.modalLoadFailure
   body = $ document.body
   ESCAPE = 27
 
@@ -20,12 +21,16 @@
     if e.which == ESCAPE
       elem.parents('.o-modal-overlay').remove()
 
-  $.modalContent = (contentUrl, failureTemplate) ->
+  $.modalContent = (contentUrl, options) ->
+    {successTemplate, failureTemplate} = options
+    successTemplate ?= defaultSuccess
+    failureTemplate ?= defaultFailure
+
     # Kill old modal
-    $('#modal-content').remove()
+    $('.o-modal-overlay').remove()
 
     # Make a new modal
-    modal = $(templates.modalContent)
+    modal = $(successTemplate)
     modal.appendTo body
 
     window = modal.find '.o-modal-window'
