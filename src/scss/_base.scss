@@ -16,6 +16,10 @@ select:-moz-focusring {
   text-shadow: 0 0 0 $o-input-text-color;
 }
 
+label {
+  cursor: pointer;
+}
+
 html {
   font-family: $o-base-font;
   font-size: $o-base-text-size;
