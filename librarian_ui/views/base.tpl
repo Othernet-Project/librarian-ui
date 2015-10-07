@@ -34,6 +34,7 @@ MENUBAR_ID = context.get('MENUBAR_ID', 'menubar-top')
 STATUSBAR_ID = context.get('STATUSBAR_ID', 'status') 
 CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
 CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
+MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 %>
 
 <!doctype html>
@@ -81,7 +82,7 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
         </%block>
         </nav>
 
-        <div class="o-main-panel" id="main-panel">
+        <div id="${MAIN_PANEL_ID}" class="o-main-panel">
             <%block name="main">
                 ${self.body(**context.kwargs)}
             </%block>
@@ -136,7 +137,8 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
                 menubarId: "${MENUBAR_ID}",
                 statusbarId: "${STATUSBAR_ID}",
                 contextbarId: "${CONTEXT_BAR_ID}",
-                contextmenuId: "${CONTEXT_MENU_ID}"
+                contextmenuId: "${CONTEXT_MENU_ID}",
+                mainPanelId: "${MAIN_PANEL_ID}"
             };
         }(this));
         </script>
