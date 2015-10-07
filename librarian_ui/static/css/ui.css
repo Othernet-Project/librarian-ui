@@ -383,20 +383,26 @@ select:focus {
 
 /* line 3, ../../../src/scss/widgets/_main_panel.scss */
 .o-main-panel {
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  padding-left: 0;
-  padding-right: 0;
+  position: fixed;
+  top: 6rem;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+}
+/* line 11, ../../../src/scss/widgets/_main_panel.scss */
+.o-main-panel .o-main-inner {
+  padding: 1rem;
 }
 
-/* line 5, ../../../src/scss/widgets/_statusbar.scss */
+/* line 6, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
 }
-/* line 16, ../../../src/scss/widgets/_statusbar.scss */
+/* line 17, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar.open .o-statusbar-status {
   max-height: 10rem;
 }
@@ -404,7 +410,7 @@ select:focus {
 .o-statusbar.open .o-statusbar-hbar-activator-icon:before {
   content: "\f211";
 }
-/* line 27, ../../../src/scss/widgets/_statusbar.scss */
+/* line 28, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar {
   position: relative;
   height: 2.25rem;
@@ -420,7 +426,7 @@ select:focus {
   border-bottom: 1px solid #ddd;
   cursor: pointer;
 }
-/* line 41, ../../../src/scss/widgets/_statusbar.scss */
+/* line 42, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-status {
   max-height: 0;
   overflow: hidden;
@@ -429,18 +435,18 @@ select:focus {
   -webkit-transition: max-height 0.3s;
   transition: max-height 0.3s;
 }
-/* line 50, ../../../src/scss/widgets/_statusbar.scss */
+/* line 51, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-activator {
   position: absolute;
   right: 0;
   top: 0;
   width: 3rem;
 }
-/* line 58, ../../../src/scss/widgets/_statusbar.scss */
+/* line 59, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-activator .o-statusbar-hbar-activator-label {
   display: none;
 }
-/* line 64, ../../../src/scss/widgets/_statusbar.scss */
+/* line 65, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-activator-icon {
   width: 100%;
   height: 100%;
@@ -762,7 +768,7 @@ select:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 100;
   display: flex;
   align-items: center;
   background: rgba(51, 51, 51, 0.8);
