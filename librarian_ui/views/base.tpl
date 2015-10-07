@@ -105,6 +105,27 @@ CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
             </div>
         </footer>
 
+        <!-- inline JS templates -->
+        <script type="text/template" id="modalContent">
+            <div class="o-modal-overlay" id="modal-content">
+                <div class="o-modal-window" role="window" id="modal-content-window" tabindex>
+                    <button id="modal-content-close" class="o-modal-close" role="button" aria-controls="modal-content-window">
+                        <span class="o-modal-close-label">${_('Close')}</span>
+                        <span class="o-modal-close-icon icon"></span>
+                    </button>
+                    <div class="o-modal-content o-modal-panel" role="document" id="modal-panel">
+                        <span class="o-modal-spinner">${_('Loading')}<span class="o-modal-spinner-loading-indicator">...</span></span>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="modalLoadFailure">
+            <div class="o-modal-load-failure o-modal-spinner">
+                ${_('Content could not be loaded')}
+            </div>
+        </script>
+
         <%block name="extra_body"/>
 
         <script type="text/javascript">
