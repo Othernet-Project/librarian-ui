@@ -5,6 +5,7 @@
   // Basic initial geometry
   position: absolute;
   right: -$o-context-menu-width - 1rem;
+  z-index: 2;
 
   // Basic geometry
   top: $o-context-menu-top-offset;

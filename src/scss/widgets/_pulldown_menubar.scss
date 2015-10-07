@@ -13,6 +13,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
   // Styling
   background: $o-pulldown-menubar-background;
   color: $o-pulldown-menubar-text-color;
+  @include box-shadow(0 0 2px transparentize($o-base, 0.5));
 
   // Basic geometry
   position: fixed;
@@ -20,6 +21,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
   left: $o-pulldown-menubar-default-pos-left;
   right: $o-pulldown-menubar-default-pos-right;
   height: $o-pulldown-menubar-height;
+  z-index: 1;
 
   // FX
   @include transition(top $o-animation-speed);
