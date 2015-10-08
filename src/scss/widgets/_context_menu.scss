@@ -3,7 +3,7 @@
 
 .o-context-menu {
   // Basic initial geometry
-  position: absolute;
+  position: fixed;
   right: -$o-context-menu-width - 1rem;
   z-index: 2;
 
