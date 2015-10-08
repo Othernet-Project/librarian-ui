@@ -54,7 +54,6 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         var context, elem, menu, url;
         elem = $(this);
         context = elem.data('context');
-        console.log(context);
         if (context === 'direct') {
           return;
         }
