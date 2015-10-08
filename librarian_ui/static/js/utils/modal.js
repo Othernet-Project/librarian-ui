@@ -25,6 +25,13 @@
       return elem.parents('.o-modal-overlay').remove();
     }
   });
+  $.modalDialog = function(template) {
+    var modal;
+    $('.o-modal-overlay').remove();
+    modal = $(template);
+    modal.appendTo(body);
+    return modal;
+  };
   return $.modalContent = function(contentUrl, options) {
     var failureTemplate, modal, panel, res, successTemplate;
     if (options == null) {
@@ -34,11 +41,9 @@
       };
     }
     successTemplate = options.successTemplate, failureTemplate = options.failureTemplate;
-    $('.o-modal-overlay').remove();
-    modal = $(successTemplate);
+    modal = $.modalDialog(successTemplate);
     window = modal.find('.o-modal-window');
     panel = modal.find('.o-modal-panel');
-    modal.appendTo(body);
     window.focus();
     res = $.get(contentUrl);
     res.done(function(data) {

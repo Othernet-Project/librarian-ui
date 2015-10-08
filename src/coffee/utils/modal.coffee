@@ -21,6 +21,15 @@
     if e.which == ESCAPE
       elem.parents('.o-modal-overlay').remove()
 
+
+  $.modalDialog = (template) ->
+    # Kill old modal
+    $('.o-modal-overlay').remove()
+    modal = $ template
+    modal.appendTo body
+    modal
+
+
   $.modalContent = (contentUrl, options) ->
     options ?= {
       successTemplate: defaultSuccess,
@@ -28,16 +37,12 @@
     }
     {successTemplate, failureTemplate} = options
 
-    # Kill old modal
-    $('.o-modal-overlay').remove()
-
     # Make a new modal
-    modal = $(successTemplate)
+    modal = $.modalDialog successTemplate
     window = modal.find '.o-modal-window'
     panel = modal.find '.o-modal-panel'
 
     # Add the modal window to body and focus it
-    modal.appendTo body
     window.focus()
 
     # Load the contents
