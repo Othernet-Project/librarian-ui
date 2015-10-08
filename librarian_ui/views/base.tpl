@@ -95,10 +95,10 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
             ## Translators, link to settings dashboard in the context menu
             ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings')}
             ## Translators, link shown in context menu when user is logged in.
-            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout')}
+            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=i18n_path(request.path)), 'logout')}
         % else:
             ## Translators, link shown in context menu when user is not logged in.
-            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'login')}
+            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=i18n_path(request.path)), 'login')}
         % endif
         </nav>
 
@@ -107,7 +107,7 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
         ## context menu's submenu
         ${ui.context_menu_back(CONTEXT_MENU_ID, _('Back to menu'))}
         % for locale, lang in languages:
-            <% lang_url = i18n_path(path=request.path, locale=locale) + h.set_qparam(action='change').to_qs() %>
+            <% lang_url = i18n_path(path=request.path, locale=locale) %>
             ${ui.context_menu_item('lang-{}'.format(locale), lang, lang_url, enabled=locale != request.locale, direct=True)}
         % endfor
         </nav>
