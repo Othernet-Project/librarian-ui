@@ -138,17 +138,11 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 
         <!-- inline JS templates -->
         <script type="text/template" id="modalContent">
-            <div class="o-modal-overlay" id="modal-content">
-                <div class="o-modal-window" role="window" id="modal-content-window" tabindex>
-                    <button id="modal-content-close" class="o-modal-close" role="button" aria-controls="modal-content-window">
-                        <span class="o-modal-close-label">${_('Close')}</span>
-                        <span class="o-modal-close-icon icon"></span>
-                    </button>
-                    <div class="o-modal-content o-modal-panel" role="document" id="modal-panel">
-                        <span class="o-modal-spinner">${_('Loading')}<span class="o-modal-spinner-loading-indicator">...</span></span>
-                    </div>
+            <%ui:modal_container id="content", close_button_label="${_('Close')}">
+                <div class="o-modal-content o-modal-panel" role="document">
+                    <span class="o-modal-spinner">${_('Loading')}<span class="o-modal-spinner-loading-indicator">...</span></span>
                 </div>
-            </div>
+            </%ui:modal_container>
         </script>
 
         <script type="text/template" id="modalLoadFailure">
