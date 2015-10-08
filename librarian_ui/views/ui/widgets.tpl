@@ -101,3 +101,15 @@
 <%def name="context_menu_separator()">
     <span class="o-context-menu-separator"></span>
 </%def>
+
+<%def name="modal_container(id, close_button_label)">
+    <div class="o-modal-overlay" id="modal-${id}">
+        <div class="o-modal-window" role="window" id="modal-${id}-window" tabindex>
+            <button id="modal-${id}-close" class="o-modal-close" role="button" aria-controls="modal-${id}-window">
+                <span class="o-modal-close-label">${close_button_label}</span>
+                <span class="o-modal-close-icon icon"></span>
+            </button>
+            ${caller.body()}
+        </div>
+    </div>
+</%def>
