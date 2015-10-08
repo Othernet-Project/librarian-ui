@@ -13,8 +13,6 @@ various parts of the interface. This includes:
 - ``menubar_panel``: Sets the contents of the panel inside the pull-down
   menubar's hbar section (between the logo and context menu)
 - ``context_menu``: Sets the contents of the context menu
-- ``context_menu_defaults``: Sets the contents of the default context menu 
-  items (this should generally not be touched)
 - ``main``: Sets the content of the main panel (this is where most of the 
   page-specific UI elements go)
 - ``statusbar_quick``: Sets the contents of the quick status area (left of the 
@@ -78,37 +76,39 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
         </header>
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
-        ## Use ``ui.context_menu_item()`` def to build your context menu, and
-        ## be sure to add a separator at the bottom of the ``context_menu`` 
-        ## block. For menu items, you can use icons (without 'mdi-' class 
-        ## prefix) listed on this page:
-        ##
-        ##     https://cdn.materialdesignicons.com/1.2.65/
-        ##
-        <%block name="context_menu_top">
-            ## Translators, label for context menu language switcher
-            ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'comment-outline')}
-        </%block>
+        ## Translators, label for context menu language switcher
+        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'comment-outline')}
+
         <%block name="context_menu">
-            ${ui.context_menu_separator()}
+            ## Use ``ui.context_menu_item()`` def to build your context menu,
+            ## and be sure to add a separator at the bottom of the
+            ## ``context_menu`` block. For menu items, you can use icons
+            ## (without 'mdi-' class prefix) listed on this page:
+            ##
+            ##     https://cdn.materialdesignicons.com/1.2.65/
+            ##
         </%block>
-        <%block name="context_menu_defaults">
-            % if request.user.is_authenticated:
-                ## Translators, link to settings dashboard in the context menu
-                ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings')}
-                ## Translators, link shown in context menu when user is logged in.
-                ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout')}
-            % else:
-                ## Translators, link shown in context menu when user is not logged in.
-                ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'login')}
-            % endif
-        </%block>
+
+        ${ui.context_menu_separator()}
+
+        % if request.user.is_authenticated:
+            ## Translators, link to settings dashboard in the context menu
+            ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings')}
+            ## Translators, link shown in context menu when user is logged in.
+            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout')}
+        % else:
+            ## Translators, link shown in context menu when user is not logged in.
+            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'login')}
+        % endif
         </nav>
 
-        <nav id="language-list" class="o-context-menu" role="menu" aria-hidden="true">
+        <nav id="language-list" class="o-context-menu o-context-menu-submenu" role="menu" aria-hidden="true">
+        ## Translators, label on back button that appears at the top of 
+        ## context menu's submenu
+        ${ui.context_menu_back(CONTEXT_MENU_ID, _('Back to menu'))}
         % for locale, lang in languages:
             <% lang_url = i18n_path(path=request.path, locale=locale) + h.set_qparam(action='change').to_qs() %>
-            ${ui.context_menu_item('lang-{}'.format(locale), lang, lang_url, enabled=locale != request.locale)}
+            ${ui.context_menu_item('lang-{}'.format(locale), lang, lang_url, enabled=locale != request.locale, direct=True)}
         % endfor
         </nav>
 
