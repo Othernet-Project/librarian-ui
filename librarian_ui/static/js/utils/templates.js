@@ -7,6 +7,6 @@
     var elem, id;
     elem = $(this);
     id = elem.attr('id');
-    return window.templates[id] = elem.html();
+    return window.templates[id] = elem.html().trim();
   });
 })(this, this.jQuery);
