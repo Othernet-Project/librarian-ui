@@ -27,19 +27,19 @@
   });
   return $.modalContent = function(contentUrl, options) {
     var failureTemplate, modal, panel, res, successTemplate;
+    if (options == null) {
+      options = {
+        successTemplate: defaultSuccess,
+        failureTemplate: defaultFailure
+      };
+    }
     successTemplate = options.successTemplate, failureTemplate = options.failureTemplate;
-    if (successTemplate == null) {
-      successTemplate = defaultSuccess;
-    }
-    if (failureTemplate == null) {
-      failureTemplate = defaultFailure;
-    }
     $('.o-modal-overlay').remove();
     modal = $(successTemplate);
-    modal.appendTo(body);
     window = modal.find('.o-modal-window');
-    window.focus();
     panel = modal.find('.o-modal-panel');
+    modal.appendTo(body);
+    window.focus();
     res = $.get(contentUrl);
     res.done(function(data) {
       return panel.html(data);

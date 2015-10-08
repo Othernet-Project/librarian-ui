@@ -22,22 +22,25 @@
       elem.parents('.o-modal-overlay').remove()
 
   $.modalContent = (contentUrl, options) ->
+    options ?= {
+      successTemplate: defaultSuccess,
+      failureTemplate: defaultFailure,
+    }
     {successTemplate, failureTemplate} = options
-    successTemplate ?= defaultSuccess
-    failureTemplate ?= defaultFailure
 
     # Kill old modal
     $('.o-modal-overlay').remove()
 
     # Make a new modal
     modal = $(successTemplate)
-    modal.appendTo body
-
     window = modal.find '.o-modal-window'
+    panel = modal.find '.o-modal-panel'
+
+    # Add the modal window to body and focus it
+    modal.appendTo body
     window.focus()
 
     # Load the contents
-    panel = modal.find '.o-modal-panel'
     res = $.get contentUrl
     res.done (data) ->
       panel.html data
