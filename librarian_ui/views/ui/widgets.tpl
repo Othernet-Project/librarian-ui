@@ -80,7 +80,7 @@
         role="menuitem" 
         aria-disabled="${'false' if enabled else 'true'}"
         aria-controls="${target_id}"
-        data-direct="submenu">
+        data-context="submenu">
         <span class="${'icon icon-{} '.format(icon) if icon else ''}o-context-menu-menuitem-icon"></span>
         <span class="o-context-menu-menuitem-label">${label}</span>
         <span class="o-context-menu-expand-icon icon icon-${expand_icon}"></span>
