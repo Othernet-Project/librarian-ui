@@ -54,6 +54,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         var context, elem, menu, url;
         elem = $(this);
         context = elem.data('context');
+        console.log(context);
         if (context === 'direct') {
           return;
         }
@@ -66,13 +67,13 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
           }
           return;
         }
-        url = elem.attr('href');
-        if (context = 'submenu') {
+        if (context === 'submenu') {
           menu = elem.data('context-menu');
           thisMenu.close();
           menu.open();
           return;
         }
+        url = elem.attr('href');
         $.modalContent(url);
       });
     }

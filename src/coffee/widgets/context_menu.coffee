@@ -49,6 +49,7 @@
       @children.on 'click', (e) ->
         elem = $ @
         context = elem.data 'context'
+        console.log context
 
         # If this is a direct link, just pass it through without further
         # processing.
@@ -64,14 +65,13 @@
             menu.parent.open()
           return
 
-        url = elem.attr 'href'
-
-        if context = 'submenu'
+        if context is 'submenu'
           menu = elem.data 'context-menu'
           thisMenu.close()
           menu.open()
           return
 
+        url = elem.attr 'href'
         $.modalContent url
         return
 
