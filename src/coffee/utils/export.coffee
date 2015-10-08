@@ -13,7 +13,7 @@
   window.export = (name, sub, obj) ->
     namespace = window.o[sub] ?= {}
     if namespace[name]?
-      throw "Name #{sub}.#{name} already defined with value #{window.o[name]}"
+      console.error "Name #{sub}.#{name} already defined with value #{window.o[name]}"
     namespace[name] = obj
 
 ) this

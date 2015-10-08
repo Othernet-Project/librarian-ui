@@ -13,7 +13,7 @@
     var base, namespace;
     namespace = (base = window.o)[sub] != null ? base[sub] : base[sub] = {};
     if (namespace[name] != null) {
-      throw "Name " + sub + "." + name + " already defined with value " + window.o[name];
+      console.error("Name " + sub + "." + name + " already defined with value " + window.o[name]);
     }
     return namespace[name] = obj;
   };
