@@ -9,10 +9,28 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
   ContextMenu = (function(superClass) {
     extend(ContextMenu, superClass);
 
-    function ContextMenu(id) {
-      this.id = id;
+    function ContextMenu(id1, activator, parent) {
+      var thisMenu;
+      this.id = id1;
+      this.activator = activator;
+      this.parent = parent;
+      if (this.activator == null) {
+        this.activator = '.o-contextbar-menu';
+      }
       ContextMenu.__super__.constructor.call(this, this.id);
-      this.children = $('.o-context-menu-menuitem');
+      this.children = this.element.find('.o-context-menu-menuitem');
+      this.submenuLinks = this.element.find('.o-context-menu-submenu-activator');
+      this.element.data('context-menu', this);
+      thisMenu = this;
+      this.submenuLinks.each((function(_this) {
+        return function(idx, item) {
+          var elem, id, targetId;
+          elem = $(item);
+          id = elem.attr('id');
+          targetId = elem.attr('href').slice(1);
+          elem.data('context-menu', new ContextMenu(targetId, id, _this));
+        };
+      })(this));
       this.refocusTimeout = null;
       this.children.on('focus', (function(_this) {
         return function() {
@@ -26,17 +44,35 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
       })(this));
       this.children.on('blur', (function(_this) {
         return function() {
-          return _this.refocusTimeout = setTimeout(function() {
+          _this.refocusTimeout = setTimeout(function() {
             _this.close();
           }, 100);
         };
       })(this));
       this.children.updownNav();
       this.children.on('click', function(e) {
-        var elem, url;
-        e.preventDefault();
+        var context, elem, menu, url;
         elem = $(this);
+        context = elem.data('context');
+        if (context === 'direct') {
+          return;
+        }
+        e.preventDefault();
+        if (context === 'back') {
+          menu = elem.parents('.o-context-menu').data('context-menu');
+          menu.close();
+          if (menu.parent != null) {
+            menu.parent.open();
+          }
+          return;
+        }
         url = elem.attr('href');
+        if (context = 'submenu') {
+          menu = elem.data('context-menu');
+          thisMenu.close();
+          menu.open();
+          return;
+        }
         $.modalContent(url);
       });
     }
@@ -45,7 +81,9 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
 
     ContextMenu.prototype.activator = '.o-contextbar-menu';
 
-    ContextMenu.prototype.onOpen = function() {};
+    ContextMenu.prototype.onOpen = function() {
+      this.children.first().focus();
+    };
 
     ContextMenu.prototype.getActivator = function() {
       return $(this.activator);

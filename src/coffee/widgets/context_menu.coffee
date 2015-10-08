@@ -4,9 +4,23 @@
   loadFailure = window.templates.modalLoadFailure
 
   class ContextMenu extends ExpandableBox
-    constructor: (@id) ->
-      super(@id)
-      @children = $ '.o-context-menu-menuitem'
+    constructor: (@id, @activator, @parent) ->
+      @activator ?= '.o-contextbar-menu'
+
+      super @id
+
+      @children = @element.find '.o-context-menu-menuitem'
+      @submenuLinks = @element.find '.o-context-menu-submenu-activator'
+      @element.data 'context-menu', @
+      thisMenu = @
+
+      # Enumerate submenus and equip them with same ContextMenu wrapper
+      @submenuLinks.each (idx, item) =>
+        elem = $ item
+        id = elem.attr 'id'
+        targetId = elem.attr('href').slice 1
+        elem.data 'context-menu', new ContextMenu targetId, id, @
+        return
 
       # The refocusTimeout property holds a timer object that is reset each
       # time a menu item is focused. The timer is started by blur event on the
@@ -27,13 +41,37 @@
           @close()
           return
         , 100
+        return
 
       @children.updownNav()
 
+      # Handle click events on the menu links
       @children.on 'click', (e) ->
+        elem = $ @
+        context = elem.data 'context'
+
+        # If this is a direct link, just pass it through without further
+        # processing.
+        if context is 'direct'
+          return
+
         e.preventDefault()
-        elem = $ this
+
+        if context is 'back'
+          menu = elem.parents('.o-context-menu').data 'context-menu'
+          menu.close()
+          if menu.parent?
+            menu.parent.open()
+          return
+
         url = elem.attr 'href'
+
+        if context = 'submenu'
+          menu = elem.data 'context-menu'
+          thisMenu.close()
+          menu.open()
+          return
+
         $.modalContent url
         return
 
@@ -41,6 +79,7 @@
     activator: '.o-contextbar-menu'
 
     onOpen: () ->
+      @children.first().focus()
       return
 
     getActivator: () ->
