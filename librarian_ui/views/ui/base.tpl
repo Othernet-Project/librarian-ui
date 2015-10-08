@@ -13,6 +13,8 @@ various parts of the interface. This includes:
 - ``menubar_panel``: Sets the contents of the panel inside the pull-down
   menubar's hbar section (between the logo and context menu)
 - ``context_menu``: Sets the contents of the context menu
+- ``context_menu_defaults``: Sets the contents of the default context menu 
+  items (this should generally not be touched)
 - ``main``: Sets the content of the main panel (this is where most of the 
   page-specific UI elements go)
 - ``statusbar_quick``: Sets the contents of the quick status area (left of the 
@@ -76,10 +78,9 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
         </header>
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
-        <%block name="context_menu">
-            ## Use ``ui.context_menu_item()`` def to build your context menu
-            ${ui.context_menu_item('about', _('About'), '/about/', 'information-outline', True)}
-        </%block>
+        ## Use ``ui.context_menu_item()`` def to build your context menu
+        <%block name="context_menu"/>
+        <%block name="context_menu_defaults"/>
         </nav>
 
         <div id="${MAIN_PANEL_ID}" class="o-main-panel">
