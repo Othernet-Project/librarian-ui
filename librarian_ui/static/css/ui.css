@@ -667,7 +667,7 @@ select:focus {
 
 /* line 4, ../../../src/scss/widgets/_context_menu.scss */
 .o-context-menu {
-  position: absolute;
+  position: fixed;
   right: -19rem;
   z-index: 2;
   top: 7rem;
