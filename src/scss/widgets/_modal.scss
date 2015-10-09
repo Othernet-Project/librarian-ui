@@ -15,6 +15,24 @@
   }
 }
 
+@include keyframes(fadein) {
+  0% {
+    background-color: transparentize($o-modal-overlay-color, 1);
+  }
+  100% {
+    background-color: $o-modal-overlay-color;
+  }
+}
+
+@include keyframes(popin) {
+  0% {
+    top: -2000px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .o-modal-overlay {
   // Basic geometry
   position: fixed;
@@ -27,8 +45,11 @@
   align-items: center;
 
   // Stylng
-  background: $o-modal-overlay-color;
+  background-color: $o-modal-overlay-color;
   cursor: pointer;
+
+  // FX
+  @include animation(fadein 2s);
 
   // Panel
 
@@ -42,6 +63,9 @@
     max-height: $o-modal-window-max-height;
     min-height: $o-modal-window-min-height;
     padding: $o-modal-window-padding;
+
+    // FX
+    @include animation(popin 0.5s);
 
     // Styling
     background: $o-modal-window-background;
@@ -61,6 +85,9 @@
   }
 
   .o-modal-close {
+    // Typography
+    font-size: $o-modal-close-icon-size;
+
     // Basic geometry
     display: block;
     position: absolute;
