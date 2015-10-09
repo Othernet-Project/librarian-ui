@@ -93,12 +93,12 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 
         % if request.user.is_authenticated:
             ## Translators, link to settings dashboard in the context menu
-            ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings')}
+            ${ui.context_menu_item('settings', _('Settings'), 'DUMMY', 'settings')}
             ## Translators, link shown in context menu when user is logged in.
-            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=i18n_path(request.path)), 'logout')}
+            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout', direct=True)}
         % else:
             ## Translators, link shown in context menu when user is not logged in.
-            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=i18n_path(request.path)), 'login')}
+            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'login')}
         % endif
         </nav>
 
@@ -121,7 +121,19 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
         <footer class="o-statusbar" id="${STATUSBAR_ID}">
             <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
                 <div class="o-statusbar-hbar-quick-status">
-                <%block name="statusbar_quick"/>
+                    <%block name="statusbar_quick">
+                        <% 
+                        if request.user.is_authenticated:
+                            icon = 'account'
+                            username = request.user.username
+                        else:
+                            icon = 'lock'
+                            # Translators, used as a label for guest account (unauthenticated user)
+                            username = _('guest')
+                        %>
+                        <span class="icon icon-${icon}"></span>
+                        <span class="username">${username}</span>
+                    </%block>
                 </div>
                 <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
                     <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
@@ -129,10 +141,12 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
                 </a>
             </div>
             <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
-            <%block name="statusbar_panel">
-                <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
-                <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
-            </%block>
+                <div class="o-statusbar-panel-content">
+                    <%block name="statusbar_panel">
+                        <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
+                        <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
+                    </%block>
+                </div>
             </div>
         </footer>
 
