@@ -4,7 +4,6 @@
 button,
 .button {
   // Basic geometry
-  margin: 0 $o-button-horizontal-spacing;
   padding: $o-button-padding;
   height: $o-input-height;
 
@@ -41,4 +40,14 @@ button,
       @include background-image(linear-gradient($o-button-hover-face-shading));
     }
   }
+}
+
+.buttons {
+  // Typography
+  text-align: right;
+
+  // Basic geometry
+  margin-top: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
