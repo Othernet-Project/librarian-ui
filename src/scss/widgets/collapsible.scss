@@ -1,0 +1,57 @@
+@import "compass/css3";
+@import "base/params";
+@import "icons/icons";
+
+.o-collapsible {
+  .o-collapsible-section {
+    // Basic geometry
+    position: relative;
+    overflow: hidden;
+    max-height: 1000px;
+
+    // FX
+    @include transition(max-height $o-long-animation-speed);
+
+    // Header
+    & > :nth-child(1) {
+      // Typography
+      line-height: $o-clickable-target-size;
+      font-size: 120%;
+
+      // Basic geometry
+      margin: 0;
+      padding-left: 1rem;
+
+      // Styling
+      cursor: pointer;
+      background: $o-foreground-material;
+      border-top: $o-separator-border;
+
+      .icon {
+        @include mdi-icon('menu-down');
+      }
+    }
+
+    // Container
+    & > :nth-child(2) {
+      // Basic geometry
+      padding: 20px;
+      overflow: hidden;
+      margin: 0;
+
+      // Styling
+      border-top: $o-widget-border;
+      @include box-shadow(inset 0 0 1px transparentize(black, 0.5));
+      background: $o-material;
+      border-bottom: 1px solid white;
+    }  
+
+    &.dash-collapsed > :nth-child(1) .icon {
+      @include mdi-icon('menu-right');
+    }
+
+    &.dash-collapsed  {
+      max-height: $o-clickable-target-size;
+    }
+  }
+}
