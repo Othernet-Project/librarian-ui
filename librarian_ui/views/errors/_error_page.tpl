@@ -1,7 +1,7 @@
 <%inherit file="_noframe.tpl"/>
 
 ## Translators, used as error page heading
-<%block name="inner">
+<%block name="main">
 <div class="h-bar">
     <h2>
         <%block name="error_title"/>
