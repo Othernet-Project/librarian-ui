@@ -52,7 +52,9 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
     <body>
         <header class="o-pulldown-menubar" id="${MENUBAR_ID}" role="section">
             <%ui:apps_menu id="${MENUBAR_ID}">
-                Hello menu
+            % for mi in menu_group('main'):
+                ${mi}
+            % endfor
             </%ui:apps_menu>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
                 <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
