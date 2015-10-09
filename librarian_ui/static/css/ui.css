@@ -459,6 +459,15 @@ select:focus {
 .o-statusbar .o-statusbar-hbar-activator-icon:before {
   content: "\f214";
 }
+/* line 80, ../../../src/scss/widgets/_statusbar.scss */
+.o-statusbar .o-statusbar-hbar-quick-status {
+  padding: 0.3rem 1rem;
+}
+/* line 84, ../../../src/scss/widgets/_statusbar.scss */
+.o-statusbar .o-statusbar-panel-content {
+  padding: 1rem 1rem 2rem;
+  background: white;
+}
 
 /**
  * PANELS

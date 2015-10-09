@@ -76,4 +76,13 @@
     // Icon
     @include mdi-icon($o-statusbar-hbar-activator-closed-icon);
   }
+
+  .o-statusbar-hbar-quick-status {
+    padding: 0.3rem 1rem;
+  }
+
+  .o-statusbar-panel-content {
+    padding: 1rem 1rem 2rem;
+    background: $o-foreground-material;
+  }
 }
