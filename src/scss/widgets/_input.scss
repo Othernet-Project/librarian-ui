@@ -11,9 +11,9 @@ input[type=tel],
 input[type=number],
 select {
   // Basic geometry
-  margin: 0 $o-input-horizontal-spacing;
   padding: $o-input-padding;
   height: $o-input-height;
+  width: 100%;
 
   // Typography
   font-size: $o-input-text-size;
