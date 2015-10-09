@@ -916,10 +916,10 @@ a:hover {
   position: relative;
   overflow: hidden;
   max-height: 1000px;
-  -moz-transition: max-height 0.6s;
-  -o-transition: max-height 0.6s;
-  -webkit-transition: max-height 0.6s;
-  transition: max-height 0.6s;
+  -moz-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
 }
 /* line 16, ../../../src/scss/widgets/collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1) {
@@ -931,11 +931,16 @@ a:hover {
   background: white;
   border-top: 1px solid #ddd;
 }
+/* line 30, ../../../src/scss/widgets/collapsible.scss */
+.o-collapsible .o-collapsible-section > :nth-child(1) .icon {
+  font-size: 180%;
+  vertical-align: middle;
+}
 /* line 24, ../../../src/scss/icons/_icons.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1) .icon:before {
   content: "\f3f2";
 }
-/* line 36, ../../../src/scss/widgets/collapsible.scss */
+/* line 43, ../../../src/scss/widgets/collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(2) {
   padding: 20px;
   overflow: hidden;
@@ -948,11 +953,11 @@ a:hover {
   border-bottom: 1px solid white;
 }
 /* line 24, ../../../src/scss/icons/_icons.scss */
-.o-collapsible .o-collapsible-section.dash-collapsed > :nth-child(1) .icon:before {
+.o-collapsible .o-collapsible-section.o-collapsed > :nth-child(1) .icon:before {
   content: "\f3f4";
 }
-/* line 53, ../../../src/scss/widgets/collapsible.scss */
-.o-collapsible .o-collapsible-section.dash-collapsed {
+/* line 60, ../../../src/scss/widgets/collapsible.scss */
+.o-collapsible .o-collapsible-section.o-collapsed {
   max-height: 3rem;
 }
 

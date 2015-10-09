@@ -10,7 +10,7 @@
     max-height: 1000px;
 
     // FX
-    @include transition(max-height $o-long-animation-speed);
+    @include transition(max-height $o-animation-speed);
 
     // Header
     & > :nth-child(1) {
@@ -28,6 +28,13 @@
       border-top: $o-separator-border;
 
       .icon {
+        // Typography
+        font-size: 180%;
+
+        // Basic geometry
+        vertical-align: middle;
+
+        // Icon
         @include mdi-icon('menu-down');
       }
     }
@@ -46,11 +53,11 @@
       border-bottom: 1px solid white;
     }  
 
-    &.dash-collapsed > :nth-child(1) .icon {
+    &.o-collapsed > :nth-child(1) .icon {
       @include mdi-icon('menu-right');
     }
 
-    &.dash-collapsed  {
+    &.o-collapsed  {
       max-height: $o-clickable-target-size;
     }
   }
