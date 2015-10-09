@@ -93,7 +93,7 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 
         % if request.user.is_authenticated:
             ## Translators, link to settings dashboard in the context menu
-            ${ui.context_menu_item('settings', _('Settings'), 'DUMMY', 'settings')}
+            ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings', direct=True)}
             ## Translators, link shown in context menu when user is logged in.
             ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout', direct=True)}
         % else:
