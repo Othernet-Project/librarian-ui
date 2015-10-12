@@ -3,8 +3,7 @@
 @import "icons/icons";
 @import "icons/core";
 
-form {
-  .field-help {
+@mixin field-note {
     // Typography
     font-style: italic;
 
@@ -14,19 +13,50 @@ form {
     padding-left: 2rem;
     margin-top: 0.2rem;
 
-    // Styling
-    color: $o-form-help-text-color;
-    cursor: pointer;
-
-    // Icon
-    @include mdi-icon($o-form-help-icon);
-
     &:before {
       @include icon-base;
       position: absolute;
       font-size: 120%;
       left: 0.7rem;
       top: 0.1rem;
+    }
+}
+
+form {
+  .field-help {
+    @include field-note;
+
+    // Styling
+    color: $o-form-help-text-color;
+
+    // Icon
+    @include mdi-icon($o-form-help-icon);
+  }
+
+  .field-error {
+    @include field-note;
+
+    // Styling
+    color: $o-form-error-text-color;
+
+    // Icon
+    @include mdi-icon($o-form-error-icon);
+  }
+
+  .form-errors {
+    background: transparentize($o-form-error-text-color, 0.9);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-error {
+    color: $o-form-error-text-color;
+    @include mdi-icon($o-form-error-icon);
+    margin-bottom: 0.2rem;
+    
+    &:before {
+      @include icon-base;
+      margin-right: 0.2rem;
     }
   }
 }

@@ -256,7 +256,7 @@ label {
   margin-bottom: 0.3rem;
 }
 
-/* line 7, ../../../src/scss/widgets/_forms.scss */
+/* line 26, ../../../src/scss/widgets/_forms.scss */
 form .field-help {
   font-style: italic;
   position: relative;
@@ -264,13 +264,8 @@ form .field-help {
   padding-left: 2rem;
   margin-top: 0.2rem;
   color: #57880e;
-  cursor: pointer;
 }
-/* line 24, ../../../src/scss/icons/_icons.scss */
-form .field-help:before {
-  content: "\f37d";
-}
-/* line 24, ../../../src/scss/widgets/_forms.scss */
+/* line 16, ../../../src/scss/widgets/_forms.scss */
 form .field-help:before {
   display: inline-block;
   font: normal normal normal 1.7rem/1 MaterialDesignIcons;
@@ -283,6 +278,63 @@ form .field-help:before {
   font-size: 120%;
   left: 0.7rem;
   top: 0.1rem;
+}
+/* line 24, ../../../src/scss/icons/_icons.scss */
+form .field-help:before {
+  content: "\f37d";
+}
+/* line 36, ../../../src/scss/widgets/_forms.scss */
+form .field-error {
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  margin-top: 0.2rem;
+  color: #cc3737;
+}
+/* line 16, ../../../src/scss/widgets/_forms.scss */
+form .field-error:before {
+  display: inline-block;
+  font: normal normal normal 1.7rem/1 MaterialDesignIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  position: absolute;
+  font-size: 120%;
+  left: 0.7rem;
+  top: 0.1rem;
+}
+/* line 24, ../../../src/scss/icons/_icons.scss */
+form .field-error:before {
+  content: "\f11e";
+}
+/* line 46, ../../../src/scss/widgets/_forms.scss */
+form .form-errors {
+  background: rgba(204, 55, 55, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+/* line 52, ../../../src/scss/widgets/_forms.scss */
+form .form-error {
+  color: #cc3737;
+  margin-bottom: 0.2rem;
+}
+/* line 24, ../../../src/scss/icons/_icons.scss */
+form .form-error:before {
+  content: "\f11e";
+}
+/* line 57, ../../../src/scss/widgets/_forms.scss */
+form .form-error:before {
+  display: inline-block;
+  font: normal normal normal 1.7rem/1 MaterialDesignIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  margin-right: 0.2rem;
 }
 
 /* line 1, ../../../src/scss/widgets/_links.scss */
