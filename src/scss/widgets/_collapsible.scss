@@ -7,7 +7,7 @@
     // Basic geometry
     position: relative;
     overflow: hidden;
-    max-height: 1000px;
+    max-height: 80rem;
 
     // FX
     @include transition(max-height $o-animation-speed);
@@ -19,8 +19,11 @@
       font-size: 120%;
 
       // Basic geometry
+      position: relative;
       margin: 0;
       padding-left: 1rem;
+      z-index: 1;
+      height: $o-clickable-target-size;
 
       // Styling
       cursor: pointer;
@@ -36,6 +39,11 @@
 
         // Icon
         @include mdi-icon('menu-down');
+      }
+
+      &:hover,
+      &:focus {
+        color: $o-accent;
       }
     }
 
@@ -58,7 +66,10 @@
     }
 
     &.o-collapsed  {
-      max-height: $o-clickable-target-size;
+      // We use !important here because JavaScript will set the max-height of 
+      // uncollapsed section on the element itself making that height higher
+      // priority in the cascade.
+      max-height: $o-clickable-target-size !important;
     }
   }
 }
