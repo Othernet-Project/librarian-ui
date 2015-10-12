@@ -44,7 +44,7 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="${assets['css/lui']}">
         % if redirect_url is not UNDEFINED:
         <meta http-equiv="refresh" content="${REDIRECT_DELAY}; url=${redirect_url}">
@@ -53,11 +53,14 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
     </head>
     <body>
         <header class="o-pulldown-menubar" id="${MENUBAR_ID}" role="section">
-            <%ui:apps_menu id="${MENUBAR_ID}">
-            % for mi in menu_group('main'):
-                ${mi}
-            % endfor
-            </%ui:apps_menu>
+        <%block name="header">
+            <%block name="header_menubar">
+                <%ui:apps_menu id="${MENUBAR_ID}">
+                % for mi in menu_group('main'):
+                    ${mi}
+                % endfor
+                </%ui:apps_menu>
+            </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
                 <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
                     <span class="o-pulldown-menubar-hbar-activator-label">${_('Toggle apps menu')}</span>
@@ -77,6 +80,7 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
                     </div>
                 </div>
             </div>
+        </%block>
         </header>
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
