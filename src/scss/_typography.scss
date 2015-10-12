@@ -16,3 +16,10 @@ h1 {
   font-size: 200%;
   line-height: 110%;
 }
+
+h2 {
+  font-size: 180%;
+  margin-top: 1rem;
+  border-bottom: $o-separator-border;
+  padding-bottom: 0.5rem;
+}
