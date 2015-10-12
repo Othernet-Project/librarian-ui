@@ -9,8 +9,10 @@ form {
     font-style: italic;
 
     // Basic geometry
+    position: relative;
     display: inline-block;
     padding-left: 2rem;
+    margin-top: 0.2rem;
 
     // Styling
     color: $o-form-help-text-color;
@@ -21,6 +23,10 @@ form {
 
     &:before {
       @include icon-base;
+      position: absolute;
+      font-size: 120%;
+      left: 0.7rem;
+      top: 0.1rem;
     }
   }
 }

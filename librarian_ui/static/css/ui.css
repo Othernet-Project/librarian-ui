@@ -254,8 +254,10 @@ label {
 /* line 7, ../../../src/scss/widgets/_forms.scss */
 form .field-help {
   font-style: italic;
+  position: relative;
   display: inline-block;
   padding-left: 2rem;
+  margin-top: 0.2rem;
   color: #57880e;
   cursor: pointer;
 }
@@ -263,7 +265,7 @@ form .field-help {
 form .field-help:before {
   content: "\f37d";
 }
-/* line 22, ../../../src/scss/widgets/_forms.scss */
+/* line 24, ../../../src/scss/widgets/_forms.scss */
 form .field-help:before {
   display: inline-block;
   font: normal normal normal 1.7rem/1 MaterialDesignIcons;
@@ -272,6 +274,10 @@ form .field-help:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
+  position: absolute;
+  font-size: 120%;
+  left: 0.7rem;
+  top: 0.1rem;
 }
 
 /* line 1, ../../../src/scss/widgets/_links.scss */
