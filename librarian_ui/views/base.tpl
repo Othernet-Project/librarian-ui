@@ -41,6 +41,8 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 
 <html lang="en" xml:lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="${assets['css/lui']}">
