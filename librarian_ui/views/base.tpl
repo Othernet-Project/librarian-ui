@@ -28,13 +28,13 @@ various parts of the interface. This includes:
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
 
-<% 
+<%! 
 # Global constants
-MENUBAR_ID = context.get('MENUBAR_ID', 'menubar-top')
-STATUSBAR_ID = context.get('STATUSBAR_ID', 'status') 
-CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
-CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
-MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
+MENUBAR_ID = 'menubar-top'
+STATUSBAR_ID = 'status'
+CONTEXT_BAR_ID = 'context-bar'
+CONTEXT_MENU_ID = 'context-menu'
+MAIN_PANEL_ID = 'main-panel'
 %>
 
 <!doctype html>
