@@ -133,6 +133,14 @@ h1 {
   line-height: 110%;
 }
 
+/* line 20, ../../../src/scss/_typography.scss */
+h2 {
+  font-size: 180%;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: 'MaterialDesignIcons';
@@ -417,6 +425,20 @@ a:hover {
 /* line 12, ../../../src/scss/widgets/_main_panel.scss */
 .o-main-panel .o-main-inner {
   padding: 1rem;
+}
+
+/* line 5, ../../../src/scss/widgets/_narrow_panel.scss */
+.o-narrow-panel {
+  max-width: 36rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  -moz-border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
 }
 
 /* line 6, ../../../src/scss/widgets/_statusbar.scss */
