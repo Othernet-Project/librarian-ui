@@ -149,7 +149,7 @@ h2 {
   font-weight: normal;
   font-style: normal;
 }
-/* line 1, ../../../src/scss/icons/_core.scss */
+/* line 7, ../../../src/scss/icons/_materialdesignicons.scss */
 .icon {
   display: inline-block;
   font: normal normal normal 1.7rem/1 MaterialDesignIcons;
@@ -253,6 +253,28 @@ select:focus {
 label {
   font-weight: bold;
   display: block;
+}
+
+/* line 7, ../../../src/scss/widgets/_forms.scss */
+form .field-help {
+  font-style: italic;
+  display: inline-block;
+  padding-left: 2rem;
+  color: #57880e;
+}
+/* line 24, ../../../src/scss/icons/_icons.scss */
+form .field-help:before {
+  content: "\f37d";
+}
+/* line 21, ../../../src/scss/widgets/_forms.scss */
+form .field-help:before {
+  display: inline-block;
+  font: normal normal normal 1.7rem/1 MaterialDesignIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
 }
 
 /* line 1, ../../../src/scss/widgets/_links.scss */
@@ -436,9 +458,9 @@ a:hover {
   -moz-border-radius: 0.3rem;
   -webkit-border-radius: 0.3rem;
   border-radius: 0.3rem;
-  -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
-  -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
-  box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 /* line 6, ../../../src/scss/widgets/_statusbar.scss */

@@ -1,0 +1,25 @@
+@import "compass/css3";
+@import "base/params";
+@import "icons/icons";
+@import "icons/core";
+
+form {
+  .field-help {
+    // Typography
+    font-style: italic;
+
+    // Basic geometry
+    display: inline-block;
+    padding-left: 2rem;
+
+    // Styling
+    color: $o-form-help-text-color;
+
+    // Icon
+    @include mdi-icon($o-form-help-icon);
+
+    &:before {
+      @include icon-base;
+    }
+  }
+}
