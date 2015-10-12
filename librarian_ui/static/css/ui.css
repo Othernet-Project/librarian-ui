@@ -446,6 +446,16 @@ a:hover {
   padding: 1rem;
 }
 
+/**
+ * _media_query.scss: media query support
+ *
+ * Copyright 2014-2015, Outernet Inc.
+ * Some rights reserved.
+ *
+ * This software is free software licensed under the terms of GPLv3. See
+ * COPYING file that comes with the source code, or
+ * http://www.gnu.org/licenses/gpl.txt.
+ */
 /* line 5, ../../../src/scss/widgets/_narrow_panel.scss */
 .o-narrow-panel {
   max-width: 36rem;
@@ -458,6 +468,15 @@ a:hover {
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 640px) {
+  /* line 5, ../../../src/scss/widgets/_narrow_panel.scss */
+  .o-narrow-panel {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 
 /* line 6, ../../../src/scss/widgets/_statusbar.scss */
