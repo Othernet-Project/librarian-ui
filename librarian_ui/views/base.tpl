@@ -39,7 +39,7 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
 
 <!doctype html>
 
-<html lang="en" xml:lang="en">
+<html lang="${request.locale}"${' dir="rtl"' if th.is_rtl(request.locale) == True else ''}>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
