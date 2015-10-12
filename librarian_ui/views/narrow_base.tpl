@@ -14,7 +14,9 @@ limited page width.
 
 <%block name="main">
     <div class="o-narrow-panel">
-        ${self.body(**context.kwargs)}
+        <%block name="narrow_main">
+            ${self.body(**context.kwargs)}
+        </%block>
     </div>
 </%block>
 

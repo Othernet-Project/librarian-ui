@@ -7,7 +7,11 @@ ${_('Page not found')}
 
 <%block name="error_title">
 ## Translators, used as error page heading
-404: ${_('Page not found')}
+<span class="icon icon-routes"></span> ${_('Page not found')}
+</%block>
+
+<%block name="error_code">
+404
 </%block>
 
 <%block name="error_message">

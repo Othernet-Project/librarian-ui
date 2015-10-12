@@ -7,7 +7,11 @@ ${_('Under maintenance')}
 
 <%block name="error_title">
 ## Translators, used as maintenance page heading
-503: ${_('Under maintenance')}
+<span class="icon icon-settings-box"></span> ${_('Under maintenance')}
+</%block>
+
+<%block name="error_code">
+503
 </%block>
 
 <%block name="error_message">

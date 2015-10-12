@@ -7,16 +7,20 @@ ${_('Error')}
 
 <%block name="error_title">
 ## Translators, used as error page heading
-500: ${_('Error')}
+<span class="icon icon-alert-octagon"></span> ${_('Error')}
+</%block>
+
+<%block name="error_code">
+    500
 </%block>
 
 <%block name="error_message">
 <p class="single">${_('Librarian has failed to fulfill your request due to unexpected error in the program. Details are provided below.')}</p>
 
-<pre class="trace"><code>${trace}</code></pre>
+<pre class="error-trace"><code>${trace}</code></pre>
 
-<p class="single">
-<a class="button primary" href="${url('sys:applog')}">${_('Download application log')}</a>
+<p class="buttons">
+<a class="button" href="${url('sys:applog')}">${_('Download application log')}</a>
 </p>
 </%block>
 

@@ -1,5 +1,7 @@
-<%inherit file="/base.tpl"/>
+<%inherit file="/narrow_base.tpl"/>
 
+## When this template is loaded into an iframe, the code in the extra_head 
+## script tag causes it to escape the frame.
 <%block name="extra_head">
 <script>
 if (this != top) {

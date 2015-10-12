@@ -202,6 +202,11 @@ button:hover, button:focus,
   margin-bottom: 1rem;
 }
 
+/* line 55, ../../../src/scss/widgets/_button.scss */
+a.button {
+  padding: 0.3rem 1rem;
+}
+
 /* line 4, ../../../src/scss/widgets/_input.scss */
 input[type=text],
 input[type=email],
@@ -1032,6 +1037,34 @@ a:hover {
 /* line 68, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section.o-collapsed {
   max-height: 3rem !important;
+}
+
+/* line 4, ../../../src/scss/widgets/_error_pages.scss */
+.error-name {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #cc3737;
+}
+
+/* line 15, ../../../src/scss/widgets/_error_pages.scss */
+.error-code {
+  font-size: 80%;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0 0 2rem;
+}
+
+/* line 25, ../../../src/scss/widgets/_error_pages.scss */
+.error-trace {
+  padding: 1rem;
+  max-height: 20rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  background: #333;
+  color: white;
+  -moz-border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
 }
 
 /* line 17, ../../../src/scss/icons/_icons.scss */

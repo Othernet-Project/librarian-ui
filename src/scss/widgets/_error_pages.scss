@@ -1,0 +1,36 @@
+@import "compass/css3";
+@import "base/params";
+
+.error-name {
+  // Typography
+  text-transform: uppercase;
+
+  // Basic geometry
+  margin-bottom: 0;
+
+  // Styling
+  color: $o-critical;
+}
+
+.error-code {
+  // Typography
+  font-size: 80%;
+  text-transform: uppercase;
+  text-align: right;
+
+  // Basic geometry
+  margin: 0 0 2rem;
+}
+
+.error-trace {
+  // Basic geometry
+  padding: 1rem;
+  max-height: 20rem;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  // Styling
+  background: $o-base;
+  color: $o-foreground-material;
+  @include border-radius($o-clickable-target-corner-radius);
+}

@@ -7,7 +7,11 @@ ${_('Forbidden')}
 
 <%block name="error_title">
 ## Translators, used as access denied page heading
-403: ${_('Forbidden')}
+<span class="icon icon-account-key"></span> ${_('Forbidden')}
+</%block>
+
+<%block name="error_code">
+403
 </%block>
 
 <%block name="error_message">
