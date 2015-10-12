@@ -3,24 +3,24 @@ The base template
 =================
 
 Base template sets the basic UI elements for all 'full' pages. A 'full' page is
-a page that provides the complete set of auxiliarry interface elements such as 
+a page that provides the complete set of auxiliarry interface elements such as
 navigation, sidebars, status bars, and menus.
 
-The base template provides several Mako blocks that can be used to overload 
+The base template provides several Mako blocks that can be used to overload
 various parts of the interface. This includes:
 
 - ``title``: Sets the page title
 - ``menubar_panel``: Sets the contents of the panel inside the pull-down
   menubar's hbar section (between the logo and context menu)
 - ``context_menu``: Sets the contents of the context menu
-- ``main``: Sets the content of the main panel (this is where most of the 
+- ``main``: Sets the content of the main panel (this is where most of the
   page-specific UI elements go)
-- ``statusbar_quick``: Sets the contents of the quick status area (left of the 
+- ``statusbar_quick``: Sets the contents of the quick status area (left of the
   statusbar toggle activator
 - ``statusbar_panel``: Sets the contetns of the statusbar panel (expandable
   portion)
 - ``extra_head``: Can be used to add arbitrary markup to the <head> section
-- ``extra_body``: Can be used to add arbitrary markup to the <body> but 
+- ``extra_body``: Can be used to add arbitrary markup to the <body> but
   _above_ the scripts
 - ``extra_scripts``: Can be used to add arbitrary markup to the <body> but
   _below_ the default scripts
@@ -28,10 +28,10 @@ various parts of the interface. This includes:
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
 
-<% 
+<%
 # Global constants
 MENUBAR_ID = context.get('MENUBAR_ID', 'menubar-top')
-STATUSBAR_ID = context.get('STATUSBAR_ID', 'status') 
+STATUSBAR_ID = context.get('STATUSBAR_ID', 'status')
 CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
 CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
 MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
@@ -106,7 +106,7 @@ STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
         </nav>
 
         <nav id="language-list" class="o-context-menu o-context-menu-submenu" role="menu" aria-hidden="true">
-        ## Translators, label on back button that appears at the top of 
+        ## Translators, label on back button that appears at the top of
         ## context menu's submenu
         ${ui.context_menu_back(CONTEXT_MENU_ID, _('Back to menu'))}
         % for locale, lang in languages:
@@ -125,7 +125,7 @@ STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
             <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
                 <div class="o-statusbar-hbar-quick-status">
                     <%block name="statusbar_quick">
-                        <% 
+                        <%
                         if request.user.is_authenticated:
                             icon = 'account'
                             username = request.user.username

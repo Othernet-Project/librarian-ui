@@ -5,7 +5,7 @@
 ## Pulldown menubar
 ##
 ## Renders several containers representing pulldown menubars.
-## 
+##
 
 <%def name="apps_menu(id)">
     <nav class="o-pulldown-menubar-menu o-collapsible" id="${id}-menu" role="menubar" aria-expanded="false">
@@ -60,10 +60,10 @@
 </%def>
 
 <%def name="context_menu_item(id, label, url, icon='', enabled=True, direct=False, extra_attribs='')">
-    <a 
-        href="${url if enabled else jsvoid}" id="${id}" 
-        class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}" 
-        role="menuitem" 
+    <a
+        href="${url if enabled else jsvoid}" id="${id}"
+        class="o-context-menu-menuitem ${ 'disabled' if not enabled else ''}"
+        role="menuitem"
         aria-disabled="${'false' if enabled else 'true'}"
         data-context="${'direct' if direct else 'modal'}"
         ${'tabindex="-1"' if not enabled else ''}
@@ -74,10 +74,10 @@
 </%def>
 
 <%def name="context_menu_submenu(id, target_id, label, icon='', expand_icon='chevron-right', enabled=True)">
-    <a 
-        href="${'#{}'.format(target_id) if enabled else jsvoid}" id="${id}" 
-        class="o-context-menu-menuitem o-context-menu-submenu-activator ${ 'disabled' if not enabled else ''}" 
-        role="menuitem" 
+    <a
+        href="${'#{}'.format(target_id) if enabled else jsvoid}" id="${id}"
+        class="o-context-menu-menuitem o-context-menu-submenu-activator ${ 'disabled' if not enabled else ''}"
+        role="menuitem"
         aria-disabled="${'false' if enabled else 'true'}"
         aria-controls="${target_id}"
         data-context="submenu">
