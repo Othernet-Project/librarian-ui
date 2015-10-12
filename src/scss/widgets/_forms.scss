@@ -14,6 +14,7 @@ form {
 
     // Styling
     color: $o-form-help-text-color;
+    cursor: pointer;
 
     // Icon
     @include mdi-icon($o-form-help-icon);

@@ -94,11 +94,6 @@ select:-moz-focusring {
 }
 
 /* line 19, ../../../src/scss/_base.scss */
-label {
-  cursor: pointer;
-}
-
-/* line 23, ../../../src/scss/_base.scss */
 html {
   font-family: Arial, Helvetica, "Liberation Sans", "Open Sans", sans-serif;
   font-size: 14px;
@@ -107,7 +102,7 @@ html {
   color: #333;
 }
 
-/* line 31, ../../../src/scss/_base.scss */
+/* line 27, ../../../src/scss/_base.scss */
 body {
   overflow-x: hidden;
 }
@@ -262,12 +257,13 @@ form .field-help {
   display: inline-block;
   padding-left: 2rem;
   color: #57880e;
+  cursor: pointer;
 }
 /* line 24, ../../../src/scss/icons/_icons.scss */
 form .field-help:before {
   content: "\f37d";
 }
-/* line 21, ../../../src/scss/widgets/_forms.scss */
+/* line 22, ../../../src/scss/widgets/_forms.scss */
 form .field-help:before {
   display: inline-block;
   font: normal normal normal 1.7rem/1 MaterialDesignIcons;
