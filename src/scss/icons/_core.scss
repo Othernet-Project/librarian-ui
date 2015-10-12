@@ -1,4 +1,4 @@
-.#{$mdi-css-prefix} {
+@mixin icon-base() {
   display: inline-block;
   font: normal normal normal #{$mdi-font-size-base}/1 MaterialDesignIcons; // shortening font declaration
   font-size: inherit; // can't have font-size inherit on line above, so need to override

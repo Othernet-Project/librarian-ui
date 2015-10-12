@@ -3,3 +3,7 @@
 @import "path";
 @import "core";
 @import "icons";
+
+.#{$mdi-css-prefix} {
+  @include icon-base;
+}
