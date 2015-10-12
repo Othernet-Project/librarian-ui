@@ -35,6 +35,7 @@ STATUSBAR_ID = context.get('STATUSBAR_ID', 'status')
 CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
 CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
 MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
+STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
 %>
 
 <!doctype html>
@@ -145,8 +146,19 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
             <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
                 <div class="o-statusbar-panel-content">
                     <%block name="statusbar_panel">
-                        <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
-                        <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
+                        <div id="status-tab" class="tab">
+                            <ul class="tab-handles">
+                                <li class="handle"><a href="javascript:;" data-panel="info">${_("Info")}</a></li>
+                                <li class="handle"><a href="javascript:;" data-panel="notifications">${_("Notifications")}</a></li>
+                            </ul>
+                            <div class="tab-panels">
+                                <div class="panel" id="info">
+                                    <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
+                                    <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
+                                </div>
+                                <div class="panel" id="notifications"></div>
+                            </div>
+                        </div>
                     </%block>
                 </div>
             </div>
@@ -178,7 +190,8 @@ MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
                 statusbarId: "${STATUSBAR_ID}",
                 contextbarId: "${CONTEXT_BAR_ID}",
                 contextmenuId: "${CONTEXT_MENU_ID}",
-                mainPanelId: "${MAIN_PANEL_ID}"
+                mainPanelId: "${MAIN_PANEL_ID}",
+                statusTabId: "${STATUS_TAB_ID}"
             };
         }(this));
         </script>
