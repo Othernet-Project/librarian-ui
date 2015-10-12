@@ -21,7 +21,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
   left: $o-pulldown-menubar-default-pos-left;
   right: $o-pulldown-menubar-default-pos-right;
   height: $o-pulldown-menubar-height;
-  z-index: 1;
+  z-index: 10;
 
   // FX
   @include transition(top $o-animation-speed);

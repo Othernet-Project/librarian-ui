@@ -28,22 +28,24 @@ various parts of the interface. This includes:
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
 
-<%
+<%!
 # Global constants
-MENUBAR_ID = context.get('MENUBAR_ID', 'menubar-top')
-STATUSBAR_ID = context.get('STATUSBAR_ID', 'status')
-CONTEXT_BAR_ID = context.get('CONTEXT_BAR_ID', 'context-bar')
-CONTEXT_MENU_ID = context.get('CONTEXT_MENU_ID', 'context-menu')
-MAIN_PANEL_ID = context.get('MAIN_PANEL_ID', 'main-panel')
-STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
+MENUBAR_ID = 'menubar-top'
+STATUSBAR_ID = 'status'
+CONTEXT_BAR_ID = 'context-bar'
+CONTEXT_MENU_ID = 'context-menu'
+MAIN_PANEL_ID = 'main-panel'
+STATUS_TAB_ID = 'status-tab'
 %>
 
 <!doctype html>
 
-<html lang="en" xml:lang="en">
+<html lang="${request.locale}"${' dir="rtl"' if th.is_rtl(request.locale) == True else ''}>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="${assets['css/lui']}">
         % if redirect_url is not UNDEFINED:
         <meta http-equiv="refresh" content="${REDIRECT_DELAY}; url=${redirect_url}">
@@ -52,11 +54,14 @@ STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
     </head>
     <body>
         <header class="o-pulldown-menubar" id="${MENUBAR_ID}" role="section">
-            <%ui:apps_menu id="${MENUBAR_ID}">
-            % for mi in menu_group('main'):
-                ${mi}
-            % endfor
-            </%ui:apps_menu>
+        <%block name="header">
+            <%block name="header_menubar">
+                <%ui:apps_menu id="${MENUBAR_ID}">
+                % for mi in menu_group('main'):
+                    ${mi}
+                % endfor
+                </%ui:apps_menu>
+            </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
                 <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
                     <span class="o-pulldown-menubar-hbar-activator-label">${_('Toggle apps menu')}</span>
@@ -76,6 +81,7 @@ STATUS_TAB_ID = context.get('STATUS_TAB_ID', 'status-tab')
                     </div>
                 </div>
             </div>
+        </%block>
         </header>
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">

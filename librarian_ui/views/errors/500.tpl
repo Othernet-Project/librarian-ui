@@ -15,13 +15,22 @@ ${_('Error')}
 </%block>
 
 <%block name="error_message">
-<p class="single">${_('Librarian has failed to fulfill your request due to unexpected error in the program. Details are provided below.')}</p>
+    <p>
+        ${_('Librarian has failed to fulfill your request due to unexpected error in the program.')}
+        % if trace:
+            ${_('Details are provided below.')}
+        % else:
+            ${_('Error details are not available.')}
+        % endif
+    </p>
 
-<pre class="error-trace"><code>${trace}</code></pre>
+    % if trace:
+        <pre class="error-trace"><code>${trace}</code></pre>
+    % endif
 
-<p class="buttons">
-<a class="button" href="${url('sys:applog')}">${_('Download application log')}</a>
-</p>
+    <p class="buttons">
+    <a class="button" href="${url('sys:applog')}">${_('Download application log')}</a>
+    </p>
 </%block>
 
 
