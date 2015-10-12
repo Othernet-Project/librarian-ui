@@ -253,6 +253,7 @@ select:focus {
 label {
   font-weight: bold;
   display: block;
+  margin-bottom: 0.3rem;
 }
 
 /* line 7, ../../../src/scss/widgets/_forms.scss */
