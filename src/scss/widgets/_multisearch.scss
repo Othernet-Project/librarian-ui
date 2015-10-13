@@ -1,6 +1,6 @@
 @import "base/params";
 @import "base/panels";
-@import "icons/icons";
+@import "elements/icons";
 
 .o-multisearch {
   // Basic geometry
@@ -68,7 +68,7 @@
   .o-multisearch-button-icon {
     @if $o-multisearch-icon {
       font-size: $o-multisearch-icon-size;
-      @include mdi-icon($o-multisearch-icon);
+      @include icon($o-multisearch-icon);
     }
   }
 

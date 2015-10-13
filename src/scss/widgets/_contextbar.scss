@@ -3,7 +3,7 @@
 
 @import "base/params";
 @import "base/panels";
-@import "icons/icons";
+@import "elements/icons";
 
 .o-contextbar {
   // Basic geometry
@@ -52,7 +52,7 @@
     font-size: $o-contextbar-menu-icon-size;
 
     // Icon
-    @include mdi-icon(menu);
+    @include icon(menu);
 
     // FX
     @include transition(color $o-animation-speed);

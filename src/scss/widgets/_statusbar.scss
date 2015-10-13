@@ -1,7 +1,7 @@
 @import "compass/css3";
 
 @import "base/params";
-@import "icons/icons";
+@import "elements/icons";
 
 .o-statusbar {
   // Basic geometry
@@ -19,7 +19,7 @@
     }
 
     .o-statusbar-hbar-activator-icon {
-      @include mdi-icon($o-statusbar-hbar-activator-open-icon);
+      @include icon($o-statusbar-hbar-activator-open-icon);
     }
   }
 
@@ -74,7 +74,7 @@
     color: $o-statusbar-hbar-activator-icon-color;
 
     // Icon
-    @include mdi-icon($o-statusbar-hbar-activator-closed-icon);
+    @include icon($o-statusbar-hbar-activator-closed-icon);
   }
 
   .o-statusbar-hbar-quick-status {

@@ -1,7 +1,7 @@
 @import "compass/reset";
 @import "base";
 @import "typography";
-@import "icons/materialdesignicons";
+@import "elements/icons";
 @import "widgets/button";
 @import "widgets/input";
 @import "widgets/labels";
@@ -18,4 +18,5 @@
 @import "widgets/collapsible";
 @import "widgets/error_pages";
 
+@include icon-font-face;
 @include icon-classes;

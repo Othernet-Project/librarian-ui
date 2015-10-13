@@ -3,6 +3,7 @@
 
 @import "base/params";
 @import "elements/images";
+@import "elements/icons";
 
 $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menubar-menu-height;
 
@@ -39,7 +40,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
 
     .o-pulldown-menubar-hbar-activator-icon {
       // Icon
-      @include mdi-icon($o-pulldown-menubar-hbar-activator-open-icon);
+      @include icon($o-pulldown-menubar-hbar-activator-open-icon);
     }
   }
 
@@ -125,7 +126,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     font-size: $o-pulldown-menubar-hbar-activator-icon-size;
 
     // Icon
-    @include mdi-icon($o-pulldown-menubar-hbar-activator-closed-icon);
+    @include icon($o-pulldown-menubar-hbar-activator-closed-icon);
 
     // Fx
     @include transition(color $o-animation-speed);

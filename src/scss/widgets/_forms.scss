@@ -1,7 +1,6 @@
 @import "compass/css3";
 @import "base/params";
-@import "icons/icons";
-@import "icons/core";
+@import "elements/icons";
 
 @mixin field-note {
     // Typography
@@ -30,7 +29,7 @@ form {
     color: $o-form-help-text-color;
 
     // Icon
-    @include mdi-icon($o-form-help-icon);
+    @include icon($o-form-help-icon);
   }
 
   .field-error {
@@ -40,7 +39,7 @@ form {
     color: $o-form-error-text-color;
 
     // Icon
-    @include mdi-icon($o-form-error-icon);
+    @include icon($o-form-error-icon);
   }
 
   .form-errors {
@@ -51,7 +50,7 @@ form {
 
   .form-error {
     color: $o-form-error-text-color;
-    @include mdi-icon($o-form-error-icon);
+    @include icon($o-form-error-icon);
     margin-bottom: 0.2rem;
     
     &:before {

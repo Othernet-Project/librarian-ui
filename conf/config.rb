@@ -7,6 +7,7 @@ css_dir = "librarian_ui/static/css"
 sass_dir = "src/scss"
 images_dir = "librarian_ui/static/img"
 javascripts_dir = "librarian_ui/static/js"
+fonts_dir = "librarian_ui/static/font"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

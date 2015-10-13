@@ -1,6 +1,6 @@
 @import "compass/css3";
 @import "base/params";
-@import "icons/icons";
+@import "elements/icons";
 
 
 @include keyframes(blink) {
@@ -107,6 +107,6 @@
   }
 
   .o-modal-close-icon {
-    @include mdi-icon($o-modal-close-icon);
+    @include icon($o-modal-close-icon);
   }
 }

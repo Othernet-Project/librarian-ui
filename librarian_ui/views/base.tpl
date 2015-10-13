@@ -86,7 +86,7 @@ STATUS_TAB_ID = 'status-tab'
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
         ## Translators, label for context menu language switcher
-        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'comment-outline')}
+        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe')}
 
         <%block name="context_menu">
             ## Use ``ui.context_menu_item()`` def to build your context menu,
@@ -104,10 +104,10 @@ STATUS_TAB_ID = 'status-tab'
             ## Translators, link to settings dashboard in the context menu
             ${ui.context_menu_item('settings', _('Settings'), i18n_url('dashboard:main'), 'settings', direct=True)}
             ## Translators, link shown in context menu when user is logged in.
-            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'logout', direct=True)}
+            ${ui.context_menu_item('auth', _('Log out'), i18n_url('auth:logout', next=request.path), 'exit', direct=True)}
         % else:
             ## Translators, link shown in context menu when user is not logged in.
-            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'login')}
+            ${ui.context_menu_item('auth', _('Log in'), i18n_url('auth:login', next=request.path), 'enter')}
         % endif
         </nav>
 

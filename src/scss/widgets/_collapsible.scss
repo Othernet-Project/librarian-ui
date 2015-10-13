@@ -1,6 +1,6 @@
 @import "compass/css3";
 @import "base/params";
-@import "icons/icons";
+@import "elements/icons";
 
 .o-collapsible {
   .o-collapsible-section {
@@ -38,7 +38,7 @@
         vertical-align: middle;
 
         // Icon
-        @include mdi-icon('menu-down');
+        @include icon(expand-down);
       }
 
       &:hover,
@@ -62,7 +62,7 @@
     }  
 
     &.o-collapsed > :nth-child(1) .icon {
-      @include mdi-icon('menu-right');
+      @include icon(expand-up);
     }
 
     &.o-collapsed  {
