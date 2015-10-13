@@ -138,7 +138,7 @@ h2 {
 }
 
 /*
- * oicons-b6b3f5215a749cda46aa02fc7c48ccfa
+ * oicons-9871a6692ab0b775dc745cc0cafcc140
  */
 /* line 4, ../../../src/scss/widgets/_button.scss */
 button,
@@ -1099,8 +1099,13 @@ a:hover {
   margin-bottom: 0;
   color: #cc3737;
 }
+/* line 14, ../../../src/scss/widgets/_error_pages.scss */
+.error-name .icon {
+  position: relative;
+  top: -0.1em;
+}
 
-/* line 15, ../../../src/scss/widgets/_error_pages.scss */
+/* line 21, ../../../src/scss/widgets/_error_pages.scss */
 .error-code {
   font-size: 80%;
   text-transform: uppercase;
@@ -1108,7 +1113,7 @@ a:hover {
   margin: 0 0 2rem;
 }
 
-/* line 25, ../../../src/scss/widgets/_error_pages.scss */
+/* line 31, ../../../src/scss/widgets/_error_pages.scss */
 .error-trace {
   padding: 1rem;
   max-height: 20rem;
@@ -1123,7 +1128,7 @@ a:hover {
 
 @font-face {
   font-family: "OIcons";
-  src: url('../font/oicons-b6b3f5215a749cda46aa02fc7c48ccfa.eot?1444761882') format('embedded-opentype'), url('../font/oicons-b6b3f5215a749cda46aa02fc7c48ccfa.ttf?1444761882') format('truetype'), url('../font/oicons-b6b3f5215a749cda46aa02fc7c48ccfa.woff?1444761882') format('woff');
+  src: url('../font/oicons-9871a6692ab0b775dc745cc0cafcc140.eot?1444766571') format('embedded-opentype'), url('../font/oicons-9871a6692ab0b775dc745cc0cafcc140.ttf?1444766571') format('truetype'), url('../font/oicons-9871a6692ab0b775dc745cc0cafcc140.woff?1444766571') format('woff');
 }
 /* line 136, ../../../src/scss/elements/_icons.scss */
 .icon {

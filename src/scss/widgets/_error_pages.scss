@@ -10,6 +10,12 @@
 
   // Styling
   color: $o-critical;
+
+  .icon {
+    // Fix icon alignment
+    position: relative;
+    top: -0.1em;
+  }
 }
 
 .error-code {
