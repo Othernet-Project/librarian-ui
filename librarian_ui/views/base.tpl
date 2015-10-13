@@ -47,7 +47,7 @@ STATUS_TAB_ID = 'status-tab'
         <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="${assets['css/lui']}">
-        % if redirect_url is not UNDEFINED and False == True:
+        % if redirect_url is not UNDEFINED:
         <meta http-equiv="refresh" content="${REDIRECT_DELAY}; url=${redirect_url}">
         % endif
         <%block name="extra_head"/>
