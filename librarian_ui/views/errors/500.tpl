@@ -7,7 +7,7 @@ ${_('Error')}
 
 <%block name="error_title">
 ## Translators, used as error page heading
-<span class="icon icon-alert-octagon"></span> ${_('Error')}
+<span class="icon icon-alert-stop"></span> ${_('Error')}
 </%block>
 
 <%block name="error_code">

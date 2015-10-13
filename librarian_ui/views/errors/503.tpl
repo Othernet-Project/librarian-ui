@@ -7,7 +7,7 @@ ${_('Under maintenance')}
 
 <%block name="error_title">
 ## Translators, used as maintenance page heading
-<span class="icon icon-settings-box"></span> ${_('Under maintenance')}
+<span class="icon icon-alert-key"></span> ${_('Under maintenance')}
 </%block>
 
 <%block name="error_code">

@@ -3,117 +3,125 @@
 $oicons-prefix: '' !default;
 
 $glyphs: (
-  alert-outline: '\f101',
-  alert-question: '\f102',
-  alert-stop: '\f103',
-  alert: '\f104',
-  arrow-down: '\f105',
-  arrow-left: '\f106',
-  arrow-right: '\f107',
-  arrow-up: '\f108',
-  box-minus: '\f109',
-  box-plus: '\f10a',
-  circle-arrow-down: '\f10b',
-  circle-arrow-in-down: '\f10c',
-  circle-arrow-in-left: '\f10d',
-  circle-arrow-in-right: '\f10e',
-  circle-arrow-in-up: '\f10f',
-  circle-arrow-left: '\f110',
-  circle-arrow-right: '\f111',
-  circle-arrow-up: '\f112',
-  circle-dot: '\f113',
-  circle-ok: '\f114',
-  circle-power: '\f115',
-  circle: '\f116',
-  clock: '\f117',
-  close: '\f118',
-  edit-outline: '\f119',
-  edit: '\f11a',
-  enter: '\f11b',
-  ethernet: '\f11c',
-  exit: '\f11d',
-  expand-down: '\f11e',
-  expand-left: '\f11f',
-  expand-right: '\f120',
-  expand-up: '\f121',
-  file-audio: '\f122',
-  file-binary: '\f123',
-  file-image: '\f124',
-  file-music: '\f125',
-  file-text-image: '\f126',
-  file-text: '\f127',
-  file-vector: '\f128',
-  file-video: '\f129',
-  file: '\f12a',
-  folder-circle: '\f12b',
-  folder-down: '\f12c',
-  folder-left: '\f12d',
-  folder-locked: '\f12e',
-  folder-no: '\f12f',
-  folder-ok: '\f130',
-  folder-plus: '\f131',
-  folder-right: '\f132',
-  folder-up: '\f133',
-  folder: '\f134',
-  globe: '\f135',
-  help-outline: '\f136',
-  help: '\f137',
-  key: '\f138',
-  lock: '\f139',
-  menu: '\f13a',
-  message-alert: '\f13b',
-  message: '\f13c',
-  minus-outline: '\f13d',
-  minus: '\f13e',
-  no-outline: '\f13f',
-  no: '\f140',
-  other-outline: '\f141',
-  other: '\f142',
-  outernet: '\f143',
-  plus-outline: '\f144',
-  plus: '\f145',
-  satellite: '\f146',
-  search: '\f147',
-  settings: '\f148',
-  unlock: '\f149',
-  user-exclamation: '\f14a',
-  user-key: '\f14b',
-  user-minus: '\f14c',
-  user-multiple: '\f14d',
-  user-no: '\f14e',
-  user-ok: '\f14f',
-  user-plus: '\f150',
-  user-shield: '\f151',
-  user-star: '\f152',
-  user-unknown: '\f153',
-  user-up: '\f154',
-  user: '\f155',
-  wifi: '\f156',
+  alert-key: '\f101',
+  alert-outline: '\f102',
+  alert-question: '\f103',
+  alert-stop: '\f104',
+  alert: '\f105',
+  arrow-down: '\f106',
+  arrow-left: '\f107',
+  arrow-right: '\f108',
+  arrow-up: '\f109',
+  box-minus: '\f10a',
+  box-plus: '\f10b',
+  circle-arrow-down: '\f10c',
+  circle-arrow-in-down: '\f10d',
+  circle-arrow-in-left: '\f10e',
+  circle-arrow-in-right: '\f10f',
+  circle-arrow-in-up: '\f110',
+  circle-arrow-left: '\f111',
+  circle-arrow-right: '\f112',
+  circle-arrow-up: '\f113',
+  circle-dot: '\f114',
+  circle-ok: '\f115',
+  circle-power: '\f116',
+  circle: '\f117',
+  clock: '\f118',
+  close: '\f119',
+  edit-outline: '\f11a',
+  edit: '\f11b',
+  enter: '\f11c',
+  ethernet: '\f11d',
+  exit: '\f11e',
+  expand-down: '\f11f',
+  expand-left: '\f120',
+  expand-right: '\f121',
+  expand-up: '\f122',
+  file-audio: '\f123',
+  file-binary: '\f124',
+  file-image: '\f125',
+  file-music: '\f126',
+  file-text-image: '\f127',
+  file-text: '\f128',
+  file-vector: '\f129',
+  file-video: '\f12a',
+  file: '\f12b',
+  folder-circle: '\f12c',
+  folder-down: '\f12d',
+  folder-left: '\f12e',
+  folder-locked: '\f12f',
+  folder-no: '\f130',
+  folder-ok: '\f131',
+  folder-plus: '\f132',
+  folder-right: '\f133',
+  folder-up: '\f134',
+  folder: '\f135',
+  globe: '\f136',
+  help-outline: '\f137',
+  help: '\f138',
+  key: '\f139',
+  lock: '\f13a',
+  menu: '\f13b',
+  message-alert: '\f13c',
+  message: '\f13d',
+  minus-outline: '\f13e',
+  minus: '\f13f',
+  no-outline: '\f140',
+  no: '\f141',
+  other-outline: '\f142',
+  other: '\f143',
+  outernet: '\f144',
+  plus-outline: '\f145',
+  plus: '\f146',
+  satellite: '\f147',
+  search: '\f148',
+  settings: '\f149',
+  unlock: '\f14a',
+  user-exclamation: '\f14b',
+  user-key: '\f14c',
+  user-minus: '\f14d',
+  user-multiple: '\f14e',
+  user-no: '\f14f',
+  user-ok: '\f150',
+  user-plus: '\f151',
+  user-shield: '\f152',
+  user-star: '\f153',
+  user-unknown: '\f154',
+  user-up: '\f155',
+  user: '\f156',
+  wifi: '\f157',
 );
 
 // Shortcut to add font-face definition
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-943a17beafd0ee4e272b8e1113f16127.eot",
-      "#{$oicons-prefix}oicons-943a17beafd0ee4e272b8e1113f16127.ttf",
-      "#{$oicons-prefix}oicons-943a17beafd0ee4e272b8e1113f16127.woff"));
+      "#{$oicons-prefix}oicons-b6b3f5215a749cda46aa02fc7c48ccfa.eot",
+      "#{$oicons-prefix}oicons-b6b3f5215a749cda46aa02fc7c48ccfa.ttf",
+      "#{$oicons-prefix}oicons-b6b3f5215a749cda46aa02fc7c48ccfa.woff"));
 }
 
 // Base styles for all icons
 @mixin icon-base {
+  // Typography
   font-family: "OIcons";
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
   font-weight: normal;
   font-style: normal;
-  speak: none;
   text-decoration: inherit;
   text-transform: none;
+
+  // Basic geometry
+  display: inline-block;
+  speak: none;
+
+  // Text rendering settings
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    vertical-align: middle;
+  }
 }
 
 // Mixin for a single icon
@@ -137,5 +145,5 @@ $glyphs: (
 }
 
 /*
- * oicons-943a17beafd0ee4e272b8e1113f16127
+ * oicons-b6b3f5215a749cda46aa02fc7c48ccfa
  */
