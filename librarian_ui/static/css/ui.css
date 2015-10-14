@@ -136,8 +136,9 @@ h2 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
 }
-/* line 26, ../../../src/scss/_typography.scss */
-h2 .subtitle-buttons {
+
+/* line 27, ../../../src/scss/_typography.scss */
+.subtitle-buttons {
   display: block;
   position: absolute;
   top: 1rem;
