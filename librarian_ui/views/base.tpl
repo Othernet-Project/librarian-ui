@@ -139,7 +139,7 @@ STATUS_TAB_ID = 'status-tab'
                             icon = 'lock'
                             # Translators, used as a label for guest account (unauthenticated user)
                             username = _('guest')
-                            notifications = th.get_notification_count()
+                        notifications = th.get_notification_count()
                         %>
                         <span class="icon icon-${icon}"></span>
                         <span class="username">${username}</span>
