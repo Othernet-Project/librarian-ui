@@ -66,6 +66,10 @@
     vertical-align: middle;
   }
 
+  .o-context-menu-menuitem-label {
+    vertical-align: middle;  // Keep labels aligned with fonts
+  }
+
   .o-context-menu-separator {
     // Basic geometry
     display: block;

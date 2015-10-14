@@ -107,6 +107,11 @@
   }
 
   .o-modal-close-icon {
+    // Icon
     @include icon($o-modal-close-icon);
+
+    // Basic geometry
+    position: relative;
+    top: -3px;  // For some reason, icon is way too low, so adjust it
   }
 }

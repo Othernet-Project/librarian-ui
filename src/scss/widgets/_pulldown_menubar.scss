@@ -102,11 +102,10 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     height: 100%;
   }
 
-  // FIXME: The logo is not centered within the h-bar.
   .o-pulldown-menubar-hbar-activator-label {
     // Basic geometry
     position: relative;
-    top: $o-pulldown-menubar-hbar-activator-icon-top-offset;
+    top: -1px;
 
     @if $o-pulldown-menubar-hbar-use-logo == yes {
       @include image-sprite($o-pulldown-menubar-hbar-logo);
@@ -120,7 +119,6 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     // Basic geometry
     vertical-align: middle;
     position: relative;
-    top: $o-pulldown-menubar-hbar-activator-icon-top-offset;
 
     // Styling
     font-size: $o-pulldown-menubar-hbar-activator-icon-size;
