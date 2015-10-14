@@ -227,8 +227,11 @@ button.clean,
   height: auto;
   background: transparent;
   border: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
-/* line 50, ../../../src/scss/widgets/_button.scss */
+/* line 51, ../../../src/scss/widgets/_button.scss */
 button.clean:hover, button.clean:focus,
 .button.clean:hover,
 .button.clean:focus {
@@ -236,13 +239,13 @@ button.clean:hover, button.clean:focus,
   color: #089bd2;
   background-image: none;
 }
-/* line 58, ../../../src/scss/widgets/_button.scss */
+/* line 59, ../../../src/scss/widgets/_button.scss */
 button .icon,
 .button .icon {
   font-size: 120%;
 }
 
-/* line 63, ../../../src/scss/widgets/_button.scss */
+/* line 64, ../../../src/scss/widgets/_button.scss */
 .buttons {
   text-align: right;
   margin-top: 1rem;
@@ -250,7 +253,7 @@ button .icon,
   margin-bottom: 1rem;
 }
 
-/* line 73, ../../../src/scss/widgets/_button.scss */
+/* line 74, ../../../src/scss/widgets/_button.scss */
 a.button {
   padding: 0.36rem 1rem;
 }

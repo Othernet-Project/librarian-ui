@@ -46,6 +46,7 @@ button,
     height: auto;
     background: transparent;
     border: 0;
+    @include border-radius(0);
 
     &:hover,
     &:focus {
