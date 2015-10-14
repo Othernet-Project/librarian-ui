@@ -136,6 +136,16 @@ h2 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
 }
+/* line 26, ../../../src/scss/_typography.scss */
+h2 .subtitle-buttons {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  text-align: right;
+  margin: 0 0 1rem;
+}
 
 @-moz-keyframes spin {
   from {
@@ -209,8 +219,29 @@ button:hover, button:focus,
   background-image: -webkit-linear-gradient(#089bd2, #0677a1);
   background-image: linear-gradient(#089bd2, #0677a1);
 }
+/* line 44, ../../../src/scss/widgets/_button.scss */
+button.clean,
+.button.clean {
+  padding: 0;
+  height: auto;
+  background: transparent;
+  border: 0;
+}
+/* line 50, ../../../src/scss/widgets/_button.scss */
+button.clean:hover, button.clean:focus,
+.button.clean:hover,
+.button.clean:focus {
+  background: transparent;
+  color: #089bd2;
+  background-image: none;
+}
+/* line 58, ../../../src/scss/widgets/_button.scss */
+button .icon,
+.button .icon {
+  font-size: 120%;
+}
 
-/* line 45, ../../../src/scss/widgets/_button.scss */
+/* line 63, ../../../src/scss/widgets/_button.scss */
 .buttons {
   text-align: right;
   margin-top: 1rem;
@@ -218,7 +249,7 @@ button:hover, button:focus,
   margin-bottom: 1rem;
 }
 
-/* line 55, ../../../src/scss/widgets/_button.scss */
+/* line 73, ../../../src/scss/widgets/_button.scss */
 a.button {
   padding: 0.36rem 1rem;
 }
@@ -574,6 +605,7 @@ a:hover {
   max-width: 36rem;
   margin: 1rem auto;
   padding: 1rem;
+  position: relative;
   background: rgba(255, 255, 255, 0.75);
   -moz-border-radius: 0.3rem;
   -webkit-border-radius: 0.3rem;

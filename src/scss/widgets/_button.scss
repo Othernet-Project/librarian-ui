@@ -40,6 +40,24 @@ button,
       @include background-image(linear-gradient($o-button-hover-face-shading));
     }
   }
+
+  &.clean {
+    padding: 0;
+    height: auto;
+    background: transparent;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: $o-accent;
+      @include background-image(none);
+    }
+  }
+
+  .icon {
+    font-size: 120%;
+  }
 }
 
 .buttons {
