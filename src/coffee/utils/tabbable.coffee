@@ -38,11 +38,15 @@
         targetPanel.html template.loadFail
       return
 
+    elem.on 'focus', activator, (e) ->
+      elem.trigger 'activator-focus'
 
     elem.on 'click', activator, (e) ->
       e.preventDefault()
       closeActivePanel()
       act = $ this
       activatePanel act
+
+    elem
 
 ) this, this.jQuery, this.templates

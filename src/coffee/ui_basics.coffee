@@ -7,8 +7,11 @@
   pdmb = new PulldownMenubar window.o.pageVars.menubarId
   scrl = new Statusbar window.o.pageVars.statusbarId
   ctxm = new ContextMenu window.o.pageVars.contextmenuId
-
-  $('#' + window.o.pageVars.statusTabId).tabable()
+  statusBarTabs = $('#' + window.o.pageVars.statusTabId)
+  statusBarTabs.tabable()
+  statusBarTabs.on 'activator-focus', (e)->
+    scrl.open()
+    return
 
   return
 

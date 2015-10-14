@@ -38,12 +38,16 @@
         return targetPanel.html(template.loadFail);
       });
     };
-    return elem.on('click', activator, function(e) {
+    elem.on('focus', activator, function(e) {
+      return elem.trigger('activator-focus');
+    });
+    elem.on('click', activator, function(e) {
       var act;
       e.preventDefault();
       closeActivePanel();
       act = $(this);
       return activatePanel(act);
     });
+    return elem;
   };
 })(this, this.jQuery, this.templates);
