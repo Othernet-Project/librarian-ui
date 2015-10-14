@@ -133,7 +133,7 @@ STATUS_TAB_ID = 'status-tab'
                     <%block name="statusbar_quick">
                         <%
                         if request.user.is_authenticated:
-                            icon = 'account'
+                            icon = 'user'
                             username = request.user.username
                         else:
                             icon = 'lock'
