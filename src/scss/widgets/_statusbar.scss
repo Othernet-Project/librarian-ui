@@ -15,7 +15,7 @@
   // FX
   &.open {
     .o-statusbar-status {
-      max-height: $o-statusbar-status-height;
+      max-height: 40rem;
     }
 
     .o-statusbar-hbar-activator-icon {
@@ -84,6 +84,26 @@
 
   .o-statusbar-hbar-quick-status {
     padding: 0.3rem 1rem;
+
+    .separator {
+      // Basic geometry
+      with: 0;
+      height: 100%;
+      position: relative;
+      margin: 0 0.3rem;
+
+
+      // Styling
+      border-right: $o-widget-border;
+    }
+
+    .icon {
+      font-size: 120%;
+
+      &.alert {
+        color: $o-critical;
+      }
+    }
   }
 
   .o-statusbar-panel-content {

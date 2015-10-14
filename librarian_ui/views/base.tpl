@@ -144,11 +144,10 @@ STATUS_TAB_ID = 'status-tab'
                         <span class="icon icon-${icon}"></span>
                         <span class="username">${username}</span>
                         % if notifications:
+                            <span class="separator"></span>
                             <span class="unread-notifications">
-                                <span class="icon icon-message-alert"></span>
-                                <span class="unread-notification-count">
-                                    ${ngettext('{} unread notification', '{} unread notifications', notifications).format(notifications)}
-                                </span>
+                                <span class="alert icon icon-message-alert"></span>
+                                <span class="unread-notification-count">${notifications}</span>
                             </span>
                         % endif
                         </span>

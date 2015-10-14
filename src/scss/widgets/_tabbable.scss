@@ -20,7 +20,8 @@
     // Basic geometry
     margin-left: $o-clickable-target-size;
     padding: 1rem 1rem 3rem;
-    min-height: 20rem;
+    height: 100%;
+    overflow-y: auto;
   }
 
   .o-tab-handle-activator {
