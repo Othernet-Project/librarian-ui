@@ -1178,7 +1178,7 @@ a:hover {
 }
 /* line 143, ../../../src/scss/elements/_icons.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1) .icon:before {
-  content: "";
+  content: "";
 }
 /* line 44, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1):hover, .o-collapsible .o-collapsible-section > :nth-child(1):focus {
@@ -1198,7 +1198,7 @@ a:hover {
 }
 /* line 143, ../../../src/scss/elements/_icons.scss */
 .o-collapsible .o-collapsible-section.o-collapsed > :nth-child(1) .icon:before {
-  content: "";
+  content: "";
 }
 /* line 68, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section.o-collapsed {
@@ -1260,8 +1260,9 @@ a:hover {
 /* line 65, ../../../src/scss/widgets/_tabbable.scss */
 .o-tabbable .o-tab-panel {
   display: none;
+  position: relative;
 }
-/* line 68, ../../../src/scss/widgets/_tabbable.scss */
+/* line 69, ../../../src/scss/widgets/_tabbable.scss */
 .o-tabbable .o-tab-panel.active {
   display: block;
 }

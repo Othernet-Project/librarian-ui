@@ -64,6 +64,7 @@
 
   .o-tab-panel {
     display: none;
+    position: relative;
 
     &.active {
       display: block;

@@ -38,7 +38,7 @@
         vertical-align: middle;
 
         // Icon
-        @include icon(expand-down);
+        @include icon(expand-up);
       }
 
       &:hover,
@@ -62,7 +62,7 @@
     }  
 
     &.o-collapsed > :nth-child(1) .icon {
-      @include icon(expand-up);
+      @include icon(expand-down);
     }
 
     &.o-collapsed  {
