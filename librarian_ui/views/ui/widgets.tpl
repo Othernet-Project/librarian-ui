@@ -124,3 +124,27 @@
     </span>
 </span>
 </%def>
+
+## Spinner
+
+<%def name="spinner(message='')">
+    <span class="icon icon-spinning-loader-xxl"></span>
+    ${message}
+</%def>
+
+## Tabbable
+
+<%def name="tab_activator(label, icon, target, active=False)">
+    <a class="o-tab-handle-activator${ ' active' if active else ''}" href="#${target}" role="tab" aria-controls="info">
+        <span class="o-tab-handle-activator-icon icon icon-${icon}"></span>
+        <span class="o-tab-handle-activator-label">${label}</span>
+    </a>
+</%def>
+
+<%def name="tab_panel(id, expanded=False, url='')">
+    <div id="${id}" class="o-tab-panel${ ' active' if expanded else ''}" role="tabpanel" aria-expanded="${'true' if expanded else 'false'}"${ ' data-url={}'.format(url) if url else ''}>
+        % if not url:
+            ${caller.body()}
+        % endif
+    </div>
+</%def>

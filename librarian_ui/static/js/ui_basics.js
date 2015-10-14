@@ -7,5 +7,5 @@
   pdmb = new PulldownMenubar(window.o.pageVars.menubarId);
   scrl = new Statusbar(window.o.pageVars.statusbarId);
   ctxm = new ContextMenu(window.o.pageVars.contextmenuId);
-  return $('#' + window.o.pageVars.statusTabId).tab();
+  $('#' + window.o.pageVars.statusTabId).tabable();
 })(this, this.jQuery);

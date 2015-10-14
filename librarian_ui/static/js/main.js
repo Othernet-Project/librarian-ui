@@ -6,5 +6,6 @@
   ContextMenu = window.o.widgets.ContextMenu;
   pdmb = new PulldownMenubar('menubar-top');
   scrl = new Statusbar('main-status');
-  return ctxm = new ContextMenu('context-menu');
+  ctxm = new ContextMenu('context-menu');
+  $('#' + window.o.pageVars.statusTabId).tabbable();
 })(this, this.jQuery);

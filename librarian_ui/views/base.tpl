@@ -139,9 +139,19 @@ STATUS_TAB_ID = 'status-tab'
                             icon = 'lock'
                             # Translators, used as a label for guest account (unauthenticated user)
                             username = _('guest')
+                            notifications = th.get_notification_count()
                         %>
                         <span class="icon icon-${icon}"></span>
                         <span class="username">${username}</span>
+                        % if notifications:
+                            <span class="unread-notifications">
+                                <span class="icon icon-message-alert"></span>
+                                <span class="unread-notification-count">
+                                    ${ngettext('{} unread notification', '{} unread notifications', notifications).format(notifications)}
+                                </span>
+                            </span>
+                        % endif
+                        </span>
                     </%block>
                 </div>
                 <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
@@ -152,17 +162,21 @@ STATUS_TAB_ID = 'status-tab'
             <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
                 <div class="o-statusbar-panel-content">
                     <%block name="statusbar_panel">
-                        <div id="status-tab" class="tab">
-                            <ul class="tab-handles">
-                                <li class="handle"><a href="javascript:;" data-panel="info">${_("Info")}</a></li>
-                                <li class="handle"><a href="javascript:;" data-panel="notifications">${_("Notifications")}</a></li>
+                        <div id="status-tab" class="o-tabbable">
+                            <ul class="o-tab-handles" role="tablist">
+                                <li class="o-tab-handle">
+                                ${ui.tab_activator(_('Info'), 'info', 'info', active=True)}
+                                </li>
+                                <li class="o-tab-handle">
+                                ${ui.tab_activator(_('Notifications'), 'message-alert', 'notifications')}
+                                </li>
                             </ul>
-                            <div class="tab-panels">
-                                <div class="panel" id="info">
+                            <div class="o-tab-panels">
+                                <%ui:tab_panel id="info" expanded="true">
                                     <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
                                     <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
-                                </div>
-                                <div class="panel" id="notifications"></div>
+                                </%ui:tab_panel>
+                                <%ui:tab_panel id="notifications" url="${i18n_url('notifications:list')}"/>
                             </div>
                         </div>
                     </%block>
@@ -179,10 +193,19 @@ STATUS_TAB_ID = 'status-tab'
             </%ui:modal_container>
         </script>
 
+        <script type="text/template" id="loadFail">
+            ${_('Content could not be loaded')}
+        </script>
+
         <script type="text/template" id="modalLoadFailure">
             <div class="o-modal-load-failure o-modal-spinner">
                 ${_('Content could not be loaded')}
             </div>
+        </script>
+
+        <script type="text/template" id="spinner">
+            ## Translators, message shown next to a spinning load icon
+            ${ui.spinner(_('Loading...'))}
         </script>
 
         <%block name="extra_body"/>

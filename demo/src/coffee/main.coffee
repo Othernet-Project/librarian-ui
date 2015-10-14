@@ -8,4 +8,8 @@
   scrl = new Statusbar('main-status')
   ctxm = new ContextMenu('context-menu')
 
+  $('#' + window.o.pageVars.statusTabId).tabbable()
+
+  return
+
 ) this, this.jQuery
