@@ -13,6 +13,19 @@
     scrl.open()
     return
 
+  # Convert marked timestamps to local time as per browser's locale
+  $.timeconv()
+
+  # Since there's no good way to get DOM change events in order to apply time
+  # format conversion, we monkey-patch jQuery's html() method in order to
+  # perform time format conversion after the original method is done.
+  origHtml = $.fn.html
+  $.fn.html = () ->
+    ret = origHtml.apply this, arguments
+    if arguments.length
+      $.timeconv(this)
+    ret
+
   return
 
 ) this, this.jQuery
