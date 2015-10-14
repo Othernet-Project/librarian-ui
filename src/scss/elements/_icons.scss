@@ -59,46 +59,54 @@ $glyphs: (
   globe: '\f136',
   help-outline: '\f137',
   help: '\f138',
-  key: '\f139',
-  lock: '\f13a',
-  menu: '\f13b',
-  message-alert: '\f13c',
-  message: '\f13d',
-  minus-outline: '\f13e',
-  minus: '\f13f',
-  no-outline: '\f140',
-  no: '\f141',
-  other-outline: '\f142',
-  other: '\f143',
-  outernet: '\f144',
-  plus-outline: '\f145',
-  plus: '\f146',
-  satellite: '\f147',
-  search: '\f148',
-  settings: '\f149',
-  unlock: '\f14a',
-  user-exclamation: '\f14b',
-  user-key: '\f14c',
-  user-minus: '\f14d',
-  user-multiple: '\f14e',
-  user-no: '\f14f',
-  user-ok: '\f150',
-  user-plus: '\f151',
-  user-shield: '\f152',
-  user-star: '\f153',
-  user-unknown: '\f154',
-  user-up: '\f155',
-  user: '\f156',
-  wifi: '\f157',
+  info-outline: '\f139',
+  info: '\f13a',
+  key: '\f13b',
+  lock: '\f13c',
+  menu: '\f13d',
+  message-alert: '\f13e',
+  message: '\f13f',
+  minus-outline: '\f140',
+  minus: '\f141',
+  no-outline: '\f142',
+  no: '\f143',
+  other-outline: '\f144',
+  other: '\f145',
+  outernet: '\f146',
+  plus-outline: '\f147',
+  plus: '\f148',
+  satellite: '\f149',
+  search: '\f14a',
+  settings: '\f14b',
+  spinner: '\f14c',
+  unlock: '\f14d',
+  user-exclamation: '\f14e',
+  user-key: '\f14f',
+  user-minus: '\f150',
+  user-multiple: '\f151',
+  user-no: '\f152',
+  user-ok: '\f153',
+  user-plus: '\f154',
+  user-shield: '\f155',
+  user-star: '\f156',
+  user-unknown: '\f157',
+  user-up: '\f158',
+  user: '\f159',
+  wifi: '\f15a',
 );
+
+@include keyframes('spin') {
+  from { @include rotate(0deg); }
+  to { @include rotate(360deg); }
+}
 
 // Shortcut to add font-face definition
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-a1f66ceaacd3b36c6db037968788ad8f.eot",
-      "#{$oicons-prefix}oicons-a1f66ceaacd3b36c6db037968788ad8f.ttf",
-      "#{$oicons-prefix}oicons-a1f66ceaacd3b36c6db037968788ad8f.woff"));
+      "#{$oicons-prefix}oicons-528ca8b0ee9d0e4fe7303ee755f4df83.eot",
+      "#{$oicons-prefix}oicons-528ca8b0ee9d0e4fe7303ee755f4df83.ttf",
+      "#{$oicons-prefix}oicons-528ca8b0ee9d0e4fe7303ee755f4df83.woff"));
 }
 
 // Base styles for all icons
@@ -137,6 +145,12 @@ $glyphs: (
   }
 }
 
+@mixin spinner($size: 100%) {
+  @include icon(spinner);
+  @include animation(spin 2s linear infinite);
+  font-size: $size;
+}
+
 // Shortcut to add all icon classes
 @mixin icon-classes {
   .icon {
@@ -148,8 +162,12 @@ $glyphs: (
       @include icon($name);
     }
   }
-}
 
-/*
- * oicons-a1f66ceaacd3b36c6db037968788ad8f
- */
+  .icon-spinning-loader {
+    @include spinner;
+  }
+
+  .icon-spinning-loader-xxl {
+    @include spinner(300%);
+  }
+}
