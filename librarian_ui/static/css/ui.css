@@ -638,29 +638,33 @@ a:hover {
   right: 0;
   top: 0;
   width: 3rem;
+  color: #333;
 }
-/* line 59, ../../../src/scss/widgets/_statusbar.scss */
+/* line 60, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-activator .o-statusbar-hbar-activator-label {
   display: none;
 }
 /* line 65, ../../../src/scss/widgets/_statusbar.scss */
+.o-statusbar .o-statusbar-hbar-activator:hover, .o-statusbar .o-statusbar-hbar-activator:focus {
+  color: #089bd2;
+}
+/* line 71, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-activator-icon {
   width: 100%;
   height: 100%;
   padding-top: 0.2rem;
   font-size: 180%;
   text-align: center;
-  color: #333;
 }
 /* line 143, ../../../src/scss/elements/_icons.scss */
 .o-statusbar .o-statusbar-hbar-activator-icon:before {
   content: "";
 }
-/* line 80, ../../../src/scss/widgets/_statusbar.scss */
+/* line 85, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-quick-status {
   padding: 0.3rem 1rem;
 }
-/* line 84, ../../../src/scss/widgets/_statusbar.scss */
+/* line 89, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-panel-content {
   background: #eee;
 }

@@ -54,11 +54,17 @@
     right: 0;
     top: 0;
     width: $o-statusbar-hbar-activator-width;
+    color: $o-base-text-color;
 
     @if $o-statusbar-hbar-show-label == no {
       .o-statusbar-hbar-activator-label {
         display: none;
       }
+    }
+
+    &:hover,
+    &:focus {
+      color: $o-accent;
     }
   }
 
@@ -71,7 +77,6 @@
     // Styling
     font-size: $o-statusbar-hbar-activator-icon-size;
     text-align: center;
-    color: $o-statusbar-hbar-activator-icon-color;
 
     // Icon
     @include icon($o-statusbar-hbar-activator-closed-icon);
