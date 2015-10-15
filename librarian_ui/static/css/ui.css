@@ -822,7 +822,7 @@ a:hover {
   content: "";
 }
 
-/* line 5, ../../../src/scss/widgets/_multisearch.scss */
+/* line 6, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch {
   width: 100%;
   display: block;
@@ -850,26 +850,32 @@ a:hover {
   left: 14rem;
   right: 6rem;
 }
-/* line 10, ../../../src/scss/widgets/_multisearch.scss */
+@media only screen and (max-width: 520px) {
+  /* line 6, ../../../src/scss/widgets/_multisearch.scss */
+  .o-multisearch {
+    display: none;
+  }
+}
+/* line 15, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch > .o-panel {
   padding: 0.8rem 0;
 }
-/* line 13, ../../../src/scss/widgets/_multisearch.scss */
+/* line 18, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch > .o-panel:first-child {
   padding-left: 2rem;
 }
-/* line 17, ../../../src/scss/widgets/_multisearch.scss */
+/* line 22, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch > .o-panel:last-child {
   padding-right: 2rem;
 }
-/* line 23, ../../../src/scss/widgets/_multisearch.scss */
+/* line 28, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch select, .o-multisearch input[type=text], .o-multisearch button, .o-multisearch label {
   display: inline-block;
   width: 100%;
   vertical-align: middle;
   margin: 0;
 }
-/* line 30, ../../../src/scss/widgets/_multisearch.scss */
+/* line 35, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch input[type=text] {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -877,7 +883,7 @@ a:hover {
   border-left: 0;
   border-right: 0;
 }
-/* line 37, ../../../src/scss/widgets/_multisearch.scss */
+/* line 42, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch select {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
@@ -886,7 +892,7 @@ a:hover {
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 42, ../../../src/scss/widgets/_multisearch.scss */
+/* line 47, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch button {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -895,7 +901,7 @@ a:hover {
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-/* line 47, ../../../src/scss/widgets/_multisearch.scss */
+/* line 52, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch label {
   font-family: Arial, Helvetica, "Liberation Sans", "Open Sans", sans-serif;
   font-size: 14px;
@@ -913,7 +919,7 @@ a:hover {
   -webkit-border-bottom-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
-/* line 68, ../../../src/scss/widgets/_multisearch.scss */
+/* line 73, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch .o-multisearch-button-icon {
   font-size: 180%;
 }
@@ -921,7 +927,7 @@ a:hover {
 .o-multisearch .o-multisearch-button-icon:before {
   content: "";
 }
-/* line 75, ../../../src/scss/widgets/_multisearch.scss */
+/* line 80, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch .o-multisearch-button-label {
   display: none;
 }

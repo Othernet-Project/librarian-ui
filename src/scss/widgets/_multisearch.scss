@@ -1,11 +1,16 @@
 @import "base/params";
 @import "base/panels";
+@import "base/media_query";
 @import "elements/icons";
 
 .o-multisearch {
   // Basic geometry
   width: $o-multisearch-width;
   @include double-split-panel($o-multisearch-select-width, $o-multisearch-button-width, $o-multisearch-height);
+
+  @include narrower-than(520px) {
+    display: none;
+  }
 
   & > .o-#{$o-container-class} {
     padding: $o-multisearch-vertical-padding 0;
