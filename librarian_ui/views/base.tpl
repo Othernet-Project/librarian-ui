@@ -58,9 +58,11 @@ STATUS_TAB_ID = 'status-tab'
         <%block name="header">
             <%block name="header_menubar">
                 <%ui:apps_menu id="${MENUBAR_ID}">
-                % for mi in menu_group('main'):
-                    ${menu.menu_item(mi)}
-                % endfor
+                    <ul class="o-apps-menu">
+                    % for mi in menu_group('main'):
+                        ${menu.menu_item(mi)}
+                    % endfor
+                    </ul>
                 </%ui:apps_menu>
             </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
