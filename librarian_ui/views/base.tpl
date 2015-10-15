@@ -27,6 +27,7 @@ various parts of the interface. This includes:
 </%doc>
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
+<%namespace name="menu" file="/ui/menu_item.tpl"/>
 
 <%!
 # Global constants
@@ -58,7 +59,7 @@ STATUS_TAB_ID = 'status-tab'
             <%block name="header_menubar">
                 <%ui:apps_menu id="${MENUBAR_ID}">
                 % for mi in menu_group('main'):
-                    ${mi}
+                    ${menu.menu_item(mi)}
                 % endfor
                 </%ui:apps_menu>
             </%block>
@@ -132,14 +133,17 @@ STATUS_TAB_ID = 'status-tab'
                 <div class="o-statusbar-hbar-quick-status">
                     <%block name="statusbar_quick">
                         <%
-                        if request.user.is_authenticated:
-                            icon = 'user'
-                            username = request.user.username
-                        else:
-                            icon = 'lock'
-                            # Translators, used as a label for guest account (unauthenticated user)
-                            username = _('guest')
-                        notifications = th.get_notification_count()
+                            if request.user.is_authenticated:
+                                if request.user.is_superuser:
+                                    icon = 'user-up'
+                                else:
+                                    icon = 'user'
+                                username = request.user.username
+                            else:
+                                icon = 'lock'
+                                # Translators, used as a label for guest account (unauthenticated user)
+                                username = _('guest')
+                            notifications = th.get_notification_count()
                         %>
                         <span class="icon icon-${icon}"></span>
                         <span class="username">${username}</span>
@@ -164,18 +168,18 @@ STATUS_TAB_ID = 'status-tab'
                         <div id="status-tab" class="o-tabbable">
                             <ul class="o-tab-handles" role="tablist">
                                 <li class="o-tab-handle">
-                                ${ui.tab_activator(_('Info'), 'info', 'info', active=True)}
+                                ${ui.tab_activator(_('Info'), 'info', 'info-tab', active=True)}
                                 </li>
                                 <li class="o-tab-handle">
-                                ${ui.tab_activator(_('Notifications'), 'message-alert', 'notifications')}
+                                ${ui.tab_activator(_('Notifications'), 'message-alert', 'notifications-tab')}
                                 </li>
                             </ul>
                             <div class="o-tab-panels">
-                                <%ui:tab_panel id="info" expanded="true">
+                                <%ui:tab_panel id="info-tab" expanded="true">
                                     <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
                                     <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
                                 </%ui:tab_panel>
-                                <%ui:tab_panel id="notifications" url="${i18n_url('notifications:list')}"/>
+                                <%ui:tab_panel id="notifications-tab" url="${i18n_url('notifications:list')}"/>
                             </div>
                         </div>
                     </%block>
