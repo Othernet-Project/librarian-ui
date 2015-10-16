@@ -9,12 +9,17 @@
     }
     time = $('time', subtree);
     return time.each(function() {
-      var dt, dtstr, e, elem;
+      var dt, dtstr, e, elem, format;
       elem = $(this);
+      format = elem.data('format');
       dtstr = elem.attr('datetime');
       try {
         dt = new Date(dtstr);
-        dt = dt.toLocaleString();
+        if (format === 'date') {
+          dt = dt.toLocaleDateString();
+        } else {
+          dt = dt.toLocaleString();
+        }
       } catch (error) {
         e = error;
         dt = dtstr;
