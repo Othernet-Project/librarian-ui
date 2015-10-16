@@ -8,12 +8,16 @@
 ## Select list
 ##
 
-<%def name="select(name)">
-    <% 
-    choices = context.get(name + '_choices', [])
-    current_value = request.params.get(name, '')
+<%def name="select(name, choices=[], empty_value=None, prefix='')">
+    <%
+        choices = choices or context.get(name + '_choices', [])
+        # Make a copy to work around caching issues
+        choices = [c for c in choices]
+        if empty_value:
+            choices.insert(0, ('', empty_value))
+        current_value = request.params.get(name, '')
     %>
-    <select name="${name}" id="${name}">
+    <select name="${name}" id="${prefix}${name}">
     % for value, label in choices:
         <% selected = value == current_value %>
         ${option(value, label, selected)}
