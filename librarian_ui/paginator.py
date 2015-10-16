@@ -59,7 +59,8 @@ class Paginator(object):
         first = (self.page - 1) * self.per_page
         last = first + self.per_page
         if self.count == self._items:
-            return (first, last)
+            # Return offset and limit
+            return (first, self.per_page)
         return self._items[first:last]
 
     @classmethod
