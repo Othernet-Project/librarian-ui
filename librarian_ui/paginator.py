@@ -21,7 +21,7 @@ class Paginator(object):
             self.count = len(items)
         except TypeError:
             # items is probably an number
-            self.coutn = items
+            self.count = items
         self.per_page = self._in_range(per_page,
                                        self.min_per_page,
                                        self.max_per_page)
