@@ -107,11 +107,13 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     position: relative;
     top: -1px;
 
-    @if $o-pulldown-menubar-hbar-use-logo == yes {
-      @include image-sprite($o-pulldown-menubar-hbar-logo);
-      vertical-align: middle;
-      @include hide-text;
-      margin-right: -0.2rem;
+    .o-pulldown-menubar-hbar-activator-label-icon {
+      font-size: 1200%;
+      @include transition(color $o-animation-speed);
+    }
+
+    .o-pulldown-menubar-hbar-activator-label-text {
+      display: none;
     }
   }
 
@@ -126,7 +128,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
     // Icon
     @include icon($o-pulldown-menubar-hbar-activator-closed-icon);
 
-    // Fx
+    // FX
     @include transition(color $o-animation-speed);
   }
 }

@@ -67,7 +67,10 @@ STATUS_TAB_ID = 'status-tab'
             </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
                 <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
-                    <span class="o-pulldown-menubar-hbar-activator-label">${_('Toggle apps menu')}</span>
+                    <span class="o-pulldown-menubar-hbar-activator-label">
+                        <span class="o-pulldown-menubar-hbar-activator-label-icon icon icon-outernet"></span>
+                        <span class="o-pulldown-menubar-hbar-activator-label-text">${_('Toggle apps menu')}</span>
+                    </span>
                     <span class="o-pulldown-menubar-hbar-activator-icon icon"></span>
                 </a>
                 <div class="o-pulldown-menubar-hbar-bar">
