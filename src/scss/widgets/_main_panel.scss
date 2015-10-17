@@ -1,13 +1,13 @@
 @import "base/params";
 
 .o-main-panel {
+  // Basic geometry
   position: fixed;
   top: $o-main-panel-top-offset;
   bottom: $o-main-panel-bottom-offset;
   left: 0;
   right: 0;
   overflow-y: auto;
-  background-image: image-url('light_material.png');
 
   .o-main-inner {
     padding: $o-main-panel-inner-padding;
