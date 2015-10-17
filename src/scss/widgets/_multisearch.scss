@@ -17,10 +17,26 @@
 
     &:first-child {
       padding-left: $o-multisearch-horizontal-padding;
+
+      @include narrower-than(740px) {
+        display: none;
+      }
     }
 
     &:last-child {
       padding-right: $o-multisearch-horizontal-padding;
+    }
+
+    &:nth-child(2) {
+      @include narrower-than(740px) {
+        left: 0;
+
+        input {
+          border-left: $o-widget-border;
+          @include border-top-left-radius($o-clickable-target-corner-radius);
+          @include border-bottom-left-radius($o-clickable-target-corner-radius);
+        }
+      }
     }
   }
 
