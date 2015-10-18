@@ -70,6 +70,18 @@
     // Styling
     background: $o-modal-window-background;
     @include box-shadow($o-modal-window-shadow);
+
+    &.o-full-screen {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: auto;
+      left: 0.5rem;
+      right: 0.5rem;
+      overflow-y: hidden;
+    }
   }
 
   .o-modal-spinner {

@@ -33,17 +33,26 @@
     return modal;
   };
   return $.modalContent = function(contentUrl, options) {
-    var failureTemplate, modal, panel, res, successTemplate;
+    var failureTemplate, fullScreen, modal, panel, res, successTemplate;
     if (options == null) {
-      options = {
-        successTemplate: defaultSuccess,
-        failureTemplate: defaultFailure
-      };
+      options = {};
     }
-    successTemplate = options.successTemplate, failureTemplate = options.failureTemplate;
+    if (options.successTemplate == null) {
+      options.successTemplate = defaultSuccess;
+    }
+    if (options.failureTemplate == null) {
+      options.failureTemplate = defaultFailure;
+    }
+    if (options.fullScreen == null) {
+      options.fullScreen = false;
+    }
+    successTemplate = options.successTemplate, failureTemplate = options.failureTemplate, fullScreen = options.fullScreen;
     modal = $.modalDialog(successTemplate);
     window = modal.find('.o-modal-window');
     panel = modal.find('.o-modal-panel');
+    if (fullScreen) {
+      window.addClass('o-full-screen');
+    }
     window.focus();
     res = $.get(contentUrl);
     res.done(function(data) {

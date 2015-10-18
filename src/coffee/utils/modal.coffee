@@ -31,16 +31,19 @@
 
 
   $.modalContent = (contentUrl, options) ->
-    options ?= {
-      successTemplate: defaultSuccess,
-      failureTemplate: defaultFailure,
-    }
-    {successTemplate, failureTemplate} = options
+    options ?= {}
+    options.successTemplate ?= defaultSuccess
+    options.failureTemplate ?= defaultFailure
+    options.fullScreen ?= false
+    {successTemplate, failureTemplate, fullScreen} = options
 
     # Make a new modal
     modal = $.modalDialog successTemplate
     window = modal.find '.o-modal-window'
     panel = modal.find '.o-modal-panel'
+
+    if fullScreen
+      window.addClass 'o-full-screen'
 
     # Add the modal window to body and focus it
     window.focus()
