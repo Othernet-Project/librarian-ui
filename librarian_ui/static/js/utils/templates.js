@@ -3,10 +3,20 @@
   if (window.templates == null) {
     window.templates = {};
   }
-  return $('script[type="text/template"]').each(function() {
-    var elem, id;
+  $.fn.loadTemplate = function(name) {
+    var elem, text;
     elem = $(this);
-    id = elem.attr('id');
-    return window.templates[id] = elem.html().trim();
-  });
+    name = name || elem.attr('id');
+    text = elem.html().trim();
+    return window.templates[name] = text;
+  };
+  window.templates._collect = function() {
+    $('script[type="text/template"]').each(function() {
+      return $(this).loadTemplate();
+    });
+  };
+  window.templates._load = function(id) {
+    return $("#" + id).loadTemplate();
+  };
+  return window.templates._collect();
 })(this, this.jQuery);
