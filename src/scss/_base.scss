@@ -1,5 +1,6 @@
-@import "base/params";
 @import "compass/css3";
+@import "base/params";
+@import "base/browser_fixes";
 
 * {
   // http://caniuse.com/#search=box-sizing
@@ -22,6 +23,7 @@ html {
   line-height: $o-base-line-height;
   background: $o-material;
   color: $o-base-text-color;
+  @include ios-font-size-fix;
 }
 
 body {

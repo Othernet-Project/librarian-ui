@@ -71,39 +71,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  * Recommended way to customize the variables is to load a separate module 
  * containing customized values _before_ this module.
  */
-/* line 4, ../../../src/scss/_base.scss */
+/**
+ * This module contains fixes for various browsers. When adding a fix for a
+ * particular browser, please add it here, with description of the solution and
+ * any platforms it affects.
+ */
+/* line 5, ../../../src/scss/_base.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 10, ../../../src/scss/_base.scss */
+/* line 11, ../../../src/scss/_base.scss */
 :focus {
   outline: none;
 }
 
-/* line 11, ../../../src/scss/_base.scss */
+/* line 12, ../../../src/scss/_base.scss */
 ::-moz-focus-inner {
   border: 0;
 }
 
-/* line 14, ../../../src/scss/_base.scss */
+/* line 15, ../../../src/scss/_base.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #333;
 }
 
-/* line 19, ../../../src/scss/_base.scss */
+/* line 20, ../../../src/scss/_base.scss */
 html {
   font-family: Arial, Helvetica, "Liberation Sans", "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 140%;
   background: #eee;
   color: #333;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* line 27, ../../../src/scss/_base.scss */
+/* line 29, ../../../src/scss/_base.scss */
 body {
   overflow-x: hidden;
 }
@@ -314,7 +320,7 @@ form .field-help {
   display: inline-block;
   padding-left: 2rem;
   margin-top: 0.2rem;
-  color: #57880e;
+  color: #5d7b0a;
 }
 /* line 15, ../../../src/scss/widgets/_forms.scss */
 form .field-help:before {
