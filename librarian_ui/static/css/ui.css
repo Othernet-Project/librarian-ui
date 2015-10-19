@@ -1127,18 +1127,26 @@ a:hover {
   right: 0.5rem;
   overflow-y: hidden;
 }
-/* line 87, ../../../src/scss/widgets/_modal.scss */
+/* line 85, ../../../src/scss/widgets/_modal.scss */
+.o-modal-overlay .o-modal-window.o-full-screen .o-modal-content {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+}
+/* line 95, ../../../src/scss/widgets/_modal.scss */
 .o-modal-overlay .o-modal-spinner {
   display: block;
   font-size: 180%;
   text-align: center;
   margin: 4rem 0;
 }
-/* line 95, ../../../src/scss/widgets/_modal.scss */
+/* line 103, ../../../src/scss/widgets/_modal.scss */
 .o-modal-overlay .o-modal-spinner-loading-indicator {
   animation: blink 1s infinite;
 }
-/* line 99, ../../../src/scss/widgets/_modal.scss */
+/* line 107, ../../../src/scss/widgets/_modal.scss */
 .o-modal-overlay .o-modal-close {
   font-size: 180%;
   display: block;
@@ -1153,11 +1161,11 @@ a:hover {
   border-top-right-radius: 0;
   border-top: 0;
 }
-/* line 115, ../../../src/scss/widgets/_modal.scss */
+/* line 123, ../../../src/scss/widgets/_modal.scss */
 .o-modal-overlay .o-modal-close-label {
   display: none;
 }
-/* line 121, ../../../src/scss/widgets/_modal.scss */
+/* line 129, ../../../src/scss/widgets/_modal.scss */
 .o-modal-overlay .o-modal-close-icon {
   position: relative;
   top: -3px;
