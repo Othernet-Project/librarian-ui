@@ -25,7 +25,7 @@
     <select name="${name}" id="${id or name}">
     % for val, label in choices:
         <% selected = val == current_value %>
-        ${option(value, label, selected)}
+        ${option(val, label, selected)}
     % endfor
     </select>
 </%def>
