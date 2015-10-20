@@ -148,3 +148,23 @@
         % endif
     </div>
 </%def>
+
+## Progress bar
+<%def name="progress(label, percentage, value, threshold)">
+    <%
+        # Percentages are expressed in 5% increments
+        rounded_pct = round(percentage / 5) * 5
+        # And we correct the out-of-bounds percentages
+        rounded_pct = min(max(rounded_pct, 0), 100)
+    %>
+    <span class="o-progress">
+        <span class="o-progress-indicator o-progress-percentage-${rounded_pct}">
+            <span class="o-progress-value">
+                ${value}
+            </span>
+        </span>
+        <span class="o-progress-label">
+            ${label}
+        </span>
+    </span>
+</%def>
