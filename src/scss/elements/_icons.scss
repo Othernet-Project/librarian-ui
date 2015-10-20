@@ -113,9 +113,9 @@ $glyphs: (
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-8010d7918b40f810e13604bd1588ac1f.eot",
-      "#{$oicons-prefix}oicons-8010d7918b40f810e13604bd1588ac1f.ttf",
-      "#{$oicons-prefix}oicons-8010d7918b40f810e13604bd1588ac1f.woff"));
+      "#{$oicons-prefix}oicons-73e8b199420a20485dbe7fcd35e5af8c.eot",
+      "#{$oicons-prefix}oicons-73e8b199420a20485dbe7fcd35e5af8c.ttf",
+      "#{$oicons-prefix}oicons-73e8b199420a20485dbe7fcd35e5af8c.woff"));
 }
 
 // Base styles for all icons
