@@ -157,3 +157,21 @@
         </span>
     </span>
 </%def>
+
+<%def name="progress_mini(percentage, threshold=10, icon=None)">
+    <%
+        # Percentages are expressed in 5% increments
+        rounded_pct = int(round(percentage / 5) * 5)
+        # And we correct the out-of-bounds percentages
+        rounded_pct = min(max(rounded_pct, 0), 100)
+    %>
+    <span class="o-progress-mini">
+        <span class="o-progress-indicator o-progress-percentage-${rounded_pct}">
+            <span class="o-progress-icon">
+                % if icon:
+                    <span class="icon icon-${icon}"></span>
+                % endif
+            </span>
+        </span>
+    </span>
+</%def>

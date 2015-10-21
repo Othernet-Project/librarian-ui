@@ -10,8 +10,11 @@ $o-progress-step: 5;  // 5% steps
 $o-progress-iterations: round(100 / $o-progress-step);
 $o-progress-increment: 360 / $o-progress-iterations;
 
-$o-progress-bar-width: 0.4rem;
-$o-progress-bar-size: 4rem;
+$o-progress-bar-width: 5px;
+$o-progress-bar-size: 48px;
+
+$o-progress-mini-width: 5px;
+$o-progress-mini-size: 28px;
 
 @mixin front-gradient($degs, $color: $o-progress-normal) {
   /**
@@ -46,33 +49,41 @@ $o-progress-bar-size: 4rem;
   }
 }
 
-.o-progress {
-  // Typography
-  text-align: center;
-
+@mixin indicator-base($size) {
   // Basic geometry
+  position: relative;
   display: inline-block;
+  @include border-radius(2000rem);  // Fully rounded
+  width: $size;
+  height: $size;
+}
+
+@mixin bar-base($width, $size) {
+  // Basic geometry
+  position: absolute;
+  top: $width;
+  left: $width;
+  right: $width;
+  bottom: $width;
+  line-height: $size - $width * 2;
+  display: inline-block;
+  @include border-radius(2000rem);
+}
+
+@mixin progress-base {
+  text-align: center;
+  display: inline-block;
+}
+
+.o-progress {
+  @include progress-base;
 
   .o-progress-indicator {
-    // Basic geometry
-    position: relative;
-    display: inline-block;
-    @include border-radius(2000rem);  // Fully rounded
-    width: $o-progress-bar-size;
-    height: $o-progress-bar-size;
+    @include indicator-base($o-progress-bar-size);
   }
 
   .o-progress-value {
-    // Basic geometry
-    position: absolute;
-    top: $o-progress-bar-width;
-    left: $o-progress-bar-width;
-    right: $o-progress-bar-width;
-    bottom: $o-progress-bar-width;
-    line-height: $o-progress-bar-size - $o-progress-bar-width * 2;
-    display: inline-block;
-    @include border-radius(2000rem);
-    text-align: center;
+    @include bar-base($o-progress-bar-width, $o-progress-bar-size);
 
     // Styling
     background: $o-progress-face;
@@ -96,3 +107,30 @@ $o-progress-bar-size: 4rem;
     display: block;
   }
 }
+
+.o-progress-mini {
+  @include progress-base;
+  vertical-align: middle;
+
+  .o-progress-indicator {
+    @include indicator-base($o-progress-mini-size);
+  }
+
+  .o-progress-icon {
+    @include bar-base($o-progress-mini-width, $o-progress-mini-size);
+
+    // Styling
+    background: $o-progress-face;
+  }
+
+  @for $i from 0 through $o-progress-iterations {
+    $percentage: $i * $o-progress-step;
+    $degs: round($percentage * 3.6);
+    .o-progress-percentage-#{$percentage} {
+      @include front-gradient($degs);
+    }
+  }
+  
+}
+
+
