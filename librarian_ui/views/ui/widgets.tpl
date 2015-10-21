@@ -114,17 +114,6 @@
     </div>
 </%def>
 
-## Progressbar
-<%def name="progress(label, percentage, value=None, threshold=10, id=None)">
-<span class="progress${ ' low' if percentage < threshold else ''}" data-threshold="${threshold}" ${'id="%s"' % id if id else ''}>
-    <span class="label">${label}</span>
-    <span class="value">${value if value is not None else '%s%%' % percentage}</span>
-    <span class="indicator">
-        <span class="bar" style="width: ${percentage}%"></span>
-    </span>
-</span>
-</%def>
-
 ## Spinner
 
 <%def name="spinner(message='')">
@@ -153,7 +142,7 @@
 <%def name="progress(label, percentage, value, threshold)">
     <%
         # Percentages are expressed in 5% increments
-        rounded_pct = round(percentage / 5) * 5
+        rounded_pct = int(round(percentage / 5) * 5)
         # And we correct the out-of-bounds percentages
         rounded_pct = min(max(rounded_pct, 0), 100)
     %>
