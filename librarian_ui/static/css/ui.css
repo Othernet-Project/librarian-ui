@@ -1387,6 +1387,462 @@ a:hover {
   background: #1a4061;
 }
 
+/* line 49, ../../../src/scss/widgets/_progress.scss */
+.o-progress {
+  text-align: center;
+  display: inline-block;
+}
+/* line 56, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-indicator {
+  position: relative;
+  display: inline-block;
+  -moz-border-radius: 2000rem;
+  -webkit-border-radius: 2000rem;
+  border-radius: 2000rem;
+  width: 4rem;
+  height: 4rem;
+}
+/* line 65, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-value {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  line-height: 3.2rem;
+  display: inline-block;
+  -moz-border-radius: 2000rem;
+  -webkit-border-radius: 2000rem;
+  border-radius: 2000rem;
+  text-align: center;
+  background: white;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-0 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background: #ddd;
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-5 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5OTIwMSIgeTE9IjAuMzA1MzA4IiB4Mj0iMS4wOTkyMDEiIHkyPSIwLjY5NDY5MiI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(342deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-10 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA2NTAxOCIgeTE9IjAuMDg5NDkiIHgyPSIxLjA2NTAxOCIgeTI9IjAuOTEwNTEiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(324deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-15 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMDg5NDkiIHkxPSItMC4wNjUwMTgiIHgyPSIwLjkxMDUxIiB5Mj0iMS4wNjUwMTgiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(306deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-20 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMzA1MzA4IiB5MT0iLTAuMDk5MjAxIiB4Mj0iMC42OTQ2OTIiIHkyPSIxLjA5OTIwMSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(288deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-25 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-30 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNjk0NjkyIiB5MT0iLTAuMDk5MjAxIiB4Mj0iMC4zMDUzMDgiIHkyPSIxLjA5OTIwMSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(252deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-35 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuOTEwNTEiIHkxPSItMC4wNjUwMTgiIHgyPSIwLjA4OTQ5IiB5Mj0iMS4wNjUwMTgiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(234deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-40 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDY1MDE4IiB5MT0iMC4wODk0OSIgeDI9Ii0wLjA2NTAxOCIgeTI9IjAuOTEwNTEiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(216deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-45 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMDk5MjAxIiB5MT0iMC4zMDUzMDgiIHgyPSItMC4wOTkyMDEiIHkyPSIwLjY5NDY5MiI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(198deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #dddddd 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-50 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(90deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(90deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(0deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-55 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNDEwNTEiIHkxPSIxLjA2NTAxOCIgeDI9IjAuNTg5NDkiIHkyPSItMC4wNjUwMTgiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(81deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(81deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(9deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-60 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMzA1MzA4IiB5MT0iMS4wOTkyMDEiIHgyPSIwLjY5NDY5MiIgeTI9Ii0wLjA5OTIwMSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(72deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(72deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(18deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-65 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMTk0NjkyIiB5MT0iMS4wOTkyMDEiIHgyPSIwLjgwNTMwOCIgeTI9Ii0wLjA5OTIwMSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(63deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(63deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(27deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-70 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMDg5NDkiIHkxPSIxLjA2NTAxOCIgeDI9IjAuOTEwNTEiIHkyPSItMC4wNjUwMTgiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(54deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(54deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(36deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-75 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(45deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(45deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(45deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-80 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA2NTAxOCIgeTE9IjAuOTEwNTEiIHgyPSIxLjA2NTAxOCIgeTI9IjAuMDg5NDkiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(36deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(36deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(54deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-85 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5OTIwMSIgeTE9IjAuODA1MzA4IiB4Mj0iMS4wOTkyMDEiIHkyPSIwLjE5NDY5MiI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(27deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(27deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(63deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-90 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA5OTIwMSIgeTE9IjAuNjk0NjkyIiB4Mj0iMS4wOTkyMDEiIHkyPSIwLjMwNTMwOCI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(18deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(18deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(72deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-95 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjA2NTAxOCIgeTE9IjAuNTg5NDkiIHgyPSIxLjA2NTAxOCIgeTI9IjAuNDEwNTEiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjU1YTg5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(9deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(9deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(81deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 85, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-percentage-100 {
+  /**
+   * The circular progress bar has 2 gradients. One gradient masks one half of 
+   * the circle, while the other sets the angle of the indicator. 
+   *
+   * When desired number of angle of the indicator is less than 180deg, the
+   * left portion of the circle is masked by background color, while the the
+   * right portion is masked at an angle. When desired angle is more than
+   * 180deg, then the right portion of the circle is masked by foreground color
+   * and the left portion is masked at an angle.
+   *
+   * This mixin only sets the gradients, and nothing else.
+   */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMyNTVhODkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: -webkit-linear-gradient(0deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
+  background-image: linear-gradient(90deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+/* line 90, ../../../src/scss/widgets/_progress.scss */
+.o-progress .o-progress-label {
+  font-size: 90%;
+  text-transform: uppercase;
+  display: block;
+}
+
 @font-face {
   font-family: "OIcons";
   src: url('../font/oicons-9ebf0bf3c933fc7b8a797c626bca15c2.eot?1445435275') format('embedded-opentype'), url('../font/oicons-9ebf0bf3c933fc7b8a797c626bca15c2.ttf?1445435275') format('truetype'), url('../font/oicons-9ebf0bf3c933fc7b8a797c626bca15c2.woff?1445435275') format('woff');
