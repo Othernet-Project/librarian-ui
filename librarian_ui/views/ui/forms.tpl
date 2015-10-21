@@ -146,7 +146,7 @@
     </p>
 </%def>
 
-## Form errors
+## Form errors and messages
 ##
 
 <%def name="form_errors(errors)">
@@ -161,4 +161,14 @@
             </li>
         % endfor
     </ul>
+</%def>
+
+<%def name="form_message(message)">
+    <% 
+    if not message:
+        return ''
+    %>
+    <p class="o-form-message">
+        ${message}
+    </p>
 </%def>

@@ -380,8 +380,8 @@ form .o-field-error-message:before {
   content: "";
 }
 /* line 45, ../../../src/scss/widgets/_forms.scss */
-form .o-form-errors {
-  background: rgba(204, 55, 55, 0.1);
+form .o-form-messages {
+  background: rgba(93, 123, 10, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -413,11 +413,41 @@ form .o-form-error:before {
 form .o-form-error:before ~ * {
   vertical-align: middle;
 }
-/* line 63, ../../../src/scss/widgets/_forms.scss */
+/* line 62, ../../../src/scss/widgets/_forms.scss */
+form .o-form-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(93, 123, 10, 0.1);
+  color: #5d7b0a;
+}
+/* line 150, ../../../src/scss/elements/_icons.scss */
+form .o-form-message:before {
+  content: "";
+}
+/* line 72, ../../../src/scss/widgets/_forms.scss */
+form .o-form-message:before {
+  font-family: "OIcons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  text-transform: none;
+  display: inline-block;
+  speak: none;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 0.2rem;
+}
+/* line 143, ../../../src/scss/elements/_icons.scss */
+form .o-form-message:before ~ * {
+  vertical-align: middle;
+}
+/* line 79, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error label {
   color: #cc3737;
 }
-/* line 67, ../../../src/scss/widgets/_forms.scss */
+/* line 83, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error input, form .o-field-error select, form .o-field-error textarea {
   border-color: #cc3737;
 }
