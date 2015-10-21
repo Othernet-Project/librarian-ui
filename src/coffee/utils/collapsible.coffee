@@ -5,13 +5,19 @@
   SPACE = 32
   ESC = 27
 
-  $.fn.collapsible = (options) ->
-    elem = $ this
-    options ?=
+  win = $ window
+
+  $.collapsibleDefaults =
       button: '.o-collapsible-section-title'
       collapsibleArea: '.o-collapsible-section-panel'
       collapsibleSection: '.o-collapsible-section'
       collapseClass: 'o-collapsed'
+
+
+  $.fn.collapsible = (options) ->
+    elem = $ this
+    options ?= {}
+    options = $.extend options, $.collapsibleDefaults
     {button, collapsibleArea, collapsibleSection, collapseClass} = options
 
     # The default stylesheet assigns a 'large-enough' max-height to uncollapsed
@@ -19,11 +25,19 @@
     # height of uncollapsed section, the animation isn't smooth. Here we go
     # through all panels, get their height, and adjust the max-height of an
     # uncollapsed variant.
-    elem.find(collapsibleSection).each () ->
+    remax = () ->
       section = $ this
       panel = section.find collapsibleArea
       totalHeight = panel.outerHeight()
       section.css 'max-height', totalHeight + CLICKABLE_TARGET
+      section
+
+    elem.find(collapsibleSection).each () ->
+      section = remax.call this
+      section.data 'collapsible-parent', elem
+      section.on 'remax', remax
+      win.on 'resize', () =>
+        remax.call this
 
     onclick = (e) ->
       clicked = $ e.target
@@ -54,5 +68,7 @@
       section.addClass collapseClass
       panel.ariaProperty 'hidden', 'true'
       button.focus()
+
+    elem
 
 ) this, this.jQuery
