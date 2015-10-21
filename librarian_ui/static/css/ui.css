@@ -314,7 +314,7 @@ label {
 }
 
 /* line 25, ../../../src/scss/widgets/_forms.scss */
-form .field-help {
+form .o-field-help {
   font-style: italic;
   position: relative;
   display: inline-block;
@@ -323,7 +323,7 @@ form .field-help {
   color: #5d7b0a;
 }
 /* line 15, ../../../src/scss/widgets/_forms.scss */
-form .field-help:before {
+form .o-field-help:before {
   font-family: "OIcons";
   font-weight: normal;
   font-style: normal;
@@ -341,11 +341,11 @@ form .field-help:before {
   top: 0;
 }
 /* line 140, ../../../src/scss/elements/_icons.scss */
-form .field-help:before ~ * {
+form .o-field-help:before ~ * {
   vertical-align: middle;
 }
 /* line 35, ../../../src/scss/widgets/_forms.scss */
-form .field-error {
+form .o-field-error {
   font-style: italic;
   position: relative;
   display: inline-block;
@@ -354,7 +354,7 @@ form .field-error {
   color: #cc3737;
 }
 /* line 15, ../../../src/scss/widgets/_forms.scss */
-form .field-error:before {
+form .o-field-error:before {
   font-family: "OIcons";
   font-weight: normal;
   font-style: normal;
@@ -372,30 +372,30 @@ form .field-error:before {
   top: 0;
 }
 /* line 140, ../../../src/scss/elements/_icons.scss */
-form .field-error:before ~ * {
+form .o-field-error:before ~ * {
   vertical-align: middle;
 }
 /* line 147, ../../../src/scss/elements/_icons.scss */
-form .field-error:before {
+form .o-field-error:before {
   content: "";
 }
 /* line 45, ../../../src/scss/widgets/_forms.scss */
-form .form-errors {
+form .o-form-errors {
   background: rgba(204, 55, 55, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 /* line 51, ../../../src/scss/widgets/_forms.scss */
-form .form-error {
+form .o-form-error {
   color: #cc3737;
   margin-bottom: 0.2rem;
 }
 /* line 147, ../../../src/scss/elements/_icons.scss */
-form .form-error:before {
+form .o-form-error:before {
   content: "";
 }
 /* line 56, ../../../src/scss/widgets/_forms.scss */
-form .form-error:before {
+form .o-form-error:before {
   font-family: "OIcons";
   font-weight: normal;
   font-style: normal;
@@ -410,7 +410,7 @@ form .form-error:before {
   margin-right: 0.2rem;
 }
 /* line 140, ../../../src/scss/elements/_icons.scss */
-form .form-error:before ~ * {
+form .o-form-error:before ~ * {
   vertical-align: middle;
 }
 
