@@ -22,7 +22,7 @@
 }
 
 form {
-  .o-field-help {
+  .o-field-help-message {
     @include field-note;
 
     // Styling
@@ -32,7 +32,7 @@ form {
     @include icon($o-form-help-icon);
   }
 
-  .o-field-error {
+  .o-field-error-message {
     @include field-note;
 
     // Styling
@@ -56,6 +56,16 @@ form {
     &:before {
       @include icon-base;
       margin-right: 0.2rem;
+    }
+  }
+
+  .o-field-error {
+    label {
+      color: $o-form-error-text-color;
+    }
+
+    input, select, textarea {
+      border-color: $o-form-error-text-color;
     }
   }
 }

@@ -89,13 +89,13 @@
 ##
 
 <%def name="field_help(message)">
-    <span class="o-field-help">
+    <span class="o-field-help-message">
         ${message}
     </span>
 </%def>
 
 <%def name="field_error(message)">
-    <span class="o-field-error">
+    <span class="o-field-error-message">
         ${message}
     </span>
 </%def>
@@ -144,4 +144,21 @@
             ${self.field_extras(fld)}
         % endif
     </p>
+</%def>
+
+## Form errors
+##
+
+<%def name="form_errors(errors)">
+    <% 
+    if not errors:
+        return '' 
+    %>
+    <ul class="o-form-errors">
+        % for error in errors:
+            <li class="o-form-error">
+            ${error}
+            </li>
+        % endfor
+    </ul>
 </%def>
