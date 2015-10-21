@@ -139,7 +139,7 @@
 </%def>
 
 ## Progress bar
-<%def name="progress(label, percentage, value, threshold)">
+<%def name="progress(label, percentage, value, threshold=10)">
     <%
         # Percentages are expressed in 5% increments
         rounded_pct = int(round(percentage / 5) * 5)
