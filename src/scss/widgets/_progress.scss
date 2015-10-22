@@ -30,18 +30,17 @@ $o-progress-mini-size: 28px;
    * This mixin only sets the gradients, and nothing else.
    */
 
-  @if $degs == 0 {
+  $degs: $degs + 90;
+  @if $degs == 90 {
     background: $o-progress-background;
   }
-  @else if $degs < 180 {
-    $degs: $degs + 90;
+  @else if $degs < 270 {
     @include background-image(
       linear-gradient(90deg, $o-progress-background 50%, transparent 50%, transparent), 
       linear-gradient($degs * 1deg, $color 50%, $o-progress-background 50%, $o-progress-background)
     );
   }
   @else {
-    $degs: $degs / 2 - 90;
     @include background-image(
       linear-gradient($degs * 1deg, $color 50%, transparent 50%, transparent), 
       linear-gradient(270deg, $color 50%, $o-progress-background 50%, $o-progress-background)    
