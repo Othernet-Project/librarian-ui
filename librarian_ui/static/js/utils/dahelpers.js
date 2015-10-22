@@ -296,7 +296,6 @@ define(function() {
       return newObj;
     },
     subset: function(small, big) {
-      var error;
       try {
         h.walk(small, function(v, k, c) {
           if (!(v === h.props(big, c))) {
@@ -406,7 +405,7 @@ define(function() {
           return this.get(state.currentIndex);
         },
         slice: function(start, end, callback) {
-          var collected, e, error, i, item, j, lastIndex, ref, ref1;
+          var collected, e, i, item, j, lastIndex, ref, ref1;
           if (start == null) {
             start = 0;
           }
