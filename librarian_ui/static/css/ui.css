@@ -344,6 +344,10 @@ form .o-field-help-message:before {
 form .o-field-help-message:before ~ * {
   vertical-align: middle;
 }
+/* line 150, ../../../src/scss/elements/_icons.scss */
+form .o-field-help-message:before {
+  content: "";
+}
 /* line 35, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error-message {
   font-style: italic;

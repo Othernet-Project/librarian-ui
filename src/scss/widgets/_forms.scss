@@ -67,7 +67,7 @@ form {
     // Styling
     background: transparentize($o-friendly, 0.9);
     color: $o-friendly;
-    @include icon(info);
+    @include icon($o-form-help-icon);
     
     &:before {
       @include icon-base;
