@@ -72,8 +72,8 @@
     pages_in_group = last_in_group - first_in_group
     if pages_in_group < 4:
         first_in_group = max(f, last_in_group - 4)
-    show_f = max(last_in_group - 5, f) >= f
-    show_l = min(first_in_group + 4, l) < l
+    show_f = last_in_group - 5 >= f
+    show_l = first_in_group + 4 < l
     show_ellip_f = f < c - 3
     show_ellip_l = l > c + 3
     %>
