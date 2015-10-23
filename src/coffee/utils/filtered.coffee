@@ -12,7 +12,7 @@
 
     # Sort out the default options
     options ?= {}
-    $.extend options, $.filteredDefaults
+    options = $.extend {}, $.filteredDefaults, options
     {selector, input, getText} = options
 
     # Grab the filtered elements

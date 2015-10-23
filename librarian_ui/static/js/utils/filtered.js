@@ -14,7 +14,7 @@
     if (options == null) {
       options = {};
     }
-    $.extend(options, $.filteredDefaults);
+    options = $.extend({}, $.filteredDefaults, options);
     selector = options.selector, input = options.input, getText = options.getText;
     filtered = elem.find(selector);
     filtered.each(function() {
