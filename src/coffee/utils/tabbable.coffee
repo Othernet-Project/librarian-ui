@@ -1,11 +1,15 @@
 ((window, $, templates) ->
 
-  $.fn.tabable = (options) ->
-    options ?=
+  $.tabbableDefaults =
       activator: '.o-tab-handle-activator'
       panel: '.o-tab-panel'
+      onChange: null
 
-    {activator, panel} = options
+  $.fn.tabable = (options) ->
+    options ?= {}
+    options = $.extend {}, $.tabbableDefaults, options
+
+    {activator, panel, onChange} = options
     elem = $ this
 
     # Cache all panels
@@ -23,10 +27,19 @@
       return
 
     activatePanel = (targetActivator) ->
+      targetActivator = $ targetActivator
+
+      if not targetActivator.length
+        return
+
       targetActivator.addClass 'active'
       targetPanel = targetActivator.data 'panel'
       targetPanel.addClass 'active'
       targetPanel.ariaProperty 'expanded', 'true'
+
+      if onChange?
+        onChange targetActivator
+
       url = targetPanel.data 'url'
       if not url
         return
@@ -38,6 +51,8 @@
         targetPanel.html template.loadFail
       return
 
+    elem.data 'tabbableActivator', activatePanel
+
     elem.on 'focus', activator, (e) ->
       elem.trigger 'activator-focus'
 
@@ -46,6 +61,17 @@
       closeActivePanel()
       act = $ this
       activatePanel act
+
+    elem
+
+  $.fn.activateTab = (tabId) ->
+    elem = $ this
+    fn = elem.data 'tabbableActivator'
+
+    if not fn
+      return
+
+    fn tabId
 
     elem
 
