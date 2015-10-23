@@ -3,72 +3,82 @@
   $.tabbableDefaults = {
     activator: '.o-tab-handle-activator',
     panel: '.o-tab-panel',
-    onChange: null
+    spinnerTemplate: templates.spinner,
+    errorTemplate: templates.loadFail
   };
-  $.fn.tabable = function(options) {
-    var activatePanel, activator, closeActivePanel, elem, onChange, panel;
+  $.fn.tabbableCloseAll = function() {
+    var activator, elem, options, panel;
+    elem = $(this);
+    options = elem.data('tabbableOptions');
+    if (!options) {
+      return;
+    }
+    activator = options.activator, panel = options.panel;
+    (elem.find(panel + '.active')).removeClass('active').ariaProperty('expanded', 'false');
+    (elem.find(activator + '.active')).removeClass('active');
+    return elem;
+  };
+  $.fn.tabbableOpenTab = function(tabId, suppressEvent) {
+    var activator, elem, options, panel, ref, res, tabs, url;
+    elem = $(this);
+    options = elem.data('tabbableOptions');
+    tabs = elem.data('tabbableTabs');
+    if (!options) {
+      return;
+    }
+    ref = tabs[tabId], activator = ref.activator, panel = ref.panel;
+    activator.addClass('active');
+    panel.addClass('active');
+    panel.ariaProperty('expanded', 'true');
+    if (!suppressEvent) {
+      elem.trigger('tabchange', [activator, panel]);
+    }
+    url = panel.data('url');
+    if (!url) {
+      return;
+    }
+    panel.html(options.spinnerTemplate);
+    res = $.get(url);
+    res.done(function(data) {
+      return panel.html(data);
+    });
+    res.fail(function() {
+      return panel.html(options.errorTemplate);
+    });
+    return elem;
+  };
+  return $.fn.tabable = function(options) {
+    var activator, elem, onChange, panel, tabs;
     if (options == null) {
       options = {};
     }
     options = $.extend({}, $.tabbableDefaults, options);
     activator = options.activator, panel = options.panel, onChange = options.onChange;
     elem = $(this);
-    elem.find(activator).each(function() {
-      var act;
+    elem.data('tabbableOptions', options);
+    elem.data('tabbableTabs', tabs = {});
+    (elem.find(activator)).each(function() {
+      var act, href, id;
       act = $(this);
-      act.data('panel', elem.find(act.attr('href')));
+      href = act.attr('href');
+      id = href.replace('#', '');
+      panel = elem.find(href);
+      tabs[id] = {
+        activator: act,
+        panel: panel
+      };
     });
-    closeActivePanel = function() {
-      elem.find(panel + '.active').removeClass('active').ariaProperty('expanded', 'false');
-      elem.find(activator + '.active').removeClass('active');
-    };
-    activatePanel = function(targetActivator) {
-      var res, targetPanel, url;
-      targetActivator = $(targetActivator);
-      if (!targetActivator.length) {
-        return;
-      }
-      targetActivator.addClass('active');
-      targetPanel = targetActivator.data('panel');
-      targetPanel.addClass('active');
-      targetPanel.ariaProperty('expanded', 'true');
-      if (onChange != null) {
-        onChange(targetActivator);
-      }
-      url = targetPanel.data('url');
-      if (!url) {
-        return;
-      }
-      targetPanel.html(templates.spinner);
-      res = $.get(url);
-      res.done(function(data) {
-        return targetPanel.html(data);
-      });
-      res.fail(function() {
-        return targetPanel.html(template.loadFail);
-      });
-    };
-    elem.data('tabbableActivator', activatePanel);
+    tabs = null;
     elem.on('focus', activator, function(e) {
       return elem.trigger('activator-focus');
     });
     elem.on('click', activator, function(e) {
-      var act;
+      var tabId;
       e.preventDefault();
-      closeActivePanel();
-      act = $(this);
-      return activatePanel(act);
+      tabId = (($(this)).attr('href')).replace('#', '');
+      elem.tabbableCloseAll();
+      return elem.tabbableOpenTab(tabId);
     });
-    return elem;
-  };
-  return $.fn.activateTab = function(tabId) {
-    var elem, fn;
-    elem = $(this);
-    fn = elem.data('tabbableActivator');
-    if (!fn) {
-      return;
-    }
-    fn(tabId);
     return elem;
   };
 })(this, this.jQuery, this.templates);
