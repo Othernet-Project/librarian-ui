@@ -1,0 +1,57 @@
+@import "compass/css3";
+@import "compass/typography/text/replacement";
+@import "base/params";
+@import "base/media_query";
+@import "elements/icons";
+
+.o-pager-control {
+  // Basic geometry
+  display: inline-block;
+  text-align: center;
+  height: $o-clickable-target-size;
+  line-height: $o-clickable-target-size;
+  width: $o-clickable-target-size;
+  vertical-align: middle;
+
+  // Styling
+  border: $o-widget-border;
+  border-top-color: $o-outline-highlight;
+  @include border-radius($o-clickable-target-corner-radius);
+}
+
+.o-pager-current {
+  border-color: $o-dark-material;
+  background: $o-dark-material;
+}
+
+.o-pager-page {
+  @include narrower-than(640px) {
+    display: none;
+  }
+}
+
+.o-pager-last,
+.o-pager-first,
+.o-pager-ellipsis {
+  @include narrower-than(360px) {
+    display: none;
+  }
+}
+
+.o-pager-prev,
+.o-pager-next {
+  @include icon-base;
+  font-size: 200%;
+
+  .o-pager-label {
+    display: none;
+  }
+}
+
+.o-pager-next {
+  @include icon(arrow-right);
+}
+
+.o-pager-prev {
+  @include icon(arrow-left);
+}
