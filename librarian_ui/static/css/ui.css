@@ -609,8 +609,9 @@ a:hover {
   left: 0;
   right: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 12, ../../../src/scss/widgets/_main_panel.scss */
+/* line 16, ../../../src/scss/widgets/_main_panel.scss */
 .o-main-panel .o-main-inner {
   padding: 1rem;
 }
