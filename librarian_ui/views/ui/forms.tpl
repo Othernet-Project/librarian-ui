@@ -35,12 +35,12 @@
 ##
 
 <%def name="input(name, type='text', placeholder=None, value=None, id=None, has_error=False)">
-    <% current_value = value or request.params.get(name, '') %>
+    <% current_value = h.to_unicode(value or request.params.get(name, '')) %>
     <input type="${type}" name="${name}" id="${id or name}" value="${current_value}"${self.pholder_attr(placeholder)}>
 </%def>
 
 ## Hidden input
-## 
+##
 
 <%def name="hidden(name, value, id=None)">
     ${self.input(name, value=value, id=id or name)}
@@ -57,8 +57,8 @@
 ##
 
 <%def name="checkbox(name, value, is_checked=None, label=None, id=None)">
-    <% 
-    current_value = request.params.getall(name) 
+    <%
+    current_value = request.params.getall(name)
     is_checked = value in current_value if is_checked is None else is_checked
     %>
     <input type="checkbox" id="${id or name}" name="${name}" value="${value}"${' checked' if is_checked else ''}>
@@ -71,7 +71,7 @@
 ##
 
 <%def name="textarea(name, placeholder=None, value=None, id=None)">
-    <% 
+    <%
     current_value = value or request.params.getall(name)
     %>
     <textarea name="${name}" id="${id or name}"${self.pholder_attr(placeholder)}>${current_value}</textarea>
@@ -112,7 +112,7 @@
 ## Field
 ##
 ## This def renders a bottle-utils Field instance.
-## 
+##
 
 <%def name="field(fld, id=None)">
     <p class="o-field${' o-field-error' if fld.error else ''}">
@@ -150,9 +150,9 @@
 ##
 
 <%def name="form_errors(errors)">
-    <% 
+    <%
     if not errors:
-        return '' 
+        return ''
     %>
     <ul class="o-form-errors">
         % for error in errors:
@@ -164,7 +164,7 @@
 </%def>
 
 <%def name="form_message(message)">
-    <% 
+    <%
     if not message:
         return ''
     %>
