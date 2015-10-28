@@ -51,7 +51,9 @@
 
 <%def name="page_link(page, link_class, label=None)">
     <% page_url = i18n_path(request.path + h.set_qparam(p=page).to_qs()) %>
-    <a href="${page_url}" class="o-pager-control o-pager-${link_class} o-pager-currrent">${label or page}</a>
+    <a href="${page_url}" class="o-pager-control o-pager-${link_class}">
+        <span class="o-pager-label">${label or page}</span>
+    </a>
 </%def>
 
 <%def name="pager_links(pager_obj, prev_label, next_label)">
@@ -65,12 +67,15 @@
 
     show_prev = c > 1
     show_next = c < l
-    show_f = c - 2 > f
-    show_l = c + 2 < l
+    first_in_group = max(f, c - 2)
+    last_in_group = min(l, first_in_group + 4)
+    pages_in_group = last_in_group - first_in_group
+    if pages_in_group < 4:
+        first_in_group = max(f, last_in_group - 4)
+    show_f = last_in_group - 5 >= f
+    show_l = first_in_group + 4 < l
     show_ellip_f = f < c - 3
     show_ellip_l = l > c + 3
-    first_in_group = max(f, c - 2)
-    last_in_group = min(l, c + 2)
     %>
     %if show_prev:
         ${self.page_link(c - 1, 'prev', prev_label)}
@@ -83,7 +88,7 @@
     % endif
     % for p in range(first_in_group, last_in_group + 1):
         % if p == c:
-            <span class="o-pager-control o-pager-page o-pager-current">${p}</span>
+            <span class="o-pager-control o-pager-current">${p}</span>
         % else:
             ${self.page_link(p, 'page')}
         % endif

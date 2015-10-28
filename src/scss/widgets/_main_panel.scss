@@ -9,6 +9,10 @@
   right: 0;
   overflow-y: auto;
 
+  // Fixed issue where overflowing element on iOS scrolls without the 
+  // rubber-band effect.
+  -webkit-overflow-scrolling: touch;
+
   .o-main-inner {
     padding: $o-main-panel-inner-padding;
   }

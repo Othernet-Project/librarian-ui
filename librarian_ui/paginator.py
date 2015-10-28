@@ -12,7 +12,7 @@ import math
 
 
 class Paginator(object):
-    min_per_page = 20
+    min_per_page = 5
     max_per_page = 100
 
     def __init__(self, items, page, per_page):

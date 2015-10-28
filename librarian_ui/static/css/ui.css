@@ -609,8 +609,9 @@ a:hover {
   left: 0;
   right: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 12, ../../../src/scss/widgets/_main_panel.scss */
+/* line 16, ../../../src/scss/widgets/_main_panel.scss */
 .o-main-panel .o-main-inner {
   padding: 1rem;
 }
@@ -1131,7 +1132,9 @@ a:hover {
   right: 0;
   bottom: 0;
   z-index: 100;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
   background-color: rgba(51, 51, 51, 0.8);
   cursor: pointer;
@@ -2321,6 +2324,80 @@ a:hover {
   background-image: -moz-linear-gradient(0deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -moz-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
   background-image: -webkit-linear-gradient(0deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #255a89 50%, #dddddd 50%, #dddddd);
   background-image: linear-gradient(450deg, #255a89 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #255a89 50%, #dddddd 50%, #dddddd);
+}
+
+/* line 7, ../../../src/scss/widgets/_pager.scss */
+.o-pager-control {
+  display: inline-block;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+  border: 1px solid #aaa;
+  border-top-color: #ccc;
+  -moz-border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+/* line 22, ../../../src/scss/widgets/_pager.scss */
+.o-pager-current {
+  border-color: #ddd;
+  background: #ddd;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 27, ../../../src/scss/widgets/_pager.scss */
+  .o-pager-page {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  /* line 33, ../../../src/scss/widgets/_pager.scss */
+  .o-pager-last,
+  .o-pager-first,
+  .o-pager-ellipsis {
+    display: none;
+  }
+}
+
+/* line 41, ../../../src/scss/widgets/_pager.scss */
+.o-pager-prev,
+.o-pager-next {
+  font-family: "OIcons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  text-transform: none;
+  display: inline-block;
+  speak: none;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 200%;
+}
+/* line 148, ../../../src/scss/elements/_icons.scss */
+.o-pager-prev ~ *,
+.o-pager-next ~ * {
+  vertical-align: middle;
+}
+/* line 46, ../../../src/scss/widgets/_pager.scss */
+.o-pager-prev .o-pager-label,
+.o-pager-next .o-pager-label {
+  display: none;
+}
+
+/* line 155, ../../../src/scss/elements/_icons.scss */
+.o-pager-next:before {
+  content: "";
+}
+
+/* line 155, ../../../src/scss/elements/_icons.scss */
+.o-pager-prev:before {
+  content: "";
 }
 
 @font-face {
