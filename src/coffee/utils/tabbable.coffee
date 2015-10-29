@@ -1,4 +1,5 @@
 ((window, $, templates) ->
+  tabOpenedEvent = 'tab-opened'
 
   $.tabbableDefaults =
       activator: '.o-tab-handle-activator'
@@ -44,6 +45,11 @@
     res = $.get url
     res.done (data) ->
       panel.html data
+      $.event.trigger({
+        type: tabOpenedEvent,
+        tabId: tabId
+      });
+
     res.fail () ->
       panel.html options.errorTemplate
 

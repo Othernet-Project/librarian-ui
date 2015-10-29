@@ -9,7 +9,7 @@
     }
     time = $('time', subtree);
     return time.each(function() {
-      var dt, dtstr, e, elem, format;
+      var dt, dtstr, e, elem, error, format;
       elem = $(this);
       format = elem.data('format');
       dtstr = elem.attr('datetime');
