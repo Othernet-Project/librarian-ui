@@ -15,6 +15,7 @@ various parts of the interface. This includes:
 - ``context_menu``: Sets the contents of the context menu
 - ``main``: Sets the content of the main panel (this is where most of the
   page-specific UI elements go)
+- ``footer``: Wraps the entire footer for removal in edge cases
 - ``statusbar_quick``: Sets the contents of the quick status area (left of the
   statusbar toggle activator
 - ``statusbar_panel``: Sets the contetns of the statusbar panel (expandable
@@ -133,64 +134,66 @@ STATUS_TAB_ID = 'status-tab'
             </%block>
         </div>
 
-        <footer class="o-statusbar" id="${STATUSBAR_ID}">
-            <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
-                <div class="o-statusbar-hbar-quick-status">
-                    <%block name="statusbar_quick">
-                        <%
-                            if request.user.is_authenticated:
-                                if request.user.is_superuser:
-                                    icon = 'user-up'
+        <%block name="footer">
+            <footer class="o-statusbar" id="${STATUSBAR_ID}">
+                <div class="o-statusbar-hbar o-activator" id="${id}-hbar" role="button" aria-controls="${id}-status">
+                    <div class="o-statusbar-hbar-quick-status">
+                        <%block name="statusbar_quick">
+                            <%
+                                if request.user.is_authenticated:
+                                    if request.user.is_superuser:
+                                        icon = 'user-up'
+                                    else:
+                                        icon = 'user'
+                                    username = request.user.username
                                 else:
-                                    icon = 'user'
-                                username = request.user.username
-                            else:
-                                icon = 'lock'
-                                # Translators, used as a label for guest account (unauthenticated user)
-                                username = _('guest')
-                            notifications = th.get_notification_count()
-                        %>
-                        <span class="icon icon-${icon}"></span>
-                        <span class="username">${username}</span>
-                        % if notifications:
-                            <span class="separator"></span>
-                            <span class="unread-notifications">
-                                <span class="alert icon icon-message-alert"></span>
-                                <span class="unread-notification-count">${notifications}</span>
+                                    icon = 'lock'
+                                    # Translators, used as a label for guest account (unauthenticated user)
+                                    username = _('guest')
+                                notifications = th.get_notification_count()
+                            %>
+                            <span class="icon icon-${icon}"></span>
+                            <span class="username">${username}</span>
+                            % if notifications:
+                                <span class="separator"></span>
+                                <span class="unread-notifications">
+                                    <span class="alert icon icon-message-alert"></span>
+                                    <span class="unread-notification-count">${notifications}</span>
+                                </span>
+                            % endif
                             </span>
-                        % endif
-                        </span>
-                    </%block>
+                        </%block>
+                    </div>
+                    <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
+                        <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
+                        <span class="o-statusbar-hbar-activator-icon icon"></span>
+                    </a>
                 </div>
-                <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
-                    <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
-                    <span class="o-statusbar-hbar-activator-icon icon"></span>
-                </a>
-            </div>
-            <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
-                <div class="o-statusbar-panel-content">
-                    <%block name="statusbar_panel">
-                        <div id="status-tab" class="o-tabbable">
-                            <ul class="o-tab-handles" role="tablist">
-                                <li class="o-tab-handle">
-                                ${ui.tab_activator(_('Info'), 'info', 'info-tab', active=True)}
-                                </li>
-                                <li class="o-tab-handle">
-                                ${ui.tab_activator(_('Notifications'), 'message-alert', 'notifications-tab')}
-                                </li>
-                            </ul>
-                            <div class="o-tab-panels">
-                                <%ui:tab_panel id="info-tab" expanded="true">
-                                    <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
-                                    <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
-                                </%ui:tab_panel>
-                                <%ui:tab_panel id="notifications-tab" url="${i18n_url('notifications:list')}"/>
+                <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
+                    <div class="o-statusbar-panel-content">
+                        <%block name="statusbar_panel">
+                            <div id="status-tab" class="o-tabbable">
+                                <ul class="o-tab-handles" role="tablist">
+                                    <li class="o-tab-handle">
+                                    ${ui.tab_activator(_('Info'), 'info', 'info-tab', active=True)}
+                                    </li>
+                                    <li class="o-tab-handle">
+                                    ${ui.tab_activator(_('Notifications'), 'message-alert', 'notifications-tab')}
+                                    </li>
+                                </ul>
+                                <div class="o-tab-panels">
+                                    <%ui:tab_panel id="info-tab" expanded="true">
+                                        <p class="progver"><span lang="en">Librarian</span> v${th.app_version()}</p>
+                                        <p class="copyright">2014-2015 <span lang="en">Outernet Inc</span></p>
+                                    </%ui:tab_panel>
+                                    <%ui:tab_panel id="notifications-tab" url="${i18n_url('notifications:list')}"/>
+                                </div>
                             </div>
-                        </div>
-                    </%block>
+                        </%block>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </%block>
 
         <!-- inline JS templates -->
         <script type="text/template" id="modalContent">
