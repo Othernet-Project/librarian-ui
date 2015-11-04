@@ -1,7 +1,7 @@
 ## Conditionally render placeholder
 ##
 
-<%def name="pholder_attr(text=None)">${' placeholder="{}"'.format(text) if text else ''}</%def>
+<%def name="pholder_attr(text=None)">${u' placeholder="{}"'.format(text) if text else ''}</%def>
 
 ## Select list option
 ##

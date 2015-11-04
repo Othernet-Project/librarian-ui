@@ -29,6 +29,7 @@ ${_('Error')}
     % endif
 
     <p class="buttons">
+    <a class="button" href="${url('/')}">${_('Return to main page')}</a>
     <a class="button" href="${url('sys:applog')}">${_('Download application log')}</a>
     </p>
 </%block>
