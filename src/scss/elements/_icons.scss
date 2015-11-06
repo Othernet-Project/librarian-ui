@@ -99,25 +99,24 @@ $glyphs: (
   spinner: '\f15e',
   storage-internal: '\f15f',
   storage-usbdrive: '\f160',
-  storage-usbharddisk: '\f161',
-  storage-usbstick: '\f162',
-  tuner: '\f163',
-  tweet: '\f164',
-  unlock: '\f165',
-  user-exclamation: '\f166',
-  user-key: '\f167',
-  user-minus: '\f168',
-  user-multiple: '\f169',
-  user-no: '\f16a',
-  user-ok: '\f16b',
-  user-plus: '\f16c',
-  user-shield: '\f16d',
-  user-star: '\f16e',
-  user-unknown: '\f16f',
-  user-up: '\f170',
-  user: '\f171',
-  video: '\f172',
-  wifi: '\f173',
+  storage-usbstick: '\f161',
+  tuner: '\f162',
+  tweet: '\f163',
+  unlock: '\f164',
+  user-exclamation: '\f165',
+  user-key: '\f166',
+  user-minus: '\f167',
+  user-multiple: '\f168',
+  user-no: '\f169',
+  user-ok: '\f16a',
+  user-plus: '\f16b',
+  user-shield: '\f16c',
+  user-star: '\f16d',
+  user-unknown: '\f16e',
+  user-up: '\f16f',
+  user: '\f170',
+  video: '\f171',
+  wifi: '\f172',
 );
 
 @include keyframes('spin') {
@@ -129,9 +128,9 @@ $glyphs: (
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-fdcba2e2091c28e38e5a046743b4cc7e.eot",
-      "#{$oicons-prefix}oicons-fdcba2e2091c28e38e5a046743b4cc7e.ttf",
-      "#{$oicons-prefix}oicons-fdcba2e2091c28e38e5a046743b4cc7e.woff"));
+      "#{$oicons-prefix}oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.eot",
+      "#{$oicons-prefix}oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.ttf",
+      "#{$oicons-prefix}oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.woff"));
 }
 
 // Base styles for all icons
