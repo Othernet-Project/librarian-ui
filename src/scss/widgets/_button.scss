@@ -61,6 +61,19 @@ button,
   }
 }
 
+button.nobutton {
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  color: $o-accent;
+
+  &:focus,
+  &:hover {
+    color: $o-base-text-color;
+  }
+}
+
 .buttons {
   // Typography
   text-align: right;
