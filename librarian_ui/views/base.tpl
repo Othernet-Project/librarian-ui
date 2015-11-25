@@ -127,7 +127,7 @@ STATUS_TAB_ID = 'status-tab'
 
         <nav id="${CONTEXT_MENU_ID}" class="o-context-menu ${self.open_class('sidebar')}" role="menu" ${self.aria_hidden('sidebar')}>
         ## Translators, label for context menu language switcher
-        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe')}
+        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe', target_url=i18n_url('ui:lang_list', path=request.path))}
 
         <%block name="context_menu">
             ## Use ``ui.context_menu_item()`` def to build your context menu,
