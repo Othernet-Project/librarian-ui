@@ -77,6 +77,9 @@
     collapsible: 'self'
     activator: '.o-contextbar-menu'
 
+    getInitialState: () ->
+      @element.ariaProperty 'hidden' == 'true'
+
     onOpen: () ->
       @children.first().focus()
       return

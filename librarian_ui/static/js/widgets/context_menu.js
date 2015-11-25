@@ -81,6 +81,10 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
 
     ContextMenu.prototype.activator = '.o-contextbar-menu';
 
+    ContextMenu.prototype.getInitialState = function() {
+      return this.element.ariaProperty('hidden' === 'true');
+    };
+
     ContextMenu.prototype.onOpen = function() {
       this.children.first().focus();
     };
