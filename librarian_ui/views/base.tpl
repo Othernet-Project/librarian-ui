@@ -198,10 +198,6 @@ STATUS_TAB_ID = 'status-tab'
                             </span>
                         </%block>
                     </div>
-                    <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
-                        <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
-                        <span class="o-statusbar-hbar-activator-icon icon"></span>
-                    </a>
                 </div>
                 <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
                     <div class="o-statusbar-panel-content">
@@ -251,6 +247,13 @@ STATUS_TAB_ID = 'status-tab'
         <script type="text/template" id="spinner">
             ## Translators, message shown next to a spinning load icon
             ${ui.spinner(_('Loading...'))}
+        </script>
+
+        <script type="text/template" id="statusbarToggle">
+            <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
+                <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
+                <span class="o-statusbar-hbar-activator-icon icon"></span>
+            </a>
         </script>
 
         <%block name="extra_body"/>

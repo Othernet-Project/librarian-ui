@@ -2,9 +2,12 @@
 var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
-(function(window, $) {
-  var ExpandableBox, Statusbar;
+(function(window, $, templates) {
+  var ExpandableBox, Statusbar, statusbarHbar;
   ExpandableBox = window.o.elements.ExpandableBox;
+  statusbarHbar = $('.o-statusbar-hbar');
+  statusbarHbar.append(templates.statusbarToggle);
+  statusbarHbar.addClass('clickable');
   Statusbar = (function(superClass) {
     extend(Statusbar, superClass);
 
@@ -21,4 +24,4 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
 
   })(ExpandableBox);
   return window["export"]('Statusbar', 'widgets', Statusbar);
-})(this, this.jQuery);
+})(this, this.jQuery, this.templates);
