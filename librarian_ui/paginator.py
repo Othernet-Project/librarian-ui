@@ -44,7 +44,7 @@ class Paginator(object):
 
     @property
     def pages(self):
-        return int(math.ceil(self.count / float(self.per_page)))
+        return max(int(math.ceil(self.count / float(self.per_page))), 1)
 
     @property
     def has_next(self):
