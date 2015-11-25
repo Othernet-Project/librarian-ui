@@ -73,9 +73,10 @@
     </a>
 </%def>
 
-<%def name="context_menu_submenu(id, target_id, label, icon='', expand_icon='expand-right', enabled=True)">
+<%def name="context_menu_submenu(id, target_id, label, icon='', expand_icon='expand-right', enabled=True, target_url=None)">
+    <% target_href = target_url or '#{}'.format(target_id) %>
     <a
-        href="${'#{}'.format(target_id) if enabled else jsvoid}" id="${id}"
+        href="${target_href if enabled else jsvoid}" id="${id}"
         class="o-context-menu-menuitem o-context-menu-submenu-activator ${ 'disabled' if not enabled else ''}"
         role="menuitem"
         aria-disabled="${'false' if enabled else 'true'}"
