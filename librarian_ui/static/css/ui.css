@@ -252,6 +252,18 @@ button .icon,
 }
 
 /* line 64, ../../../src/scss/widgets/_button.scss */
+button.nobutton {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #255a89;
+}
+/* line 71, ../../../src/scss/widgets/_button.scss */
+button.nobutton:focus, button.nobutton:hover {
+  color: #333;
+}
+
+/* line 77, ../../../src/scss/widgets/_button.scss */
 .buttons {
   text-align: right;
   margin-top: 1rem;
@@ -259,7 +271,7 @@ button .icon,
   margin-bottom: 1rem;
 }
 
-/* line 74, ../../../src/scss/widgets/_button.scss */
+/* line 87, ../../../src/scss/widgets/_button.scss */
 a.button {
   padding: 0.36rem 1rem;
 }
@@ -2400,9 +2412,37 @@ a:hover {
   content: "";
 }
 
+/* line 3, ../../../src/scss/page_templates/_feedback.scss */
+.feedback-icon {
+  text-align: center;
+  font-size: 400%;
+  margin: 3rem 0;
+}
+
+/* line 9, ../../../src/scss/page_templates/_feedback.scss */
+.feedback-success .feedback-icon {
+  color: #5d7b0a;
+}
+
+/* line 13, ../../../src/scss/page_templates/_feedback.scss */
+.feedback-error .feedbac-icon {
+  color: #cc3737;
+}
+
+/* line 17, ../../../src/scss/page_templates/_feedback.scss */
+.feedback-main {
+  font-size: 120%;
+  text-align: center;
+}
+
+/* line 22, ../../../src/scss/page_templates/_feedback.scss */
+.feedback-sub {
+  text-align: center;
+}
+
 @font-face {
   font-family: "OIcons";
-  src: url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.eot?1446815617') format('embedded-opentype'), url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.ttf?1446815617') format('truetype'), url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.woff?1446815617') format('woff');
+  src: url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.eot?1447320820') format('embedded-opentype'), url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.ttf?1447320820') format('truetype'), url('../font/oicons-ce4c4f9e02180fe4c6bce245c84c5bd3.woff?1447320820') format('woff');
 }
 /* line 175, ../../../src/scss/elements/_icons.scss */
 .icon {

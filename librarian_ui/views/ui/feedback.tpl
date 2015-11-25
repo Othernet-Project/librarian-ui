@@ -4,11 +4,17 @@
 ${page_title}
 </%block>
 
-<%block name="narrow_main">
-<div class="feedback ${status}">
-    <span class="icon"></span>
-    <p class="main">${message}</p>
+<% 
+    if status == 'success':
+        icon = 'ok-outline'
+    else:
+        icon = 'no-outline'
+%>
+<div class="feedback feedback-${status}">
+    <div class="feedback-icon">
+        <span class="icon icon-${icon}"></span>
+    </div>
+    <p class="feedback-main">${message}</p>
     <% link = '<a href="{url}">{target}</a>'.format(url=redirect_url, target=redirect_target) %>
-    <p class="sub">${_("You'll be taken to {target} in {seconds} seconds.").format(seconds=REDIRECT_DELAY, target=link)}</p>
+    <p class="feedback-sub">${_("You'll be taken to {target} in {seconds} seconds.").format(seconds=REDIRECT_DELAY, target=link)}</p>
 </div>
-</%block>
