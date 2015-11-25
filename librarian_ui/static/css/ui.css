@@ -1387,6 +1387,32 @@ a:hover {
   border-radius: 0.3rem;
 }
 
+/* line 3, ../../../src/scss/widgets/_lang_list.scss */
+.language-list-back {
+  text-align: right;
+}
+
+/* line 8, ../../../src/scss/widgets/_lang_list.scss */
+.language-list li {
+  border-bottom: 1px solid #ddd;
+}
+/* line 11, ../../../src/scss/widgets/_lang_list.scss */
+.language-list li:last-child {
+  border-bottom: 0;
+}
+/* line 16, ../../../src/scss/widgets/_lang_list.scss */
+.language-list a {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0;
+}
+/* line 22, ../../../src/scss/widgets/_lang_list.scss */
+.language-list .icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+}
+
 /* line 7, ../../../src/scss/widgets/_apps_menu.scss */
 .o-apps-menu {
   white-space: nowrap;
