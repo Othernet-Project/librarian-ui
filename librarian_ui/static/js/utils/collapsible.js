@@ -41,6 +41,7 @@
     });
     onclick = function(e) {
       var clicked, collapsed, panel, section;
+      e.preventDefault();
       clicked = $(e.target);
       section = clicked.parents(collapsibleSection);
       panel = section.find(collapsibleArea);
@@ -50,13 +51,6 @@
       return panel.focus();
     };
     elem.on('click', button, onclick);
-    elem.on('keydown', button, function(e) {
-      var ref;
-      if ((ref = e.which) === RETURN || ref === SPACE) {
-        e.preventDefault();
-        onclick.call(this, e);
-      }
-    });
     elem.on('keydown', collapsibleSection, function(e) {
       var panel, section;
       if (e.which !== ESC) {

@@ -40,6 +40,7 @@
         remax.call this
 
     onclick = (e) ->
+      e.preventDefault()
       clicked = $ e.target
       section = clicked.parents collapsibleSection
       panel = section.find collapsibleArea
@@ -48,14 +49,7 @@
       panel.ariaProperty 'hidden', if collapsed then 'true' else 'false'
       panel.focus()
 
-    # Because the header is not an anchor, we can't simply handle click events
-    # only. We also handle Return and Space keys to activate the panel.
     elem.on 'click', button, onclick
-    elem.on 'keydown', button, (e) ->
-      if e.which in [RETURN, SPACE]
-        e.preventDefault()
-        onclick.call this, e
-      return
 
     # Inside the panel itself, we handle the Escape key to collapse the panel
     # and focus the button.

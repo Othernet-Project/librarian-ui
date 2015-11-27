@@ -1259,6 +1259,18 @@ a:hover {
   border-top: 1px solid #ddd;
 }
 /* line 33, ../../../src/scss/widgets/_collapsible.scss */
+.o-collapsible .o-collapsible-section > :nth-child(1) a {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #333;
+}
+/* line 41, ../../../src/scss/widgets/_collapsible.scss */
+.o-collapsible .o-collapsible-section > :nth-child(1) a:hover, .o-collapsible .o-collapsible-section > :nth-child(1) a:focus {
+  color: #255a89;
+}
+/* line 47, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1) .icon {
   font-size: 180%;
   vertical-align: middle;
@@ -1267,11 +1279,11 @@ a:hover {
 .o-collapsible .o-collapsible-section > :nth-child(1) .icon:before {
   content: "";
 }
-/* line 44, ../../../src/scss/widgets/_collapsible.scss */
+/* line 58, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1):hover, .o-collapsible .o-collapsible-section > :nth-child(1):focus {
   color: #255a89;
 }
-/* line 51, ../../../src/scss/widgets/_collapsible.scss */
+/* line 65, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section > :nth-child(2) {
   padding: 20px;
   overflow: hidden;
@@ -1287,7 +1299,7 @@ a:hover {
 .o-collapsible .o-collapsible-section.o-collapsed > :nth-child(1) .icon:before {
   content: "";
 }
-/* line 68, ../../../src/scss/widgets/_collapsible.scss */
+/* line 82, ../../../src/scss/widgets/_collapsible.scss */
 .o-collapsible .o-collapsible-section.o-collapsed {
   max-height: 3rem !important;
 }
