@@ -30,6 +30,20 @@
       background: $o-foreground-material;
       border-top: $o-separator-border;
 
+      a {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        color: $o-base-text-color;
+
+        &:hover,
+        &:focus {
+          color: $o-accent;
+        }
+      }
+
       .icon {
         // Typography
         font-size: 180%;

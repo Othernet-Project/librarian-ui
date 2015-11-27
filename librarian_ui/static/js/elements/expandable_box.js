@@ -11,8 +11,8 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
     function ExpandableBox(id) {
       this.id = id;
       ExpandableBox.__super__.constructor.call(this, this.id);
-      this.collapsed = true;
       this.collapsibleElement = this.getCollapsible();
+      this.collapsed = this.getInitialState();
       this.activatorElement = this.getActivator();
       this.activatorElement.on('click', (function(_this) {
         return function(e) {
@@ -25,6 +25,10 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
     ExpandableBox.prototype.collapsibleSection = '.o-collapsible';
 
     ExpandableBox.prototype.activator = '.o-activator';
+
+    ExpandableBox.prototype.getInitialState = function() {
+      return this.collapsibleElement.ariaProperty('expanded' === 'false');
+    };
 
     ExpandableBox.prototype.getCollapsible = function() {
       if (this.collapsibleSection === 'self') {

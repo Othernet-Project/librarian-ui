@@ -27,7 +27,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
           var elem, id, targetId;
           elem = $(item);
           id = elem.attr('id');
-          targetId = elem.attr('href').slice(1);
+          targetId = elem.ariaProperty('controls');
           elem.data('context-menu', new ContextMenu(targetId, id, _this));
         };
       })(this));
@@ -80,6 +80,10 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
     ContextMenu.prototype.collapsible = 'self';
 
     ContextMenu.prototype.activator = '.o-contextbar-menu';
+
+    ContextMenu.prototype.getInitialState = function() {
+      return this.element.ariaProperty('hidden' === 'true');
+    };
 
     ContextMenu.prototype.onOpen = function() {
       this.children.first().focus();

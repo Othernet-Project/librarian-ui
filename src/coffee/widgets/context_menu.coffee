@@ -18,7 +18,7 @@
       @submenuLinks.each (idx, item) =>
         elem = $ item
         id = elem.attr 'id'
-        targetId = elem.attr('href').slice 1
+        targetId = elem.ariaProperty 'controls'
         elem.data 'context-menu', new ContextMenu targetId, id, @
         return
 
@@ -76,6 +76,9 @@
 
     collapsible: 'self'
     activator: '.o-contextbar-menu'
+
+    getInitialState: () ->
+      @element.ariaProperty 'hidden' == 'true'
 
     onOpen: () ->
       @children.first().focus()

@@ -23,8 +23,8 @@
 
     constructor: (@id) ->
       super(@id)
-      @collapsed = true
       @collapsibleElement = @getCollapsible()
+      @collapsed = @getInitialState()
       @activatorElement = @getActivator()
       @activatorElement.on 'click', (e) =>
         e.preventDefault()
@@ -32,6 +32,9 @@
 
     collapsibleSection: '.o-collapsible'
     activator: '.o-activator'
+
+    getInitialState: () ->
+      @collapsibleElement.ariaProperty 'expanded' == 'false'
 
     getCollapsible: () ->
       if @collapsibleSection == 'self'

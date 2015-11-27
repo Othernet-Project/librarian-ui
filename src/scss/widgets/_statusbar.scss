@@ -36,7 +36,10 @@
     @include background-image(linear-gradient($o-clickable-target-shading));
     border-top: $o-widget-border;
     border-bottom: $o-separator-border;
-    cursor: pointer;
+
+    &.clickable {
+      cursor: pointer;
+    }
   }
 
   .o-statusbar-status {

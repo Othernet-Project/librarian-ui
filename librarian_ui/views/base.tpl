@@ -29,6 +29,7 @@ various parts of the interface. This includes:
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
 <%namespace name="menu" file="/ui/menu_item.tpl"/>
+<%namespace name="nojs" file="/ui/nojs.tpl"/>
 
 <%!
 # Global constants
@@ -55,7 +56,7 @@ STATUS_TAB_ID = 'status-tab'
         <%block name="extra_head"/>
     </head>
     <body>
-        <header class="o-pulldown-menubar" id="${MENUBAR_ID}" role="section">
+        <header class="o-pulldown-menubar ${nojs.open_class('menu')}" id="${MENUBAR_ID}" role="section" ${nojs.aria_exp('menu')}>
         <%block name="header">
             <%block name="header_menubar">
                 <%ui:apps_menu id="${MENUBAR_ID}">
@@ -67,7 +68,7 @@ STATUS_TAB_ID = 'status-tab'
                 </%ui:apps_menu>
             </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
-                <a href="#${id}-menu" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
+                <a href="${nojs.comp_url('menu')}" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
                     <span class="o-pulldown-menubar-hbar-activator-label">
                         <span class="o-pulldown-menubar-hbar-activator-label-icon icon icon-outernet"></span>
                         <span class="o-pulldown-menubar-hbar-activator-label-text">${_('Toggle apps menu')}</span>
@@ -80,7 +81,7 @@ STATUS_TAB_ID = 'status-tab'
                         <%block name="menubar_panel"/>
                         </div>
                         <div class="o-panel">
-                            <a href="#${CONTEXT_MENU_ID}" class="o-contextbar-menu" role="button" arial-controls="${CONTEXT_MENU_ID}">
+                            <a href="${nojs.comp_url('sidebar')}" class="o-contextbar-menu" role="button" arial-controls="${CONTEXT_MENU_ID}">
                                 <span class="o-contextbar-menu-label">${_('Toggle context menu')}</span>
                                 <span class="o-contextbar-menu-icon icon"></span>
                             </a>
@@ -91,9 +92,9 @@ STATUS_TAB_ID = 'status-tab'
         </%block>
         </header>
 
-        <nav id="${CONTEXT_MENU_ID}" class="o-context-menu" role="menu" aria-hidden="true">
+        <nav id="${CONTEXT_MENU_ID}" class="o-context-menu ${nojs.open_class('sidebar')}" role="menu" ${nojs.aria_hidden('sidebar')}>
         ## Translators, label for context menu language switcher
-        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe')}
+        ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe', target_url=i18n_url('ui:lang_list', path=request.path))}
 
         <%block name="context_menu">
             ## Use ``ui.context_menu_item()`` def to build your context menu,
@@ -164,10 +165,6 @@ STATUS_TAB_ID = 'status-tab'
                             </span>
                         </%block>
                     </div>
-                    <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
-                        <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
-                        <span class="o-statusbar-hbar-activator-icon icon"></span>
-                    </a>
                 </div>
                 <div class="o-statusbar-status o-collapsible" id="${STATUSBAR_ID}-status" role="status" aria-expanded="false">
                     <div class="o-statusbar-panel-content">
@@ -217,6 +214,13 @@ STATUS_TAB_ID = 'status-tab'
         <script type="text/template" id="spinner">
             ## Translators, message shown next to a spinning load icon
             ${ui.spinner(_('Loading...'))}
+        </script>
+
+        <script type="text/template" id="statusbarToggle">
+            <a href="#${STATUSBAR_ID}-status" class="o-statusbar-hbar-activator" role="button" aria-controls="${STATUSBAR_ID}-status">
+                <span class="o-statusbar-hbar-activator-label">${_('Toggle status')}</span>
+                <span class="o-statusbar-hbar-activator-icon icon"></span>
+            </a>
         </script>
 
         <%block name="extra_body"/>
