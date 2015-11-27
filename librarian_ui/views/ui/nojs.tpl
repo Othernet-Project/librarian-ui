@@ -11,12 +11,12 @@
 </%def>
 
 <%def name="cls_toggle(name, cls, flip=False)">
-    <% cond = request.params.get(name) == '1' ^ flip %>
+    <% cond = (request.params.get(name) == '1') ^ flip %>
     ${cls if cond else ''}
 </%def>
 
 <%def name="open_class(name)">
-    ${self.class_toggle(name, 'open')}
+    ${self.cls_toggle(name, 'open')}
 </%def>
 
 <%def name="aria_exp(name)">
