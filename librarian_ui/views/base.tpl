@@ -29,6 +29,7 @@ various parts of the interface. This includes:
 
 <%namespace name="ui" file="/ui/widgets.tpl"/>
 <%namespace name="menu" file="/ui/menu_item.tpl"/>
+<%namespace name="nojs" file="/ui/nojs.tpl"/>
 
 <%!
 # Global constants
@@ -39,40 +40,6 @@ CONTEXT_MENU_ID = 'context-menu'
 MAIN_PANEL_ID = 'main-panel'
 STATUS_TAB_ID = 'status-tab'
 %>
-
-## The following defs are used to support collapsible UI elements where there 
-## is no JavaScript support in the browser.
-
-<%def name="comp_url(name)">
-    <% state = request.params.get(name) == '1' %>
-    % if state:
-        ${i18n_path(request.path + h.del_qparam(name))}
-    % else:
-        ${i18n_path(request.path + h.set_qparam(**{name: '1'}))}
-    % endif
-</%def>
-
-<%def name="open_class(name)">
-    % if request.params.get(name) == '1':
-        open
-    % endif
-</%def>
-
-<%def name="aria_exp(name)">
-    % if request.params.get(name) == '1':
-        aria-expanded="true"
-    % else:
-        aria-expanded="false"
-    % endif
-</%def>
-
-<%def name="aria_hidden(name)">
-    % if request.params.get(name) == '1':
-        aria-hidden="false"
-    % else:
-        aria-hidden="true"
-    % endif
-</%def>
 
 <!doctype html>
 
@@ -89,7 +56,7 @@ STATUS_TAB_ID = 'status-tab'
         <%block name="extra_head"/>
     </head>
     <body>
-        <header class="o-pulldown-menubar ${self.open_class('menu')}" id="${MENUBAR_ID}" role="section" ${self.aria_exp('menu')}>
+        <header class="o-pulldown-menubar ${nojs.open_class('menu')}" id="${MENUBAR_ID}" role="section" ${nojs.aria_exp('menu')}>
         <%block name="header">
             <%block name="header_menubar">
                 <%ui:apps_menu id="${MENUBAR_ID}">
@@ -101,7 +68,7 @@ STATUS_TAB_ID = 'status-tab'
                 </%ui:apps_menu>
             </%block>
             <div class="o-pulldown-menubar-hbar" id="${MENUBAR_ID}-hbar" role="menubar">
-                <a href="${self.comp_url('menu')}" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
+                <a href="${nojs.comp_url('menu')}" role="button" aria-controls="${MENUBAR_ID}" class="o-pulldown-menubar-hbar-activator o-activator">
                     <span class="o-pulldown-menubar-hbar-activator-label">
                         <span class="o-pulldown-menubar-hbar-activator-label-icon icon icon-outernet"></span>
                         <span class="o-pulldown-menubar-hbar-activator-label-text">${_('Toggle apps menu')}</span>
@@ -114,7 +81,7 @@ STATUS_TAB_ID = 'status-tab'
                         <%block name="menubar_panel"/>
                         </div>
                         <div class="o-panel">
-                            <a href="${self.comp_url('sidebar')}" class="o-contextbar-menu" role="button" arial-controls="${CONTEXT_MENU_ID}">
+                            <a href="${nojs.comp_url('sidebar')}" class="o-contextbar-menu" role="button" arial-controls="${CONTEXT_MENU_ID}">
                                 <span class="o-contextbar-menu-label">${_('Toggle context menu')}</span>
                                 <span class="o-contextbar-menu-icon icon"></span>
                             </a>
@@ -125,7 +92,7 @@ STATUS_TAB_ID = 'status-tab'
         </%block>
         </header>
 
-        <nav id="${CONTEXT_MENU_ID}" class="o-context-menu ${self.open_class('sidebar')}" role="menu" ${self.aria_hidden('sidebar')}>
+        <nav id="${CONTEXT_MENU_ID}" class="o-context-menu ${nojs.open_class('sidebar')}" role="menu" ${nojs.aria_hidden('sidebar')}>
         ## Translators, label for context menu language switcher
         ${ui.context_menu_submenu('language', 'language-list', _('Language'), 'globe', target_url=i18n_url('ui:lang_list', path=request.path))}
 
