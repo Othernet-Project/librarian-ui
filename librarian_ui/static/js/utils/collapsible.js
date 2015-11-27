@@ -13,7 +13,7 @@
     collapseClass: 'o-collapsed'
   };
   return $.fn.collapsible = function(options) {
-    var button, collapseClass, collapsibleArea, collapsibleSection, elem, onclick, remax;
+    var button, collapseClass, collapsibleArea, collapsibleSection, collapsibleSections, elem, expand, onclick, remax;
     elem = $(this);
     if (options == null) {
       options = {};
@@ -28,7 +28,16 @@
       section.css('max-height', totalHeight + CLICKABLE_TARGET);
       return section;
     };
-    elem.find(collapsibleSection).each(function() {
+    expand = function(panel) {
+      var section;
+      section = panel.parents(collapsibleSection);
+      button = section.find(button);
+      section.addClass(collapseClass);
+      panel.ariaProperty('hidden', 'true');
+      return button.focus();
+    };
+    collapsibleSections = elem.find(collapsibleSection);
+    collapsibleSections.each(function() {
       var section;
       section = remax.call(this);
       section.data('collapsible-parent', elem);

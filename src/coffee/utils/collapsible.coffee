@@ -32,7 +32,15 @@
       section.css 'max-height', totalHeight + CLICKABLE_TARGET
       section
 
-    elem.find(collapsibleSection).each () ->
+    expand = (panel) ->
+      section = panel.parents collapsibleSection
+      button = section.find button
+      section.addClass collapseClass
+      panel.ariaProperty 'hidden', 'true'
+      button.focus()
+
+    collapsibleSections = elem.find collapsibleSection
+    collapsibleSections.each () ->
       section = remax.call this
       section.data 'collapsible-parent', elem
       section.on 'remax', remax
