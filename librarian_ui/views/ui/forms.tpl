@@ -114,7 +114,7 @@
 ## This def renders a bottle-utils Field instance.
 ##
 
-<%def name="field(fld, id=None)">
+<%def name="field(fld, id=None, help=None)">
     <p class="o-field${' o-field-error' if fld.error else ''}">
         ## Label
         % if fld.type not in ('checkbox', 'radio'):
@@ -142,6 +142,10 @@
         ## Help text for non-textarea fields is rendered below the field
         % if fld.type not in ('textarea',):
             ${self.field_extras(fld)}
+        % endif
+
+        % if help:
+            ${self.field_help(help)}
         % endif
     </p>
 </%def>
