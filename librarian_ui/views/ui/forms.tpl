@@ -1,13 +1,13 @@
 ## Conditionally render placeholder
 ##
 
-<%def name="pholder_attr(text=None)">${u' placeholder="{}"'.format(text) if text else ''}</%def>
+<%def name="pholder_attr(text=None)">${u' placeholder="{}"'.format(h.attr_escape(text)) if text else ''}</%def>
 
 ## Select list option
 ##
 
 <%def name="option(value, label, selected=False)">
-    <option value="${value}"${ ' selected' if selected else ''}>${label}</option>
+    <option value="${value | h}"${ ' selected' if selected else ''}>${label | h}</option>
 </%def>
 
 ## Select list
@@ -22,7 +22,7 @@
             choices.insert(0, ('', empty_value))
         current_value = value or request.params.get(name, '')
     %>
-    <select name="${name}" id="${id or name}">
+    <select name="${name | h}" id="${id or name | h}">
     % for val, label in choices:
         <% selected = val == current_value %>
         ${option(val, label, selected)}
@@ -36,7 +36,7 @@
 
 <%def name="input(name, type='text', placeholder=None, value=None, id=None, has_error=False)">
     <% current_value = h.to_unicode(value or request.params.get(name, '')) %>
-    <input type="${type}" name="${name}" id="${id or name}" value="${current_value}"${self.pholder_attr(placeholder)}>
+    <input type="${type | h}" name="${name | h}" id="${id or name | h}" value="${current_value | h}"${self.pholder_attr(placeholder)}>
 </%def>
 
 ## Hidden input
@@ -61,7 +61,7 @@
     current_value = request.params.getall(name)
     is_checked = value in current_value if is_checked is None else is_checked
     %>
-    <input type="checkbox" id="${id or name}" name="${name}" value="${value}"${' checked' if is_checked else ''}>
+    <input type="checkbox" id="${id or name | h}" name="${name | h}" value="${value | h}"${' checked' if is_checked else ''}>
     % if label:
         ${self.label(label, inline=True)}
     % endif
@@ -74,7 +74,7 @@
     <%
     current_value = value or request.params.getall(name)
     %>
-    <textarea name="${name}" id="${id or name}"${self.pholder_attr(placeholder)}>${current_value}</textarea>
+    <textarea name="${name | h}" id="${id or name | h}"${self.pholder_attr(placeholder)}>${current_value}</textarea>
 </%def>
 
 
@@ -82,7 +82,7 @@
 ##
 
 <%def name="label(label, inline=False, id=None)">
-    <label${' for="{}"'.format(id) if id else ''} class="o-field-label${' o-field-label-inline' if inline else ''}">${label}</label>
+    <label${' for="{}"'.format(id) if id else '' | h} class="o-field-label${' o-field-label-inline' if inline else ''}">${label}</label>
 </%def>
 
 ## Field supplemental information
@@ -90,13 +90,13 @@
 
 <%def name="field_help(message)">
     <span class="o-field-help-message">
-        ${message}
+        ${message | h}
     </span>
 </%def>
 
 <%def name="field_error(message)">
     <span class="o-field-error-message">
-        ${message}
+        ${message | h}
     </span>
 </%def>
 
@@ -115,6 +115,10 @@
 ##
 
 <%def name="field(fld, id=None, help=None)">
+    <% 
+        if help:
+            fld.options['help_text'] = help
+    %>
     <p class="o-field${' o-field-error' if fld.error else ''}">
         ## Label
         % if fld.type not in ('checkbox', 'radio'):
@@ -143,10 +147,6 @@
         % if fld.type not in ('textarea',):
             ${self.field_extras(fld)}
         % endif
-
-        % if help:
-            ${self.field_help(help)}
-        % endif
     </p>
 </%def>
 
@@ -161,7 +161,7 @@
     <ul class="o-form-errors">
         % for error in errors:
             <li class="o-form-error">
-            ${error}
+            ${error | h}
             </li>
         % endfor
     </ul>
@@ -173,6 +173,6 @@
         return ''
     %>
     <p class="o-form-message">
-        ${message}
+        ${message | h}
     </p>
 </%def>
