@@ -1,7 +1,7 @@
 ## Conditionally render placeholder
 ##
 
-<%def name="pholder_attr(text=None)">${u' placeholder="{}"'.format(h.attr_escape(text)) if text else ''}</%def>
+<%def name="pholder_attr(text=None)">${u' placeholder="{}"'.format(h.html_escape(text)) if text else ''}</%def>
 
 ## Select list option
 ##
@@ -115,7 +115,7 @@
 ##
 
 <%def name="field(fld, id=None, help=None)">
-    <% 
+    <%
         if help:
             fld.options['help_text'] = help
     %>
