@@ -43,7 +43,7 @@
 ##
 
 <%def name="hidden(name, value, id=None)">
-    ${self.input(name, value=value, id=id or name)}
+    ${self.input(name, 'hidden', value=value, id=id or name)}
 </%def>
 
 ## Text input
@@ -121,7 +121,7 @@
     %>
     <p class="o-field${' o-field-error' if fld.error else ''}">
         ## Label
-        % if fld.type not in ('checkbox', 'radio'):
+        % if fld.type not in ('checkbox', 'radio', 'hidden'):
             ${self.label(fld.label, id=id or fld.name)}
         % endif
 
