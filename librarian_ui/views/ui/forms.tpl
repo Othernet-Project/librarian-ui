@@ -136,7 +136,7 @@
         % elif fld.type == 'hidden':
             ${self.hidden(fld.name, value=fld.value, id=id)}
         % elif fld.type in ['checkbox', 'radio']:
-            ${self.checkbox(fld.name, value=fld.expected_value, is_checked=fld.value, label=fld.label, id=id)}
+            ${self.checkbox(fld.name, value=fld.expected_value, is_checked=fld.default, label=fld.label, id=id)}
         % elif fld.type == 'textarea':
             ${self.textarea(fld.name, placeholder=fld.options.get('placeholder'), value=fld.value, id=id)}
         % elif fld.type == 'select':
