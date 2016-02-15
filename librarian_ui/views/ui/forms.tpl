@@ -82,7 +82,7 @@
 ##
 
 <%def name="label(label, inline=False, id=None)">
-    <label${' for="{}"'.format(id) if id else '' | h} class="o-field-label${' o-field-label-inline' if inline else ''}">${label}</label>
+    <label${' for="{}"'.format(id) if id else ''} class="o-field-label${' o-field-label-inline' if inline else ''}">${label}</label>
 </%def>
 
 ## Field supplemental information
