@@ -63,7 +63,7 @@
     %>
     <input type="checkbox" id="${id or name | h}" name="${name | h}" value="${value | h}"${' checked' if is_checked else ''}>
     % if label:
-        ${self.label(label, inline=True)}
+        ${self.label(label, inline=True, id=id or name)}
     % endif
 </%def>
 

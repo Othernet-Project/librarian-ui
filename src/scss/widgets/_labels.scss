@@ -7,4 +7,12 @@ label {
   // Basic geometry
   display: block;
   margin-bottom: 0.3rem;
+
+  // Styling
+  cursor: pointer;
+}
+
+input[type=checkbox] + label {
+  display: inline-block;
+  vertical-align: middle;
 }

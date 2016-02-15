@@ -34,3 +34,7 @@ select {
     border-color: $o-input-focus-outline;
   }
 }
+
+input[type=checkbox] {
+  vertical-align: middle;
+}
