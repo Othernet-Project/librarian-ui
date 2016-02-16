@@ -341,7 +341,7 @@ input[type=checkbox] + label {
 form .o-field-help-message {
   font-style: italic;
   position: relative;
-  display: inline-block;
+  display: block;
   padding-left: 2rem;
   margin-top: 0.2rem;
   color: #5d7b0a;
@@ -376,7 +376,7 @@ form .o-field-help-message:before {
 form .o-field-error-message {
   font-style: italic;
   position: relative;
-  display: inline-block;
+  display: block;
   padding-left: 2rem;
   margin-top: 0.2rem;
   color: #cc3737;
