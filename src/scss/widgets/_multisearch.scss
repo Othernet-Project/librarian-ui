@@ -53,6 +53,13 @@
     @include border-radius(0);
     border-left: 0;
     border-right: 0;
+    background: $o-multisearch-field-background;
+    @include transition(background 0.5s);
+
+    &:focus,
+    &:hover {
+      background: white;
+    }
   }
 
   select {
@@ -63,12 +70,23 @@
   button {
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(0);
+    border: 1px solid $o-multisearch-widget-background;
+    background: $o-multisearch-widget-background;
+    color: $o-multisearch-widget-text;
+
+    &:hover,
+    &:focus {
+      background: $o-accent;
+      color: $o-negative-base;
+      border-color: $o-accent;
+    }
   }
 
   label {
     // Typography
     font-family: $o-base-font;
     font-size: $o-base-text-size;
+    font-weight: normal;
     text-align: center;
 
     // Base geometry
@@ -78,12 +96,9 @@
     padding: 0.3rem 0.2rem;
 
     // Styling
-    border: $o-widget-border;
-    border-top-color: $o-outline-highlight;
-    @include border-top-left-radius($o-clickable-target-corner-radius);
-    @include border-bottom-left-radius($o-clickable-target-corner-radius);
-
-
+    border: 1px solid $o-multisearch-widget-background;
+    background: $o-multisearch-widget-background;
+    color: $o-multisearch-widget-text;
   }
 
   .o-multisearch-button-icon {

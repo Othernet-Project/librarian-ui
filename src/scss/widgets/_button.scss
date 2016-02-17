@@ -16,13 +16,9 @@ button,
   // Styling
   background: $o-button-face-color;
   color: $o-button-text-color;
-  @if $o-button-face-shading {
-    @include background-image(linear-gradient($o-button-face-shading));
-  }
 
   // Border
-  border: $o-input-outline;
-  border-top-color: $o-input-outline-highlight-color;
+  border: 1px solid $o-button-face-color;
   border-radius: $o-input-corner-radius;
 
   // Interaction
@@ -30,15 +26,14 @@ button,
   position: relative;
   display: inline-block;
 
+  @include transition(background 0.5s, border-color 0.5s, color 0.5s);
+
   // Alternative 
   &:hover,
   &:focus {
-    border-color: $o-input-focus-outline;
+    border-color: $o-button-hover-text-color;
     background: $o-button-hover-face-color;
     color: $o-button-hover-text-color;
-    @if $o-button-hover-face-shading {
-      @include background-image(linear-gradient($o-button-hover-face-shading));
-    }
   }
 
   &.clean {
@@ -47,6 +42,7 @@ button,
     background: transparent;
     border: 0;
     @include border-radius(0);
+    color: $o-base;
 
     &:hover,
     &:focus {
@@ -82,6 +78,9 @@ button.nobutton {
   margin-top: 1rem;
   padding-top: 1rem;
   margin-bottom: 1rem;
+
+  // Styling
+  border-top: 1px solid $o-accent;
 }
 
 a.button {

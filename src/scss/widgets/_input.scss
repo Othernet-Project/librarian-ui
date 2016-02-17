@@ -22,16 +22,14 @@ select {
   // Styling
   background: $o-input-background;
   color: $o-input-text-color;
+  border: 1px solid $o-input-background;
 
-  // Border
-  border: $o-input-outline;
-  border-top-color: $o-input-outline-highlight-color;
-  border-radius: $o-input-corner-radius;
+  @include transition(background 0.5s);
 
   // Alternative state
   &:hover,
   &:focus {
-    border-color: $o-input-focus-outline;
+    background: $o-input-focus-background;
   }
 }
 

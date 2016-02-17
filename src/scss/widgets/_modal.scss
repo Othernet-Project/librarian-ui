@@ -69,6 +69,7 @@
 
     // Styling
     background: $o-modal-window-background;
+    color: $o-modal-window-text;
     @include box-shadow($o-modal-window-shadow);
 
     &.o-full-screen {

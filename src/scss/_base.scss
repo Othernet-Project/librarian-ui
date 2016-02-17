@@ -21,7 +21,7 @@ html {
   font-family: $o-base-font;
   font-size: $o-base-text-size;
   line-height: $o-base-line-height;
-  background: $o-material;
+  background: $o-dark-material;
   color: $o-base-text-color;
   @include ios-font-size-fix;
 }
