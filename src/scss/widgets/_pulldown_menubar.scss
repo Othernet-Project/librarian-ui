@@ -111,6 +111,7 @@ $o-pulldown-menubar-height: $o-pulldown-menubar-hbar-height + $o-pulldown-menuba
       font-size: 1200%;
       @include transition(color $o-animation-speed);
       overflow: hidden; // Fixes large font cover area below hbar
+      color: $o-negative-base;
     }
 
     .o-pulldown-menubar-hbar-activator-label-text {

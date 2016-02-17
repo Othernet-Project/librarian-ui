@@ -600,12 +600,13 @@ a:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   overflow: hidden;
+  color: #fff;
 }
-/* line 116, ../../../src/scss/widgets/_pulldown_menubar.scss */
+/* line 117, ../../../src/scss/widgets/_pulldown_menubar.scss */
 .o-pulldown-menubar .o-pulldown-menubar-hbar-activator-label .o-pulldown-menubar-hbar-activator-label-text {
   display: none;
 }
-/* line 121, ../../../src/scss/widgets/_pulldown_menubar.scss */
+/* line 122, ../../../src/scss/widgets/_pulldown_menubar.scss */
 .o-pulldown-menubar .o-pulldown-menubar-hbar-activator-icon {
   vertical-align: middle;
   position: relative;
