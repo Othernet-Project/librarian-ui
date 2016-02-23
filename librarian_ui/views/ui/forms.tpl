@@ -114,7 +114,7 @@
 ## This def renders a bottle-utils Field instance.
 ##
 
-<%def name="field(fld, id=None, help=None)">
+<%def name="field(fld, id=None, help=None, label=None)">
     <%
         if help:
             fld.options['help_text'] = help
@@ -122,7 +122,7 @@
     <p class="o-field${' o-field-error' if fld.error else ''}">
         ## Label
         % if fld.type not in ('checkbox', 'radio', 'hidden'):
-            ${self.label(fld.label, id=id or fld.name)}
+            ${self.label(label or fld.label, id=id or fld.name)}
         % endif
 
         ## Help text for textarea is rendered above the field but below label
@@ -136,7 +136,7 @@
         % elif fld.type == 'hidden':
             ${self.hidden(fld.name, value=fld.value, id=id)}
         % elif fld.type in ['checkbox', 'radio']:
-            ${self.checkbox(fld.name, value=fld.expected_value, is_checked=fld.default, label=fld.label, id=id)}
+            ${self.checkbox(fld.name, value=fld.expected_value, is_checked=fld.default, label=label or fld.label, id=id)}
         % elif fld.type == 'textarea':
             ${self.textarea(fld.name, placeholder=fld.options.get('placeholder'), value=fld.value, id=id)}
         % elif fld.type == 'select':
