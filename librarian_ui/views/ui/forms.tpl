@@ -7,11 +7,8 @@
 ##
 
 <%def name="option(value, label, selected=False)">
-    % if value:
-        <option value="${value | h}"${ ' selected' if selected else ''}>${label | h}</option>
-    % else:
-        <option ${ ' selected' if selected else ''}>${label | h}</option>
-    % endif
+    <% value = '' if value is None else value %>
+    <option value="${value | h}"${ ' selected' if selected else ''}>${label | h}</option>
 </%def>
 
 ## Select list
