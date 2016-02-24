@@ -25,7 +25,7 @@
     %>
     <select name="${name | h}" id="${id or name | h}">
     % for val, label in choices:
-        <% selected = val == current_value %>
+        <% selected = str(val) == str(current_value) %>
         ${option(val, label, selected)}
     % endfor
     </select>
