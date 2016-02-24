@@ -446,14 +446,29 @@ form .o-form-messages {
 }
 /* line 64, ../../../src/scss/widgets/_forms.scss */
 form .o-form-error {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: rgba(204, 55, 55, 0.1);
   color: #cc3737;
-  margin-bottom: 0.2rem;
+  -moz-animation-name: slide-up;
+  -webkit-animation-name: slide-up;
+  animation-name: slide-up;
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 /* line 168, ../../../src/scss/elements/_icons.scss */
 form .o-form-error:before {
   content: "";
 }
-/* line 69, ../../../src/scss/widgets/_forms.scss */
+/* line 75, ../../../src/scss/widgets/_forms.scss */
 form .o-form-error:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -472,7 +487,7 @@ form .o-form-error:before {
 form .o-form-error:before ~ * {
   vertical-align: middle;
 }
-/* line 75, ../../../src/scss/widgets/_forms.scss */
+/* line 86, ../../../src/scss/widgets/_forms.scss */
 form .o-form-message {
   padding: 1rem;
   margin-bottom: 1rem;
@@ -496,7 +511,7 @@ form .o-form-message {
 form .o-form-message:before {
   content: "";
 }
-/* line 86, ../../../src/scss/widgets/_forms.scss */
+/* line 97, ../../../src/scss/widgets/_forms.scss */
 form .o-form-message:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -515,11 +530,11 @@ form .o-form-message:before {
 form .o-form-message:before ~ * {
   vertical-align: middle;
 }
-/* line 98, ../../../src/scss/widgets/_forms.scss */
+/* line 109, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error label {
   color: #cc3737;
 }
-/* line 102, ../../../src/scss/widgets/_forms.scss */
+/* line 113, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error input, form .o-field-error select, form .o-field-error textarea {
   border-color: #cc3737;
 }
