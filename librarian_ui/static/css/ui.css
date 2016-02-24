@@ -332,7 +332,43 @@ input[type=checkbox] + label {
   vertical-align: middle;
 }
 
-/* line 25, ../../../src/scss/widgets/_forms.scss */
+@-moz-keyframes slide-up {
+  from {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 100px;
+  }
+  to {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0px;
+  }
+}
+@-webkit-keyframes slide-up {
+  from {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 100px;
+  }
+  to {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0px;
+  }
+}
+@keyframes slide-up {
+  from {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 100px;
+  }
+  to {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0px;
+  }
+}
+/* line 38, ../../../src/scss/widgets/_forms.scss */
 form .o-field-help-message {
   font-style: italic;
   position: relative;
@@ -341,7 +377,7 @@ form .o-field-help-message {
   margin-top: 0.2rem;
   color: #5d7b0a;
 }
-/* line 15, ../../../src/scss/widgets/_forms.scss */
+/* line 28, ../../../src/scss/widgets/_forms.scss */
 form .o-field-help-message:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -367,7 +403,7 @@ form .o-field-help-message:before ~ * {
 form .o-field-help-message:before {
   content: "";
 }
-/* line 35, ../../../src/scss/widgets/_forms.scss */
+/* line 48, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error-message {
   font-style: italic;
   position: relative;
@@ -376,7 +412,7 @@ form .o-field-error-message {
   margin-top: 0.2rem;
   color: #cc3737;
 }
-/* line 15, ../../../src/scss/widgets/_forms.scss */
+/* line 28, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error-message:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -402,13 +438,13 @@ form .o-field-error-message:before ~ * {
 form .o-field-error-message:before {
   content: "";
 }
-/* line 45, ../../../src/scss/widgets/_forms.scss */
+/* line 58, ../../../src/scss/widgets/_forms.scss */
 form .o-form-messages {
   background: rgba(93, 123, 10, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
-/* line 51, ../../../src/scss/widgets/_forms.scss */
+/* line 64, ../../../src/scss/widgets/_forms.scss */
 form .o-form-error {
   color: #cc3737;
   margin-bottom: 0.2rem;
@@ -417,7 +453,7 @@ form .o-form-error {
 form .o-form-error:before {
   content: "";
 }
-/* line 56, ../../../src/scss/widgets/_forms.scss */
+/* line 69, ../../../src/scss/widgets/_forms.scss */
 form .o-form-error:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -436,18 +472,31 @@ form .o-form-error:before {
 form .o-form-error:before ~ * {
   vertical-align: middle;
 }
-/* line 62, ../../../src/scss/widgets/_forms.scss */
+/* line 75, ../../../src/scss/widgets/_forms.scss */
 form .o-form-message {
   padding: 1rem;
   margin-bottom: 1rem;
+  overflow: hidden;
   background: rgba(93, 123, 10, 0.1);
   color: #5d7b0a;
+  -moz-animation-name: slide-up;
+  -webkit-animation-name: slide-up;
+  animation-name: slide-up;
+  -moz-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 /* line 168, ../../../src/scss/elements/_icons.scss */
 form .o-form-message:before {
   content: "";
 }
-/* line 72, ../../../src/scss/widgets/_forms.scss */
+/* line 86, ../../../src/scss/widgets/_forms.scss */
 form .o-form-message:before {
   font-family: "OIcons";
   font-weight: normal;
@@ -466,11 +515,11 @@ form .o-form-message:before {
 form .o-form-message:before ~ * {
   vertical-align: middle;
 }
-/* line 79, ../../../src/scss/widgets/_forms.scss */
+/* line 98, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error label {
   color: #cc3737;
 }
-/* line 83, ../../../src/scss/widgets/_forms.scss */
+/* line 102, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error input, form .o-field-error select, form .o-field-error textarea {
   border-color: #cc3737;
 }

@@ -2,6 +2,19 @@
 @import "base/params";
 @import "elements/icons";
 
+@include keyframes(slide-up) {
+  from {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 100px;
+  }
+  to {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0px;
+  }
+}
+
 @mixin field-note {
     // Typography
     font-style: italic;
@@ -63,6 +76,7 @@ form {
     // Basic geometry
     padding: 1rem;
     margin-bottom: 1rem;
+    overflow: hidden;
 
     // Styling
     background: transparentize($o-friendly, 0.9);
@@ -73,6 +87,11 @@ form {
       @include icon-base;
       margin-right: 0.2rem;
     }
+
+    @include animation-name(slide-up);
+    @include animation-delay(5s);
+    @include animation-duration(1s);
+    @include animation-fill-mode(forwards);
   }
 
   .o-field-error {
