@@ -1,3 +1,13 @@
+<%!
+    def autocomplete_attr(val):
+        if val is None:
+            return ''
+        elif val is True:
+            return ' autocomplete="on"'
+        else:
+            return ' autocomplete="off"'
+%>
+
 ## Conditionally render placeholder
 ##
 
@@ -35,9 +45,9 @@
 ## Generic input
 ##
 
-<%def name="input(name, type='text', placeholder=None, value=None, id=None, has_error=False)">
+<%def name="input(name, type='text', placeholder=None, value=None, id=None, has_error=False, autocomplete=False)">
     <% current_value = h.to_unicode(value or request.params.get(name, '')) %>
-    <input type="${type | h}" name="${name | h}" id="${id or name | h}" value="${current_value | h}"${self.pholder_attr(placeholder)}>
+    <input type="${type | h}" name="${name | h}" id="${id or name | h}" value="${current_value | h}"${self.pholder_attr(placeholder)}${autocomplete_attr(autocomplete)}>
 </%def>
 
 ## Hidden input
@@ -50,8 +60,8 @@
 ## Text input
 ##
 
-<%def name="text(name, placeholder=None, value=None, id=None)">
-    ${self.input(name, 'text', placeholder=placeholder, value=value, id=id)}
+<%def name="text(name, placeholder=None, value=None, id=None, autocomplete=False)">
+    ${self.input(name, 'text', placeholder=placeholder, value=value, id=id, autocomplete=autocomplete)}
 </%def>
 
 ## Checkbox
@@ -115,7 +125,7 @@
 ## This def renders a bottle-utils Field instance.
 ##
 
-<%def name="field(fld, id=None, help=None, label=None)">
+<%def name="field(fld, id=None, help=None, label=None, autocomplete=None)">
     <%
         if help:
             fld.options['help_text'] = help
@@ -133,7 +143,7 @@
 
         ## Field
         % if fld.type in ['text', 'email', 'date', 'password', 'file']:
-            ${self.input(fld.name, type=fld.type, placeholder=fld.options.get('placeholder'), value=fld.value, id=id)}
+            ${self.input(fld.name, type=fld.type, placeholder=fld.options.get('placeholder'), value=fld.value, id=id, autocomplete=autocomplete)}
         % elif fld.type == 'hidden':
             ${self.hidden(fld.name, value=fld.value, id=id)}
         % elif fld.type in ['checkbox', 'radio']:
