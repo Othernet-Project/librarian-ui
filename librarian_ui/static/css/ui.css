@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../home/hajime/.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -438,14 +438,16 @@ form .o-field-error-message:before ~ * {
 form .o-field-error-message:before {
   content: "";
 }
-/* line 58, ../../../src/scss/widgets/_forms.scss */
-form .o-form-messages {
+
+/* line 59, ../../../src/scss/widgets/_forms.scss */
+.o-form-messages {
   background: rgba(93, 123, 10, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
-/* line 64, ../../../src/scss/widgets/_forms.scss */
-form .o-form-error {
+
+/* line 65, ../../../src/scss/widgets/_forms.scss */
+.o-form-error {
   padding: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -465,11 +467,11 @@ form .o-form-error {
   animation-fill-mode: forwards;
 }
 /* line 168, ../../../src/scss/elements/_icons.scss */
-form .o-form-error:before {
+.o-form-error:before {
   content: "";
 }
-/* line 75, ../../../src/scss/widgets/_forms.scss */
-form .o-form-error:before {
+/* line 76, ../../../src/scss/widgets/_forms.scss */
+.o-form-error:before {
   font-family: "OIcons";
   font-weight: normal;
   font-style: normal;
@@ -484,11 +486,12 @@ form .o-form-error:before {
   margin-right: 0.2rem;
 }
 /* line 161, ../../../src/scss/elements/_icons.scss */
-form .o-form-error:before ~ * {
+.o-form-error:before ~ * {
   vertical-align: middle;
 }
-/* line 86, ../../../src/scss/widgets/_forms.scss */
-form .o-form-message {
+
+/* line 87, ../../../src/scss/widgets/_forms.scss */
+.o-form-message {
   padding: 1rem;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -508,11 +511,11 @@ form .o-form-message {
   animation-fill-mode: forwards;
 }
 /* line 168, ../../../src/scss/elements/_icons.scss */
-form .o-form-message:before {
+.o-form-message:before {
   content: "";
 }
-/* line 97, ../../../src/scss/widgets/_forms.scss */
-form .o-form-message:before {
+/* line 98, ../../../src/scss/widgets/_forms.scss */
+.o-form-message:before {
   font-family: "OIcons";
   font-weight: normal;
   font-style: normal;
@@ -527,15 +530,16 @@ form .o-form-message:before {
   margin-right: 0.2rem;
 }
 /* line 161, ../../../src/scss/elements/_icons.scss */
-form .o-form-message:before ~ * {
+.o-form-message:before ~ * {
   vertical-align: middle;
 }
-/* line 109, ../../../src/scss/widgets/_forms.scss */
-form .o-field-error label {
+
+/* line 110, ../../../src/scss/widgets/_forms.scss */
+.o-field-error label {
   color: #cc3737;
 }
-/* line 113, ../../../src/scss/widgets/_forms.scss */
-form .o-field-error input, form .o-field-error select, form .o-field-error textarea {
+/* line 114, ../../../src/scss/widgets/_forms.scss */
+.o-field-error input, .o-field-error select, .o-field-error textarea {
   border-color: #cc3737;
 }
 
