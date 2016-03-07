@@ -395,13 +395,13 @@ form .o-field-help-message:before {
   left: 0.7rem;
   top: 0;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 form .o-field-help-message:before ~ * {
   vertical-align: middle;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 form .o-field-help-message:before {
-  content: "";
+  content: "";
 }
 /* line 48, ../../../src/scss/widgets/_forms.scss */
 form .o-field-error-message {
@@ -430,11 +430,11 @@ form .o-field-error-message:before {
   left: 0.7rem;
   top: 0;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 form .o-field-error-message:before ~ * {
   vertical-align: middle;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 form .o-field-error-message:before {
   content: "";
 }
@@ -466,7 +466,7 @@ form .o-field-error-message:before {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-form-error:before {
   content: "";
 }
@@ -485,7 +485,7 @@ form .o-field-error-message:before {
   -moz-osx-font-smoothing: grayscale;
   margin-right: 0.2rem;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 .o-form-error:before ~ * {
   vertical-align: middle;
 }
@@ -510,9 +510,9 @@ form .o-field-error-message:before {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-form-message:before {
-  content: "";
+  content: "";
 }
 /* line 98, ../../../src/scss/widgets/_forms.scss */
 .o-form-message:before {
@@ -529,7 +529,7 @@ form .o-field-error-message:before {
   -moz-osx-font-smoothing: grayscale;
   margin-right: 0.2rem;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 .o-form-message:before ~ * {
   vertical-align: middle;
 }
@@ -601,7 +601,7 @@ a:hover {
   background-color: #089bd2;
   color: #fff;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-pulldown-menubar.open .o-pulldown-menubar-hbar-activator-icon:before {
   content: "";
 }
@@ -684,7 +684,7 @@ a:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-pulldown-menubar .o-pulldown-menubar-hbar-activator-icon:before {
   content: "";
 }
@@ -749,7 +749,7 @@ a:hover {
 .o-statusbar.open .o-statusbar-status {
   max-height: 40rem;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-statusbar.open .o-statusbar-hbar-activator-icon:before {
   content: "";
 }
@@ -805,7 +805,7 @@ a:hover {
   font-size: 180%;
   text-align: center;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-statusbar .o-statusbar-hbar-activator-icon:before {
   content: "";
 }
@@ -930,9 +930,9 @@ a:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-contextbar .o-contextbar-menu-icon:before {
-  content: "";
+  content: "";
 }
 
 /* line 6, ../../../src/scss/widgets/_multisearch.scss */
@@ -1072,9 +1072,9 @@ a:hover {
 .o-multisearch .o-multisearch-button-icon {
   font-size: 180%;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-multisearch .o-multisearch-button-icon:before {
-  content: "";
+  content: "";
 }
 /* line 111, ../../../src/scss/widgets/_multisearch.scss */
 .o-multisearch .o-multisearch-button-label {
@@ -1321,7 +1321,7 @@ a:hover {
   position: relative;
   top: -3px;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-modal-overlay .o-modal-close-icon:before {
   content: "";
 }
@@ -1366,7 +1366,7 @@ a:hover {
   font-size: 180%;
   vertical-align: middle;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-collapsible .o-collapsible-section > :nth-child(1) .icon:before {
   content: "";
 }
@@ -1386,7 +1386,7 @@ a:hover {
   background: #eee;
   border-bottom: 1px solid white;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-collapsible .o-collapsible-section.o-collapsed > :nth-child(1) .icon:before {
   content: "";
 }
@@ -2523,7 +2523,7 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   font-size: 200%;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 .o-pager-prev ~ *,
 .o-pager-next ~ * {
   vertical-align: middle;
@@ -2534,12 +2534,12 @@ a:hover {
   display: none;
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-pager-next:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .o-pager-prev:before {
   content: "";
 }
@@ -2574,9 +2574,9 @@ a:hover {
 
 @font-face {
   font-family: "OIcons";
-  src: url('../font/oicons-1a48ad8a6a58e3f937cab23d0f36c6f5.eot?1451334065') format('embedded-opentype'), url('../font/oicons-1a48ad8a6a58e3f937cab23d0f36c6f5.ttf?1451334065') format('truetype'), url('../font/oicons-1a48ad8a6a58e3f937cab23d0f36c6f5.woff?1451334065') format('woff');
+  src: url('../font/oicons-5ebf47a7c519a75c9c8081f54ede8970.eot?1457360257') format('embedded-opentype'), url('../font/oicons-5ebf47a7c519a75c9c8081f54ede8970.ttf?1457360256') format('truetype'), url('../font/oicons-5ebf47a7c519a75c9c8081f54ede8970.woff?1457360256') format('woff');
 }
-/* line 181, ../../../src/scss/elements/_icons.scss */
+/* line 188, ../../../src/scss/elements/_icons.scss */
 .icon {
   font-family: "OIcons";
   font-weight: normal;
@@ -2590,631 +2590,666 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 161, ../../../src/scss/elements/_icons.scss */
+/* line 168, ../../../src/scss/elements/_icons.scss */
 .icon ~ * {
   vertical-align: middle;
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-alert-key:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-alert-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-alert-question:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-alert-stop:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-alert:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-app-files:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-app-library:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-app-twitter:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-arrow-down:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-arrow-left:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-arrow-right:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-arrow-up:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-atmark:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-audio:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-box-minus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-box-plus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-down:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-in-down:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-in-left:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-in-right:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-in-up:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-left:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-right:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-arrow-up:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-dot:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-ok:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle-power:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-circle:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-clock:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-close:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-discard:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-download:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-edit-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-edit:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-enter:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-ethernet:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-exit:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-expand-down:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-expand-left:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-expand-right:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-expand-up:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-favorite:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-audio:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-binary:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-globe:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-image:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-music:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-text-image:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-text:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-vector:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file-video:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-file:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-audio:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-circle:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-down:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-generic:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-html:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-image:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-left:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-locked:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-multi:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-no:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-ok:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-plus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-right:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-up:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder-video:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-folder:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-generic:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-gallery:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-globe:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-generic:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-help-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-globe:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-help:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-help-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-html:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-help:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-image:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-html:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-import:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-image:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-info-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-import:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-info:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-info-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-key:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-info:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-lock:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-key:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-menu:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-list:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-message-alert:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-listen:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-message:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-lock:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-minus-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-menu:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-minus:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-message-alert:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-multi-type:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-message:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-network-bridge:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-minus-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-no-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-minus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-no:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-multi-type:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-ok-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-network-bridge:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-ok:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-no-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-other-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-no:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-other:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-ok-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-outernet:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-ok:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-plus-outline:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-other-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-plus:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-other:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-satellite:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-outernet:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-search:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-play:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-settings:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-plus-outline:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-signal:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-plus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-spinner:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-read:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-storage-internal:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-satellite:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-storage-usbdrive:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-search:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-storage-usbstick:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-settings:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-tuner:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-signal:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-tweet:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-sound:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-unlock:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-spinner:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-exclamation:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-storage-internal:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-key:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-storage-usbdrive:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-minus:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-storage-usbstick:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-multiple:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-tuner:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-no:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-tweet:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-ok:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-unlock:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-plus:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-exclamation:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-shield:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-key:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-star:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-minus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-unknown:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-multiple:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user-up:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-no:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-user:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-ok:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-video:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-plus:before {
   content: "";
 }
 
-/* line 168, ../../../src/scss/elements/_icons.scss */
-.icon-wifi:before {
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-shield:before {
   content: "";
 }
 
-/* line 191, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-star:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-unknown:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user-up:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-user:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-video:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-watch:before {
+  content: "";
+}
+
+/* line 175, ../../../src/scss/elements/_icons.scss */
+.icon-wifi:before {
+  content: "";
+}
+
+/* line 198, ../../../src/scss/elements/_icons.scss */
 .icon-spinning-loader {
   -moz-animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   font-size: 100%;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-spinning-loader:before {
-  content: "";
+  content: "";
 }
 
-/* line 195, ../../../src/scss/elements/_icons.scss */
+/* line 202, ../../../src/scss/elements/_icons.scss */
 .icon-spinning-loader-xxl {
   -moz-animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   font-size: 300%;
 }
-/* line 168, ../../../src/scss/elements/_icons.scss */
+/* line 175, ../../../src/scss/elements/_icons.scss */
 .icon-spinning-loader-xxl:before {
-  content: "";
+  content: "";
 }
