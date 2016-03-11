@@ -136,9 +136,11 @@ $glyphs: (
   user-unknown: '\f183',
   user-up: '\f184',
   user: '\f185',
-  video: '\f186',
-  watch: '\f187',
-  wifi: '\f188',
+  video-hd: '\f186',
+  video-sd: '\f187',
+  video: '\f188',
+  watch: '\f189',
+  wifi: '\f18a',
 );
 
 @include keyframes('spin') {
@@ -150,9 +152,9 @@ $glyphs: (
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-2f105b1141df5d341e0cace5cf848d9b.eot",
-      "#{$oicons-prefix}oicons-2f105b1141df5d341e0cace5cf848d9b.ttf",
-      "#{$oicons-prefix}oicons-2f105b1141df5d341e0cace5cf848d9b.woff"));
+      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.eot",
+      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.ttf",
+      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.woff"));
 }
 
 // Base styles for all icons
