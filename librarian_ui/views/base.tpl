@@ -48,6 +48,7 @@ STATUS_TAB_ID = 'status-tab'
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><%block name="title"></%block> - Librarian v${th.app_version()}</title>
+        <meta name="mobile-web-app-capable" content="yes">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="${assets['css/lui']}">
         % if redirect_url is not UNDEFINED:
