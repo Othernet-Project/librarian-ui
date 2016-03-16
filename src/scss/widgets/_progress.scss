@@ -120,6 +120,13 @@ $o-progress-mini-size: 28px;
 
     // Styling
     background: $o-progress-face;
+
+    .icon {
+      // The icons are normally aligned middle, but in case of progress bar 
+      // this makes the icon appear off-center. Vertically aligning to baseline
+      // fixes this issue.
+      vertical-align: baseline;
+    }
   }
 
   @for $i from 0 through $o-progress-iterations {
