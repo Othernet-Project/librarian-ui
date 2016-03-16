@@ -121,26 +121,33 @@ $glyphs: (
   storage-internal: '\f174',
   storage-usbdrive: '\f175',
   storage-usbstick: '\f176',
-  tuner: '\f177',
-  tweet: '\f178',
-  unlock: '\f179',
-  user-exclamation: '\f17a',
-  user-key: '\f17b',
-  user-minus: '\f17c',
-  user-multiple: '\f17d',
-  user-no: '\f17e',
-  user-ok: '\f17f',
-  user-plus: '\f180',
-  user-shield: '\f181',
-  user-star: '\f182',
-  user-unknown: '\f183',
-  user-up: '\f184',
-  user: '\f185',
-  video-hd: '\f186',
-  video-sd: '\f187',
-  video: '\f188',
-  watch: '\f189',
-  wifi: '\f18a',
+  test-circle: '\f177',
+  test-cross: '\f178',
+  test-square-full: '\f179',
+  test-square-hhalf: '\f17a',
+  test-square-hmid: '\f17b',
+  test-square-htop: '\f17c',
+  test-square-vhalf: '\f17d',
+  tuner: '\f17e',
+  tweet: '\f17f',
+  unlock: '\f180',
+  user-exclamation: '\f181',
+  user-key: '\f182',
+  user-minus: '\f183',
+  user-multiple: '\f184',
+  user-no: '\f185',
+  user-ok: '\f186',
+  user-plus: '\f187',
+  user-shield: '\f188',
+  user-star: '\f189',
+  user-unknown: '\f18a',
+  user-up: '\f18b',
+  user: '\f18c',
+  video-hd: '\f18d',
+  video-sd: '\f18e',
+  video: '\f18f',
+  watch: '\f190',
+  wifi: '\f191',
 );
 
 @include keyframes('spin') {
@@ -152,9 +159,9 @@ $glyphs: (
 @mixin icon-font-face {
   @include font-face(
     'OIcons', font-files(
-      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.eot",
-      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.ttf",
-      "#{$oicons-prefix}oicons-87ca8c21b1cdfec03f089ca4d6a4f455.woff"));
+      "#{$oicons-prefix}oicons-0084060b48b8755f5f1143bd7cb76183.eot",
+      "#{$oicons-prefix}oicons-0084060b48b8755f5f1143bd7cb76183.ttf",
+      "#{$oicons-prefix}oicons-0084060b48b8755f5f1143bd7cb76183.woff"));
 }
 
 // Base styles for all icons
@@ -179,6 +186,10 @@ $glyphs: (
   & ~ * {
     vertical-align: middle;
   }
+
+  &:before {
+    display: inline-block;
+  }
 }
 
 // Mixin for a single icon
@@ -190,8 +201,11 @@ $glyphs: (
 
 @mixin spinner($size: 100%) {
   @include icon(spinner);
-  @include animation(spin 2s linear infinite);
   font-size: $size;
+
+  &:before {
+    @include animation(spin 2s linear infinite);
+  }
 }
 
 // Shortcut to add all icon classes
