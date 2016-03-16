@@ -3,6 +3,10 @@
 @import "elements/icons";
 
 .o-collapsible {
+  // 1px margin ensures that the top border of the topmost collapsible is 
+  // visible.
+  margin-top: 1px;
+
   .o-collapsible-section {
     // Basic geometry
     position: relative;
@@ -27,8 +31,7 @@
 
       // Styling
       cursor: pointer;
-      background: $o-foreground-material;
-      border-top: $o-separator-border;
+      background: $o-dp-background;
 
       a {
         display: block;
@@ -36,12 +39,7 @@
         height: 100%;
         width: 100%;
 
-        color: $o-base-text-color;
-
-        &:hover,
-        &:focus {
-          color: $o-accent;
-        }
+        color: $o-dp-text;
       }
 
       .icon {
@@ -57,7 +55,11 @@
 
       &:hover,
       &:focus {
-        color: $o-accent;
+        background: $o-accent;
+
+        a {
+          color: $o-base-text-color;
+        }
       }
     }
 
@@ -69,10 +71,7 @@
       margin: 0;
 
       // Styling
-      border-top: $o-widget-border;
-      @include box-shadow(inset 0 0 1px transparentize(black, 0.5));
       background: $o-material;
-      border-bottom: 1px solid white;
     }  
 
     &.o-collapsed > :nth-child(1) .icon {
