@@ -14,11 +14,11 @@ button,
   text-decoration: none;
 
   // Styling
-  background: $o-button-face-color;
-  color: $o-button-text-color;
+  background: $o-accent;
+  color: $o-negative-base;
 
   // Border
-  border: 1px solid $o-button-face-color;
+  border: 1px solid $o-accent;
   border-radius: $o-input-corner-radius;
 
   // Interaction
@@ -31,9 +31,9 @@ button,
   // Alternative 
   &:hover,
   &:focus {
-    border-color: $o-button-hover-text-color;
-    background: $o-button-hover-face-color;
-    color: $o-button-hover-text-color;
+    border-color: $o-dp-background;
+    background: $o-dp-background;
+    color: $o-negative-base;
   }
 
   &.clean {

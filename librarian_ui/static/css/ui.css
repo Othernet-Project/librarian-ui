@@ -213,9 +213,9 @@ button,
 button:hover, button:focus,
 .button:hover,
 .button:focus {
-  border-color: #089bd2;
-  background: #666;
-  color: #089bd2;
+  border-color: #444;
+  background: #444;
+  color: #fff;
 }
 /* line 39, ../../../src/scss/widgets/_button.scss */
 button.clean,
