@@ -837,11 +837,11 @@ a:hover {
 }
 /* line 104, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-quick-status .icon {
-  font-size: 120%;
+  font-size: 150%;
 }
 /* line 107, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-hbar-quick-status .icon.alert {
-  color: #cc3737;
+  color: #efa417;
 }
 /* line 113, ../../../src/scss/widgets/_statusbar.scss */
 .o-statusbar .o-statusbar-panel-content {

@@ -102,10 +102,10 @@ $sb-hbar-height: 2.2rem;
     }
 
     .icon {
-      font-size: 120%;
+      font-size: 150%;
 
       &.alert {
-        color: $o-critical;
+        color: $o-warning;
       }
     }
   }
