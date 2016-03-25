@@ -2496,8 +2496,8 @@ a:hover {
   line-height: 3rem;
   width: 3rem;
   vertical-align: middle;
-  border: 1px solid #aaa;
-  border-top-color: #ccc;
+  background: #089bd2;
+  color: #fff;
   -moz-border-radius: 0.3rem;
   -webkit-border-radius: 0.3rem;
   border-radius: 0.3rem;
@@ -2505,19 +2505,27 @@ a:hover {
 
 /* line 22, ../../../src/scss/widgets/_pager.scss */
 .o-pager-current {
-  border-color: #ddd;
-  background: #ddd;
+  background: #444;
 }
 
 @media only screen and (max-width: 640px) {
-  /* line 27, ../../../src/scss/widgets/_pager.scss */
+  /* line 26, ../../../src/scss/widgets/_pager.scss */
   .o-pager-page {
     display: none;
   }
 }
 
+/* line 32, ../../../src/scss/widgets/_pager.scss */
+.o-pager-ellipsis {
+  display: inline-block;
+  text-align: center;
+  color: #aaa;
+  font-size: 150%;
+  width: 3rem;
+}
+
 @media only screen and (max-width: 360px) {
-  /* line 33, ../../../src/scss/widgets/_pager.scss */
+  /* line 40, ../../../src/scss/widgets/_pager.scss */
   .o-pager-last,
   .o-pager-first,
   .o-pager-ellipsis {
@@ -2525,7 +2533,7 @@ a:hover {
   }
 }
 
-/* line 41, ../../../src/scss/widgets/_pager.scss */
+/* line 48, ../../../src/scss/widgets/_pager.scss */
 .o-pager-prev,
 .o-pager-next {
   font-family: "OIcons";
@@ -2551,7 +2559,7 @@ a:hover {
 .o-pager-next:before {
   display: inline-block;
 }
-/* line 46, ../../../src/scss/widgets/_pager.scss */
+/* line 53, ../../../src/scss/widgets/_pager.scss */
 .o-pager-prev .o-pager-label,
 .o-pager-next .o-pager-label {
   display: none;
