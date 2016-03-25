@@ -3,6 +3,8 @@
 @import "base/params";
 @import "elements/icons";
 
+$sb-hbar-height: 2.2rem;
+
 .o-statusbar {
   // Basic geometry
   position: fixed;
@@ -28,14 +30,13 @@
   .o-statusbar-hbar {
     // Basic geometry
     position: relative;
-    height: $o-statusbar-hbar-height;
+    height: $sb-hbar-height;
     width: 100%;
+    @include box-shadow(0 0 5px transparentize(black, 0.6));
 
     // Styling
-    background: $o-clickable-target-color;
-    @include background-image(linear-gradient($o-clickable-target-shading));
-    border-top: $o-widget-border;
-    border-bottom: $o-separator-border;
+    background: $o-dp-background;
+    color: $o-negative-base;
 
     &.clickable {
       cursor: pointer;
@@ -46,6 +47,7 @@
     // Basic geometry
     max-height: 0;  // Completely collapsed initially
     overflow: hidden;
+    margin: 0;
 
     // FX
     @include transition(max-height $o-animation-speed);
@@ -56,13 +58,13 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: $o-statusbar-hbar-activator-width;
-    color: $o-base-text-color;
+    width: 3rem;
+    color: $o-negative-base;
+    height: 100%;
+    line-height: $sb-hbar-height;
 
-    @if $o-statusbar-hbar-show-label == no {
-      .o-statusbar-hbar-activator-label {
-        display: none;
-      }
+    .o-statusbar-hbar-activator-label {
+      display: none;
     }
 
     &:hover,
@@ -75,7 +77,6 @@
     // Basic geometry
     width: 100%;
     height: 100%;
-    padding-top: $o-statusbar-hbar-activator-icon-top-offset;
 
     // Styling
     font-size: $o-statusbar-hbar-activator-icon-size;
