@@ -21,7 +21,7 @@ class Paginator(object):
             self.count = len(items)
         except TypeError:
             # items is probably an number
-            self.count = items
+            self.count = items or 0
         self.per_page = self._in_range(per_page,
                                        self.min_per_page,
                                        self.max_per_page)
@@ -58,7 +58,7 @@ class Paginator(object):
     def items(self):
         first = (self.page - 1) * self.per_page
         last = first + self.per_page
-        if self.count == self._items:
+        if self._items is None or self.count == self._items:
             # Return offset and limit
             return (first, self.per_page)
         return self._items[first:last]
