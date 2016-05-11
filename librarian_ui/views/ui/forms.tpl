@@ -125,12 +125,12 @@
 ## This def renders a bottle-utils Field instance.
 ##
 
-<%def name="field(fld, id=None, help=None, label=None, autocomplete=None)">
+<%def name="field(fld, id=None, help=None, label=None, autocomplete=None, classes=None)">
     <%
         if help:
             fld.options['help_text'] = help
     %>
-    <p class="o-field${' o-field-error' if fld.error else ''}">
+    <p class="o-field${' o-field-error' if fld.error else ''}${' ' + classes if classes else ''}">
         ## Label
         % if fld.type not in ('checkbox', 'radio', 'hidden'):
             ${self.label(label or fld.label, id=id or fld.name)}
